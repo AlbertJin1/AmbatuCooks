@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+}
+
+body {
+  min-height: 100vh;
+  background: #D3E0F9;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: #A7BEEA;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 8px 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+header .site-logo img {
+  height: 120px;
+  width: auto;
+  padding: 2px;
+  padding-right: 25px;
+  position: relative;
+  filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.25));
+  transition: transform 1s ease;
+}
+
+header .site-logo img:hover {
+  transform: scale(1.1);
+  transition: transform 1s ease;
+}
+
+header .navbar ul {
+  list-style: none;
+}
+
+header .navbar ul li {
+  position: relative;
+  float: left;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+header .navbar ul li a {
+  font-size: 20px;
+  padding: 20px;
+  color: black;
+  display: block;
+  transition: transform 1s ease-in-out;
+}
+
+header .navbar ul li a:hover {
+  font-size: 21px;
+  transition: transform 1s ease-in-out;
+}
+
+header .navbar ul li a::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  background: #5575B5;
+  display: block;
+  transition: 0.2s linear;
+}
+
+header .navbar ul li a:hover::after {
+  width: 100%;
+}
+
+header .navbar ul li a:hover {
+  color: #5575B5;
+}
+
+header .navbar ul li ul {
+  position: absolute;
+  left: 0;
+  width: 170px;
+  background: #7C9AD4;
+  display: none;
+  text-align: center;
+}
+
+header .navbar ul li ul li {
+  width: 100%;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+header .navbar ul li ul li ul {
+  left: 170px;
+  top: -.1px;
+}
+
+header .navbar ul li:focus-within > ul, header .navbar ul li:hover > ul {
+  display: initial;
+}
+
+#menu-bar {
+  display: none;
+}
+
+header label {
+  font-size: 20px;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+  display: none;
+}
+
+
+
+@media(max-width:991px) {
+  header{
+
+  }
+
+  header label {
+    display: initial;
+  }
+
+  header .navbar {
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: #A7BEEA;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    display: none;
+  }
+
+  header .navbar ul li {
+    width: 100%;
+  }
+
+  header .navbar ul li ul {
+    position: relative;
+    width: 100%;
+  }
+
+  header .navbar ul li ul li {
+    background: #91a8d5;
+  }
+
+  header .navbar ul li ul li ul {
+    width: 100%;
+    left: 0;
+  }
+
+  #menu-bar:checked ~ .navbar {
+    display: initial;
+  }
+}
