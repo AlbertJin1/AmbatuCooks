@@ -1,0 +1,107 @@
+/* FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+/* font-family: 'Dancing Script', cursive; */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+/* font-family: 'Roboto', sans-serif; */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+/* font-family: 'Cookie', cursive; */
+
+
+/* ALL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* START */
+:root{
+    --bg-color-1: white;
+    --bg-color-2: #f9f6f0;
+    --grey-color: rgba(0,0,0,0.20);
+    --heading-color: #2c2c2c;
+    --text-color: #353535;
+    --primary-color: #ed2433;
+    --font-family-1: 'Roboto', sans-serif;
+    --font-family-1: 'Cookie', sans-serif;
+    --nav-items-border-bottom: 1px solid rgba(0,0,0,0.07);
+}
+
+.dark-mode{
+    --bg-color-1: #080b0e;
+    --bg-color-2: #101418;
+    --grey-color: #383737;
+    --heading-color: #FFFFFF;
+    --text-color: #FFFFFFcc;
+    --primary-color: #ed2433;
+    --font-family-1: 'Roboto', sans-serif;
+    --font-family-1: 'Cookie', sans-serif;
+    --nav-items-border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+body{
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    background: var(--bg-color-2);
+    color: white;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--primary-color);
+}
+
+.flex-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.flex-col{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+section{
+    padding: 50px 5rem 35px 5rem;
+    margin-bottom: -1px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+img{
+    transition: all .3s ease-in-out;
+    width: 100%;
+    vertical-align: middle;
+}
+
+h1{
+    font-size: 48px;
+    font-weight: 500;
+    color: var(--heading-color);
+    line-height: 1.2;
+}
+
+h2{
+    
+}
+
+
+
+
