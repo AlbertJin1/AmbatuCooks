@@ -96,3 +96,41 @@ menuTabs.addEventListener('click', function(e){
         return
     }
 })
+
+// TEAM CAROU
+$('.team-carousel').owlCarousel({
+    loop:true,
+    margin:20,
+    dots: true,
+    nav:false,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:3
+        }
+    }
+})
+
+// REVIEW CAROU
+$('.review-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    dots: false,
+    nav:false,
+    responsive:{
+        0:{
+            items:1
+        },
+        750:{
+            items:2
+        },
+        1000:{
+            items:3
+        }
+    }
+})
