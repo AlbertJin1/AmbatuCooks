@@ -134,3 +134,20 @@ $('.review-carousel').owlCarousel({
         }
     }
 })
+
+// BLOGS CAROU
+$('.blog-carousel').owlCarousel({
+    loop:true,
+    margin:5,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:3
+        }
+    }
+})
