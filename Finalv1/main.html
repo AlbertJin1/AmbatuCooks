@@ -27,7 +27,7 @@
 
     <header>
 
-        <!-- FIRST -->
+        <!-- PRENAV FIRST -->
         <div id="prenav-text">
             <div class="flex-row">
                 <div class="contact-info">Phone no: <span>+63 997 259 4233</span> or email us:
@@ -46,12 +46,66 @@
             </div>
         </div>
         
-        <!-- END -->
+        <!-- PRENAV END -->
 
+
+
+
+        <!-- NAVBAR START -->
+
+        <nav id="navbar" class="navbar flex-row">
+
+            <div class="nav-icon menu-btn-wrapper">
+                <div id="menu-btn" class="menu-btn bx bx-menu"></div>
+            </div>
+
+            <div class="logo">
+                <h5>Ambatu<span>Cooks</span></h5>
+            </div>
+
+            <ul id="nav-items" class="nav-items">
+                <li><a href="#home" class="nav-links">HOME</a></li>
+                <li><a href="#about" class="nav-links">ABOUT</a></li>
+                <li><a href="#menu" class="nav-links">MENU</a></li>
+                <li><a href="#about" class="nav-links">RESERVATIONS</a></li>
+                <li><a href="#gallery" class="nav-links">GALLERY</a></li>
+                <li><a href="#blogs" class="nav-links">BLOG</a></li>
+                <li><a href="#footer" class="nav-links">CONTACT</a></li>
+            </ul>
+
+            <ul class="nav-btns">
+
+                <div class="search-btn-wrapper nav-icon">
+                    <i class="searchbtn bx bx-search-alt-2"></i>
+                    <div id="search-form" class="search-form">
+                        <form action="#">
+                            <input type="search" class="search-data" placeholder="Search" required>
+                            <button type="submit" class="bx bx-search-alt-2"></button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="cart-btn-wrapper nav-icon">
+                    <i class="cartbtn bx bx-cart"></i>
+                    <div id="cart" class="cart flex-row">
+                        <span>No Products In The Cart</span>
+                    </div>
+                </div>
+
+                <div class="nav-icon">
+                    <i class="darkbtn bx bx-moon"></i>
+                </div>
+
+            </ul>
+
+        </nav>
+
+        <!-- NAVBAR END -->
+        
     </header>
 
-    <!-- HOME -->
-    <div id="home">
+    <!-- HOME START-->
+    <section id="home">
         <div class="home-carousel owl-carousel owl-theme">
             <div class="slide slide1">
                 <div class="content">
@@ -68,7 +122,46 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+    <!-- HOME END -->
+
+
+
+
+    <!-- ABOUT START -->
+
+    <section id="about" class="flex-row">
+        <div class="booking-form">
+            <span>Send Us A</span>
+            <h2>MESSAGE</h2>
+            <form action="#">
+                <input type="text" name="name" placeholder="Name">
+                <input type="text" name="email" placeholder="Name">
+                <input type="text" name="phone" placeholder="Name">
+                <input type="date" name="date" placeholder="Name">
+                <input type="text" name="time" placeholder="Name">
+                
+            </form>
+        </div>
+    </section>
+
+    <!-- ABOUT END -->
+
+
+
+    <!-- MENU START -->
+
+    <section id="menu" class="menu-selection"></section>
+
+    <!-- MENU END -->
+
+
+
+    <!-- EVENT START -->
+
+    <section id="events"></section>
+
+    <!-- EVENT END -->
 
 
 
