@@ -701,7 +701,7 @@ input[type="search"]::-webkit-search-cancel-button {
     position: absolute;
     bottom: -10px;
     left: 50%;
-    transform: translateX(50%) rotate(45deg);
+    transform: translateX(-50%) rotate(45deg);
     width: 28px;
     height: 28px;
     background-color: var(--primary-color);
@@ -724,6 +724,16 @@ input[type="search"]::-webkit-search-cancel-button {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    animation: fade-in 0.5s ease;
+}
+
+@keyframes fade-in{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 .menu-item {
@@ -784,4 +794,81 @@ input[type="search"]::-webkit-search-cancel-button {
 .menu-item .menu-item-inner .text .desc {
     color: var(--text-color);
     font-size: 16px;
+}
+
+#menu .btn-wrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn2{
+    display: inline-block;
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 20px 30px;
+    margin-top: 10px;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+}
+
+.btn2:hover{
+    color: var(--primary-color);
+    background-color: var(--bg-color-1);
+}
+
+/* GALLERY */
+#gallery{
+    text-align: center;
+    background-color: var(--bg-color-2);
+    padding: 70px 0;
+}
+
+.gallery-wrapper .gallery-img{
+    width: 24rem;
+    margin: 10px 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-wrapper .gallery-img img{
+    transition: all 0.7s ease-in-out;
+}
+
+.gallery-wrapper .gallery-img .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.gallery-wrapper .gallery-img .overlay .icon{
+    color: wheat;
+    font-size: 34px;
+    transform: scale(0);
+    transition: all .5s ease-in-out;
+    text-align: center;
+    padding: 0 5rem;
+}
+
+.gallery-wrapper .gallery-img:hover img{
+    transform: scale(1.05);
+}
+
+.gallery-wrapper .gallery-img:hover .overlay{
+    opacity: 1;
+}
+
+.gallery-wrapper .gallery-img:hover .overlay .icon{
+    transform: scale(1);
 }
