@@ -28,6 +28,7 @@ let menuBtn = document.querySelector('.menu-btn');
 let searchBtn = document.querySelector('.searchbtn');
 let cartBtn = document.querySelector('.cartbtn');
 let darkBtn = document.querySelector('.darkbtn');
+let signBtn = document.getElementById('signImg');
 
 searchBtn.onclick = function(){
     document.getElementById("search-form").classList.toggle('active');
@@ -61,9 +62,13 @@ darkBtn.onclick = function(){
     if(document.body.classList.contains('dark-mode')){
         darkBtn.classList.remove("bx-moon");
         darkBtn.classList.add("bx-sun");
+
+        signImg.src = './img/sign/sign-dark.png';
     }
     else{
         darkBtn.classList.remove("bx-sun");
         darkBtn.classList.add("bx-moon");
+
+        signImg.src = './img/sign/sign-light.png';
     }
 }
