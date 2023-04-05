@@ -10,7 +10,7 @@
     <link rel="icon" href="../FILES/img/ambatuicon.png" type="image/x-icon">
 
     <!-- STYLESHEETS LOCAL MEOW -->
-    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/style-recipe.css">
     
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     
@@ -37,7 +37,6 @@
                     <span>ambatucooks@gmail.com</span>
                 </div>
                 <div class="opening-times flex-row">
-                    <!-- Mon - Fri / 9:00-21:00. Sat - Sun 10:00/20:00 -->
                     <ul class="social-links flex-row">
                         <li><a href="#"><i class="bx bxl-facebook"></i></a></li>
                         <li><a href="#"><i class="bx bxl-instagram"></i></a></li>
@@ -63,39 +62,18 @@
 
             <div class="logo">
                 <h5>
-                    <!-- Ambatu<span>Cooks</span> -->
                     <img href ="main.html" src="./img/Logo/AMBATU.png" alt="">
                 </h5>
             </div>
 
             <ul id="nav-items" class="nav-items">
-                <li><a href="#home" class="nav-links">HOME</a></li>
-                <li><a href="#about" class="nav-links">ABOUT</a></li>
+                <li><a href="main.html" class="nav-links">HOME</a></li>
                 <li><a href="#menu" class="nav-links">MENU</a></li>
-                <li><a href="#reviews" class="nav-links">REVIEWS</a></li>
-                <li><a href="#gallery" class="nav-links">GALLERY</a></li>
                 <li><a href="#blogs" class="nav-links">BLOG</a></li>
                 <li><a href="#footer" class="nav-links">CONTACT</a></li>
             </ul>
 
             <ul class="nav-btns">
-
-                <!-- <div class="search-btn-wrapper nav-icon">
-                    <i class="searchbtn bx bx-search-alt-2"></i>
-                    <div id="search-form" class="search-form">
-                        <form action="#">
-                            <input type="search" class="search-data" placeholder="Search" required>
-                            <button type="submit" class="bx bx-search-alt-2"></button>
-                        </form>
-                    </div>
-                </div> -->
-
-                <!-- <div class="cart-btn-wrapper nav-icon">
-                    <i class="cartbtn bx bx-cart"></i>
-                    <div id="cart" class="cart flex-row">
-                        <span>No Products In The Cart</span>
-                    </div>
-                </div> -->
 
                 <div class="nav-icon">
                     <i class="darkbtn bx bx-moon"></i>
@@ -109,98 +87,86 @@
         
     </header>
 
-    <!-- HOME START-->
-    <section id="home">
-        <div class="home-carousel owl-carousel owl-theme">
-            <div class="slide slide1">
-                <div class="content">
-                    <p class="sub-heading">AMBATU COOKS</p>
-                    <h1 class="heading">Delicious</h1>
-                    <p class="sub-heading-2">FOOD RECIPES</p>
-                </div>
-            </div>
-            <div class="slide slide2">
-                <div class="content">
-                    <p class="sub-heading">AMBATU COOKS</p>
-                    <h1 class="heading">Sharing Since</h1>
-                    <p class="sub-heading-2">2023</p>
-                </div>
-            </div>
-            <div class="slide slide3">
-                <div class="content">
-                    <p class="sub-heading">AMBATU COOKS</p>
-                    <h1 class="heading">Life Is Uncertain</h1>
-                    <p class="sub-heading-2">Eat Dessert First</p>
-                </div>
-            </div>
-            <div class="slide slide4">
-                <div class="content">
-                    <p class="sub-heading">AMBATU COOKS</p>
-                    <h1 class="heading">Cooking Is Love</h1>
-                    <p class="sub-heading-2">Made Visible</p>
-                </div>
-            </div>
-            <div class="slide slide5">
-                <div class="content">
-                    <p class="sub-heading">AMBATU COOKS</p>
-                    <h1 class="heading">Recipes Are Like A Map</h1>
-                    <p class="sub-heading-2">Guiding Us On A Delicious Journey</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- HOME END -->
+    <section class="space"></section>
 
+    <!-- BLOGS START -->
 
+    <section id="blogs">
 
-
-    <!-- ABOUT START -->
-
-    <section id="about" class="flex-row">
-        <div class="booking-form" data-aos="fade-right" data-aos-duration="1000">
-            <span>Make A</span>
-            <h2>Review</h2>
-            <form action="#">
-                <input type="text" name="name" placeholder="Name">
-                <input type="text" name="email" placeholder="Email">
-                <input type="text" name="phone" placeholder="Phone">
-                <textarea name="msg" id="msg">Message</textarea>
-                <a href="#" type="submit" class="btn1">Submit Review</a>
-            </form>
-        </div>
-
-        <div class="text-wrapper" data-aos="fade-left" data-aos-duration="1000">
-            <h1>DREAMY BULL</h1>
-            <h3>Morale Boosting Motivator</h3>
-            <p>Hey there, have you ever been in the mood to whip up something delicious in the kitchen but you're not quite sure what to make? Well, let me tell you about this amazing recipe website! <br>It's the perfect place to find all sorts of tasty recipes, from quick and easy meals to fancy desserts. Trust me, this website will be <br>your go-to source for all your cooking needs!</p>
-            <div class="sign">
-                <img src="./img/sign/sign-light.png" alt="#" id="signImg">
+        <div class="section-heading">
+            <h3>Our Recipe</h3>
+            <h1>Most Popular</h1>
+            <div class="square-wrapper flex-row">
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
             </div>
         </div>
 
-        <div class="img-wrapper" data-aos="fade-left" data-aos-duration="1000">
-            <img src="./img/About/about-ambatu.png" alt="#">
+        <div class="blog-carousel owl-carousel owl-theme" data-aos="fade-right" data-aos-duration="1000">
+
+            <!-- BLOG POST START -->
+            <a href="#" class="blog-post">
+
+                <div class="img-wrapper">
+                    <img src="./img/Blog/1.jpg" alt="#">
+                    <div class="overlay"><i class="icon bx bx-link"></i></div>
+                </div>
+
+                <div class="text-wrapper">
+                    <h5 class="blog-title">adsada</h5>
+                    <p class="desc">dogadsaasdasdsadadsadadsa</p>
+                    <p class="time"><i class="icon bx bx-time-five"></i>Time: <span>15min</span></p>
+                    <p class="time"><i class="icon bx bx-time-five"></i>Time: <span>15min</span></p>
+                    <p class="time"><i class="icon bx bx-time-five"></i>Time: <span>15min</span></p>
+                </div>
+
+            </a>
+            <!-- BLOG POST END -->
+
+            <!-- BLOG POST START -->
+            <a href="#" class="blog-post">
+
+                <div class="img-wrapper">
+                    <img src="./img/Blog/2.jpg" alt="#">
+                    <div class="overlay"><i class="icon bx bx-link"></i></div>
+                </div>
+
+                <div class="text-wrapper">
+                    <h5 class="blog-title">adsada</h5>
+                    <p class="desc">dogadsaasdasdsadadsadadsa oten dog pagadsadada</p>
+                    <p class="time"><i class="icon bx bx-time-five"></i>Time: <span>15min</span></p>
+                    <p class="time"><i class="icon bx bx-time-five"></i>Time: <span>15min</span></p>
+                    <p class="time"><i class="icon bx bx-time-five"></i>Time: <span>15min</span></p>
+                </div>
+
+            </a>
+            <!-- BLOG POST END -->
+
+            <!-- BLOG POST START -->
+            <a href="#" class="blog-post">
+
+                <div class="img-wrapper">
+                    <img src="./img/Blog/3.jpg" alt="#">
+                    <div class="overlay"><i class="icon bx bx-link"></i></div>
+                </div>
+
+                <div class="text-wrapper">
+                    <h5 class="blog-title">adsada</h5>
+                    <p class="desc">dogadsaasdasdsadadsadadsa</p>
+                    <p class="time"><i class="icon bx bx-time-five"></i>Time: <span>15min</span></p>
+                    <p class="time"><i class="icon bx bx-time-five"></i>Time: <span>15min</span></p>
+                    <p class="time"><i class="icon bx bx-time-five"></i>Time: <span>15min</span></p>
+                </div>
+
+            </a>
+            <!-- BLOG POST END -->
         </div>
-    </section>
 
-    <!-- ABOUT END -->
-
-
-
-
-    <!-- QUOTE START -->
-
-    <section id="quote">
-        <div class="text-wrapper">
-            <h2>Plenty of Delicious</h2>
-            <h1>Food Recipes To Try</h1>
-        </div>
     </section>
 
-    <!-- QUOTE END -->
-
-
-
+    <!-- BLOGS END -->
+    
 
     <!-- SECTION HEADING START -->
 
@@ -619,410 +585,19 @@
         </div>
         
         <div class="btn-wrapper">
-            <a href="recipes.html" class="btn2">View Full Menu</a>
+            <a href="#" class="btn2">View Full Menu</a>
         </div>
 
     </section>
 
     <!-- SECTION HEADING END -->
-   
-   
-   
-   
-    <!-- GALLERY START -->
-
-    <section id="gallery" data-aos="fade-right" data-aos-duration="1000">
-        <h3>Our Gallery</h3>
-        <h1>Our Untold Stories</h1>
-        <div class="square-wrapper flex-row">
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-        </div>
-        
-        <div class="gallery-wrapper flex-row">
-
-            <!-- IMG START -->
-            <a href="./img/Gallery/1.jpg" class="gallery-img">
-                <img src="./img/Gallery/1.jpg" alt="#">
-                <div class="overlay">
-                    <i class="icon bx bx-search"></i>
-                </div>
-            </a>
-            <!-- IMG END -->
-
-            <!-- IMG START -->
-            <a href="./img/Gallery/2.jpg" class="gallery-img">
-                <img src="./img/Gallery/2.jpg" alt="#">
-                <div class="overlay">
-                    <i class="icon bx bx-search"></i>
-                </div>
-            </a>
-            <!-- IMG END -->
-
-            <!-- IMG START -->
-            <a href="./img/Gallery/3.jpg" class="gallery-img">
-                <img src="./img/Gallery/3.jpg" alt="#">
-                <div class="overlay">
-                    <i class="icon bx bx-search"></i>
-                </div>
-            </a>
-            <!-- IMG END -->
-
-            <!-- IMG START -->
-            <a href="./img/Gallery/4.jpg" class="gallery-img">
-                <img src="./img/Gallery/4.jpg" alt="#">
-                <div class="overlay">
-                    <i class="icon bx bx-search"></i>
-                </div>
-            </a>
-            <!-- IMG END -->
-
-            <!-- IMG START -->
-            <a href="./img/Gallery/5.jpg" class="gallery-img">
-                <img src="./img/Gallery/5.jpg" alt="#">
-                <div class="overlay">
-                    <i class="icon bx bx-search"></i>
-                </div>
-            </a>
-            <!-- IMG END -->
-
-            <!-- IMG START -->
-            <a href="./img/Gallery/6.jpg" class="gallery-img">
-                <img src="./img/Gallery/6.jpg" alt="#">
-                <div class="overlay">
-                    <i class="icon bx bx-search"></i>
-                </div>
-            </a>
-            <!-- IMG END -->
-
-        </div>
-
-    </section>
-
-    <!-- GALLERY END -->
-
-
-
-
-    <!-- TEAM START -->
-
-    <section id="team">
-        <div class="section-heading">
-            <h3>Website Creators</h3>
-            <h1>Meet our Developers</h1>
-            <div class="square-wrapper flex-row">
-                <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
-            </div>
-        </div>
-
-        <div class="team-carousel owl-carousel owl-theme" data-aos="fade-right" data-aos-duration="1000">
-            <!-- CARD START -->
-            <div class="team-card">
-
-                <div class="img-wrapper">
-                    <img src="./img/team/team-albert.png" alt="#">
-                </div>
-
-                <div class="text-wrapper">
-                    <h4 class="name">Jessie Albert Regualos</h4>
-                    <h5 class="desc">Lead Web Designer</h5>
-                </div>
-
-                <ul class="social-links flex-col">
-                    
-                    <li>
-                        <a href="https://web.facebook.com/yotsuchi.albertjin1/" target="_blank"><i class="icon bx bxl-facebook"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="icon bx bxl-twitter"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="icon bx bxl-instagram"></i></a>
-                    </li>
-                
-                </ul>
-
-            </div>
-            <!-- CARD END -->
-
-            <!-- CARD START -->
-            <div class="team-card">
-
-                <div class="img-wrapper">
-                    <img src="./img/team/team-risu.png" alt="#">
-                </div>
-
-                <div class="text-wrapper">
-                    <h4 class="name">Irisjen De Lara</h4>
-                    <h5 class="desc">Web Developer</h5>
-                </div>
-
-                <ul class="social-links flex-col">
-                    
-                    <li>
-                        <a href="https://web.facebook.com/iris.jen.9" target="_blank"><i class="icon bx bxl-facebook"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="icon bx bxl-twitter"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="icon bx bxl-instagram"></i></a>
-                    </li>
-                
-                </ul>
-
-            </div>
-            <!-- CARD END -->
-
-            <!-- CARD START -->
-            <div class="team-card">
-
-                <div class="img-wrapper">
-                    <img src="./img/team/team-ambatu.png" alt="#">
-                </div>
-
-                <div class="text-wrapper">
-                    <h4 class="name">Dreamy Bull</h4>
-                    <h5 class="desc">Our Motivator</h5>
-                </div>
-
-                <ul class="social-links flex-col">
-                    
-                    <li>
-                        <a href="#"><i class="icon bx bxl-facebook"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="icon bx bxl-twitter"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="icon bx bxl-instagram"></i></a>
-                    </li>
-                
-                </ul>
-
-            </div>
-            <!-- CARD END -->
-
-        </div>
-
-    </section>
-
-    <!-- TEAM END -->
-
-
-
-
-    <!-- REVIEW START -->
-
-    <section id="reviews">
-        <div class="section-heading">
-            <h3>Critics</h3>
-            <h1>What People Say</h1>
-            <div class="square-wrapper flex-row">
-                <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
-            </div>
-        </div>
-
-        <div class="review-carousel owl-carousel owl-theme" data-aos="fade-up" data-aos-duration="1000">
-            <!-- REVIEW START -->
-            <div class="review-item">
-                <div class="container">
-                    <div class="img-box">
-                        <img src="./img/Review/gordon.png" alt="#">
-                    </div>
-                    <div class="text-holder">
-                        <h4 class="name">Gordon Ramsey</h4>
-                        <h5 class="desc">World-Class Chef</h5>
-                    </div>
-                </div>
-                <p class="comment">
-                    "I give this website a rate of 5/5. All of their recipes are delicious. Well done."
-                </p>
-                <div class="rating">
-                    <i class="icon bx bxs-star"></i>
-                    <i class="icon bx bxs-star"></i>
-                    <i class="icon bx bxs-star"></i>
-                    <i class="icon bx bxs-star"></i>
-                    <i class="icon bx bxs-star"></i>
-                    
-                </div>
-            </div>
-            <!-- REVIEW END -->
-
-            <!-- REVIEW START -->
-            <div class="review-item">
-                <div class="container">
-                    <div class="img-box">
-                        <img src="./img/Review/marco.jpg" alt="#">
-                    </div>
-                    <div class="text-holder">
-                        <h4 class="name">Marco Pierre White</h4>
-                        <h5 class="desc">World-Class Chef</h5>
-                    </div>
-                </div>
-                <p class="comment">
-                    "Outstanding!"
-                </p>
-                <div class="rating">
-                    <i class="icon bx bxs-star"></i>
-                    <i class="icon bx bxs-star"></i>
-                    <i class="icon bx bxs-star"></i>
-                    <i class="icon bx bxs-star"></i>
-                    <i class="icon bx bxs-star"></i>
-                    
-                </div>
-            </div>
-            <!-- REVIEW END -->
-
-            <!-- REVIEW START -->
-            <div class="review-item">
-                <div class="container">
-                    <div class="img-box">
-                        <img src="./img/Review/rie.png" alt="#">
-                    </div>
-                    <div class="text-holder">
-                        <h4 class="name">Rie Takahasi</h4>
-                        <h5 class="desc">Japanese Voice Actress</h5>
-                    </div>
-                </div>
-                <p class="comment">
-                    "非常に簡単でシンプルです。レシピが美味しすぎる!!"
-                </p>
-                <div class="rating">
-                    <i class="icon bx bxs-star"></i>
-                    <i class="icon bx bxs-star"></i>
-                    <i class="icon bx bxs-star"></i>
-                    <i class="icon bx bxs-star"></i>
-                    <i class="icon bx bxs-star"></i>
-                    
-                </div>
-            </div>
-            <!-- REVIEW END -->
-
-            <!-- REVIEW START -->
-            <div class="review-item">
-                <div class="container">
-                    <div class="img-box">
-                        <img src="./img/Review/charlie.png" alt="#">
-                    </div>
-                    <div class="text-holder">
-                        <h4 class="name">MoistCr1tikal</h4>
-                        <h5 class="desc">Streamer</h5>
-                    </div>
-                </div>
-                <p class="comment">
-                    "I did some tier list of their recipes, all of it got SS tier."
-                </p>
-                <div class="rating">
-                    <i class="icon bx bxs-star"></i>
-                    <i class="icon bx bxs-star"></i>
-                    <i class="icon bx bxs-star"></i>
-                    <i class="icon bx bxs-star"></i>
-                    <i class="icon bx bxs-star"></i>
-                    
-                </div>
-            </div>
-            <!-- REVIEW END -->
-        </div>
-
-    </section>
-
-    <!-- REVIEW END -->
-
-
-
-
-    <!-- BLOGS START -->
-
-    <section id="blogs">
-
-        <div class="section-heading">
-            <h3>Our Recipe</h3>
-            <h1>Most Viewed</h1>
-            <div class="square-wrapper flex-row">
-                <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
-            </div>
-        </div>
-
-        <div class="blog-carousel owl-carousel owl-theme" data-aos="fade-right" data-aos-duration="1000">
-
-            <!-- BLOG POST START -->
-            <a href="#" class="blog-post">
-
-                <div class="img-wrapper">
-                    <img src="./img/Blog/1.jpg" alt="#">
-                    <div class="overlay"><i class="icon bx bx-link"></i></div>
-                </div>
-
-                <div class="text-wrapper">
-                    <h5 class="blog-title">adsada</h5>
-                    <p class="desc">dogadsaasdasdsadadsadadsa</p>
-                    <p class="time"><i class="icon bx bx-time-five"></i>Time: <span>15min</span></p>
-                    <p class="time"><i class="icon bx bx-time-five"></i>Time: <span>15min</span></p>
-                    <p class="time"><i class="icon bx bx-time-five"></i>Time: <span>15min</span></p>
-                </div>
-
-            </a>
-            <!-- BLOG POST END -->
-
-            <!-- BLOG POST START -->
-            <a href="#" class="blog-post">
-
-                <div class="img-wrapper">
-                    <img src="./img/Blog/2.jpg" alt="#">
-                    <div class="overlay"><i class="icon bx bx-link"></i></div>
-                </div>
-
-                <div class="text-wrapper">
-                    <h5 class="blog-title">adsada</h5>
-                    <p class="desc">dogadsaasdasdsadadsadadsa oten dog pagadsadada</p>
-                    <p class="time"><i class="icon bx bx-time-five"></i>Time: <span>15min</span></p>
-                    <p class="time"><i class="icon bx bx-time-five"></i>Time: <span>15min</span></p>
-                    <p class="time"><i class="icon bx bx-time-five"></i>Time: <span>15min</span></p>
-                </div>
-
-            </a>
-            <!-- BLOG POST END -->
-
-            <!-- BLOG POST START -->
-            <a href="#" class="blog-post">
-
-                <div class="img-wrapper">
-                    <img src="./img/Blog/3.jpg" alt="#">
-                    <div class="overlay"><i class="icon bx bx-link"></i></div>
-                </div>
-
-                <div class="text-wrapper">
-                    <h5 class="blog-title">adsada</h5>
-                    <p class="desc">dogadsaasdasdsadadsadadsa</p>
-                    <p class="time"><i class="icon bx bx-time-five"></i>Time: <span>15min</span></p>
-                    <p class="time"><i class="icon bx bx-time-five"></i>Time: <span>15min</span></p>
-                    <p class="time"><i class="icon bx bx-time-five"></i>Time: <span>15min</span></p>
-                </div>
-
-            </a>
-            <!-- BLOG POST END -->
-        </div>
-
-    </section>
-
-    <!-- BLOGS END -->
-    
-
 
     
     <!-- FOOTER-QUOTE START -->
 
     <section class="footer-quote flex-col">
         <h1>"Bringing People Together, One Delicious Recipe At A Time."</h1>
-        <a href="recipes.html" class="btn3">View Our Delicious Recipes</a>
+        <a href="#" class="btn3">View Our Delicious Recipes</a>
     </section>
 
     <!-- FOOTER-QUOTE END -->
