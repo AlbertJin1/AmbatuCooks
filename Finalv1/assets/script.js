@@ -3,6 +3,9 @@ $('.home-carousel').owlCarousel({
     loop:true,
     margin:0,
     dots: true,
+    autoplay: true,
+    autoplayTimeout: 7000,
+    animateOut: 'fadeOut',
     nav:false,
     responsive:{
         0:{
@@ -43,18 +46,18 @@ searchBtn.onclick = function(){
     }
 }
 
-cartBtn.onclick = function(){
-    document.getElementById("cart").classList.toggle('active');
+// cartBtn.onclick = function(){
+//     document.getElementById("cart").classList.toggle('active');
 
-    if(document.getElementById("cart").classList.contains('active')){
-        cartBtn.classList.remove("bx-cart");
-        cartBtn.classList.add("bx-x");
-    }
-    else{
-        cartBtn.classList.remove("bx-x");
-        cartBtn.classList.add("bx-cart");
-    }
-}
+//     if(document.getElementById("cart").classList.contains('active')){
+//         cartBtn.classList.remove("bx-cart");
+//         cartBtn.classList.add("bx-x");
+//     }
+//     else{
+//         cartBtn.classList.remove("bx-x");
+//         cartBtn.classList.add("bx-cart");
+//     }
+// }
 
 darkBtn.onclick = function(){
     document.body.classList.toggle('dark-mode');
@@ -126,7 +129,7 @@ $('.review-carousel').owlCarousel({
         0:{
             items:1
         },
-        750:{
+        600:{
             items:2
         },
         1000:{
