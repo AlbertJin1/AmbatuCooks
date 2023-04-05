@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
 
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.4.0/css/lightgallery.min.css"/>
 
@@ -131,7 +133,7 @@
     <!-- ABOUT START -->
 
     <section id="about" class="flex-row">
-        <div class="booking-form">
+        <div class="booking-form" data-aos="fade-right" data-aos-duration="1000">
             <span>Make A</span>
             <h2>Review</h2>
             <form action="#">
@@ -143,7 +145,7 @@
             </form>
         </div>
 
-        <div class="text-wrapper">
+        <div class="text-wrapper" data-aos="fade-left" data-aos-duration="1000">
             <h1>DREAMY BULL</h1>
             <h3>Morale Boosting Motivator</h3>
             <p>Hey there, have you ever been in the mood to whip up something delicious in the kitchen but you're not quite sure what to make? Well, let me tell you about this amazing recipe website! <br>It's the perfect place to find all sorts of tasty recipes, from quick and easy meals to fancy desserts. Trust me, this website will be <br>your go-to source for all your cooking needs!</p>
@@ -152,7 +154,7 @@
             </div>
         </div>
 
-        <div class="img-wrapper">
+        <div class="img-wrapper" data-aos="fade-left" data-aos-duration="1000">
             <img src="./img/About/about-ambatu.png" alt="#">
         </div>
     </section>
@@ -191,7 +193,7 @@
 
 
         <!-- MENU NAV -->
-        <div class="menu-tabs flex-row">
+        <div class="menu-tabs flex-row" data-aos="zoom-in" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom">
             <div class="menu-tab-item active" data-target="#main-dishes">
                 <i class="bx bxs-bowl-hot"></i>
                 <span>Main Dishes</span>
@@ -211,7 +213,7 @@
         </div>
 
         <!-- MAIN DISHES -->
-        <div id="main-dishes" class="menu-tab-content show">
+        <div id="main-dishes" class="menu-tab-content show" data-aos="zoom-in" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom">
             
             <!-- ITEM START -->
             <div class="menu-item">
@@ -603,7 +605,7 @@
    
     <!-- GALLERY START -->
 
-    <section id="gallery">
+    <section id="gallery" data-aos="fade-right" data-aos-duration="1000">
         <h3>Our Gallery</h3>
         <h1>Our Untold Stories</h1>
         <div class="square-wrapper flex-row">
@@ -690,7 +692,7 @@
             </div>
         </div>
 
-        <div class="team-carousel owl-carousel owl-theme">
+        <div class="team-carousel owl-carousel owl-theme" data-aos="fade-right" data-aos-duration="1000">
             <!-- CARD START -->
             <div class="team-card">
 
@@ -800,7 +802,7 @@
             </div>
         </div>
 
-        <div class="review-carousel owl-carousel owl-theme">
+        <div class="review-carousel owl-carousel owl-theme" data-aos="fade-up" data-aos-duration="1000">
             <!-- REVIEW START -->
             <div class="review-item">
                 <div class="container">
@@ -923,7 +925,7 @@
             </div>
         </div>
 
-        <div class="blog-carousel owl-carousel owl-theme">
+        <div class="blog-carousel owl-carousel owl-theme" data-aos="fade-right" data-aos-duration="1000">
 
             <!-- BLOG POST START -->
             <a href="#" class="blog-post">
@@ -935,7 +937,7 @@
 
                 <div class="text-wrapper">
                     <h5 class="blog-title">adsada</h5>
-                    <p class="desc">dogadsaasdasdsadadsadadsadsadsadasda.</p>
+                    <p class="desc">dogadsaasdasdsadadsadadsa</p>
                     <p class="time"><i class="icon bx bx-time-five"></i></p>
                 </div>
 
@@ -952,7 +954,7 @@
 
                 <div class="text-wrapper">
                     <h5 class="blog-title">adsada</h5>
-                    <p class="desc">dogadsaasdasdsadadsadadsadsadsadasda.</p>
+                    <p class="desc">dogadsaasdasdsadadsadadsa oten dog pagadsadada</p>
                     <p class="time"><i class="icon bx bx-time-five"></i></p>
                 </div>
 
@@ -969,7 +971,7 @@
 
                 <div class="text-wrapper">
                     <h5 class="blog-title">adsada</h5>
-                    <p class="desc">dogadsaasdasdsadadsadadsadsadsadasda.</p>
+                    <p class="desc">dogadsaasdasdsadadsadadsa</p>
                     <p class="time"><i class="icon bx bx-time-five"></i>Time: <span>15min</span></p>
                 </div>
 
@@ -1042,6 +1044,12 @@
 
     <!-- OWL CARO -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
     <!-- LIGHTGAL -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>

@@ -480,7 +480,7 @@ input[type="search"]::-webkit-search-cancel-button {
 .booking-form {
     width: 30%;
     background-color: var(--primary-color);
-    padding: 50px 30px 30px 30px;
+    padding: 70px 30px 50px 30px;
 }
 
 .booking-form span {
@@ -563,7 +563,7 @@ input[type="search"]::-webkit-search-cancel-button {
     margin-top: auto;
     position: absolute;
     width: 30rem;
-    right: 50px;
+    right: 0px;
     bottom: 0;
 }
 
@@ -1180,8 +1180,14 @@ footer{
 
 
 /* MEDIA QUERIES */
+@media only screen and (max-width: 1200px){
+    #about .img-wrapper{
+        width: 30rem;
+    }
+}
+
 @media only screen and (max-width: 1080px){
-    #about . .img-wrapper{
+    #about .img-wrapper{
         width: 22rem;
     }
     .gallery-wrapper .gallery-img{
@@ -1290,7 +1296,7 @@ footer{
         font-size: 40px;
     }
     p, .event-item p{
-        font-size: 15px;
+        font-size: 15px!important;
     }
     .menu-tab-item::after,
     .menu-tab-item.active::after{
@@ -1324,6 +1330,16 @@ footer{
     }
     .footer-top{
         padding: 35px 15px;
+    }
+    .footer-top .flex-col{
+        width: 100%;
+    }
+    #about .img-wrapper{
+        width: 80%;
+    }
+    #about .text-wrapper{
+        padding: 0;
+        width: 100%;
     }
 }
 
@@ -1367,7 +1383,7 @@ footer{
         width: 100%;
     }
     #about .img-wrapper{
-        width: 60%;
+        width: 80%;
     }
     .section-heading{
         margin-bottom: 10px;
@@ -1376,5 +1392,93 @@ footer{
     .square-wrapper::before{
         width: 50px;
     }
-    
+    #quote .text-wrapper{
+        margin: 0 10px;
+    }
+    #quote .text-wrapper h1{
+        font-size: 48px;
+    }
+    #quote .text-wrapper h2{
+        font-size: 30px;
+    }
+    .menu-tab-content{
+        padding: 0;
+    }
+    .menu-tabs{
+        padding: 0;
+    }
+    .menu-tab-item{
+        width: 40%;
+        margin: 10px;
+    }
+    .menu-tab-item span{
+        font-size: 16px;
+    }
+    .menu-item{
+        padding: 20px 10px;
+    }
+    .menu-item .menu-item-inner{
+        flex-direction: column;
+    }
+    .menu-item .menu-item-inner .food-img{
+        width: 100%;
+        margin: 0;
+    }
+    .menu-item .menu-item-inner .text .dish-details{
+        flex-direction: column-reverse;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .menu-item .text,
+    .menu-item .text .price,
+    .menu-item .text .dish-details h2,
+    .menu-item .text .desc p{
+        padding-right: 0!important;
+        width: 100%;
+        text-align: center;
+    }
+    .menu-item .text .desc p{
+        font-size: 18px;
+    }
+    .menu-item .text .dish-details{
+        flex-direction: column;
+        align-items: flex-start!important;
+    }
+    .menu-item .text .dish-details .line{
+        display: none;
+    }
+    .gallery-wrapper .gallery-img{
+        width: 900vw;
+    }
+    .review-item .container{
+        flex-direction: column;
+        text-align: center;
+    }
+    .review-item .img-box{
+        margin-right: 0!important;
+        margin-bottom: 10px;
+    }
+    .review-item p,
+    .review-item .rating{
+        text-align: center;
+    }
+    .footer-top .flex-col{
+        width: 100%;
+    }
+    .footer-quote h1{
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 340px){
+    #home .slide .content{
+        width: 100%;
+    }
+    #navbar,
+    #navbar.fixed{
+        padding: 0 10px;
+    }
+    .review-item .details{
+        font-size: 16px;
+    }
 }
