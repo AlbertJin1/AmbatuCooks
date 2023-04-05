@@ -33,6 +33,23 @@ let cartBtn = document.querySelector('.cartbtn');
 let darkBtn = document.querySelector('.darkbtn');
 let signBtn = document.getElementById('signImg');
 
+
+
+menuBtn.onclick = function(){
+    document.getElementById("nav-items").classList.toggle('active');
+
+    if(document.getElementById("nav-items").classList.contains('active')){
+        menuBtn.classList.remove("bx-menu");
+        menuBtn.classList.add("bx-x");
+    }
+    else{
+        menuBtn.classList.remove("bx-x");
+        menuBtn.classList.add("bx-menu");
+    }
+}
+
+
+
 searchBtn.onclick = function(){
     document.getElementById("search-form").classList.toggle('active');
 
