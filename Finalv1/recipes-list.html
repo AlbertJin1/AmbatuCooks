@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="../FILES/img/ambatuicon.png" type="image/x-icon">
+
+    <!-- STYLESHEETS LOCAL MEOW -->
+    <link rel="stylesheet" href="./assets/style-recipe-list.css">
+    
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.4.0/css/lightgallery.min.css"/>
+
+    <title>Ambatu Cooks</title>
+
+</head>
+
+<body>
+
+    <div class="loader">
+        <img src="./img/loader/loading-loader.gif" alt="loader gif">
+    </div>
+
+    <div id="progress">
+        <span id="progress-value">&#x1F815;</span>
+    </div>
+
+    <header>
+        
+        <!-- PRENAV FIRST -->
+        <div id="prenav-text">
+            <div class="flex-row">
+                <div class="contact-info">Phone no: <span>+63 997 259 4233</span> or email us:
+                    <span>ambatucooks@gmail.com</span>
+                </div>
+                <div class="opening-times flex-row">
+                    <ul class="social-links flex-row">
+                        <li><a href="#"><i class="bx bxl-facebook"></i></a></li>
+                        <li><a href="#"><i class="bx bxl-instagram"></i></a></li>
+                        <li><a href="#"><i class="bx bxl-twitter"></i></a></li>
+                        <li><a href="#"><i class="bx bxl-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- PRENAV END -->
+
+
+
+
+        <!-- NAVBAR START -->
+
+        <nav id="navbar" class="navbar flex-row">
+
+            <div class="nav-icon menu-btn-wrapper">
+                <div id="menu-btn" class="menu-btn bx bx-menu"></div>
+            </div>
+
+            <div class="logo">
+                <h5>
+                    <img href ="main.html" src="./img/Logo/AMBATU.png" alt="">
+                </h5>
+            </div>
+
+            <ul id="nav-items" class="nav-items">
+                <li><a href="main.html#home" class="nav-links">HOME</a></li>
+                <li><a href="main.html#about" class="nav-links">ABOUT</a></li>
+                <li><a href="recipes.html" class="nav-links">MAIN MENU</a></li>
+                <li><a href="#recipes-main" class="nav-links">MAIN DISH</a></li>
+                <li><a href="#" class="nav-links">APPETIZER</a></li>
+                <li><a href="#" class="nav-links">DESSERT</a></li>
+                <li><a href="#" class="nav-links">BEVERAGE</a></li>
+                <li><a href="main.html#reviews" class="nav-links">REVIEWS</a></li>
+                <li><a href="main.html#gallery" class="nav-links">GALLERY</a></li>
+                <li><a href="recipes.html#blogs" class="nav-links">BLOG</a></li>
+                <li><a href="#footer" class="nav-links">CONTACT</a></li>
+            </ul>
+
+            <ul class="nav-btns">
+
+                <div class="nav-icon">
+                    <i class="darkbtn bx bx-moon"></i>
+                </div>
+
+            </ul>
+
+        </nav>
+
+        <!-- NAVBAR END -->
+        
+    </header>
+
+    <section class="space"></section>
+
+    <!-- #RECIPE MENU -->
+
+    <section id="recipes-main">
+        <div class="section-heading">
+            <h3>Main Dishes</h3>
+            <h1>Hearty Main Course Recipes That Will Satisfy Your Hunger</h1>
+            <div class="square-wrapper flex-row">
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+            </div>
+        </div>
+
+        <div class="menu" class="menu-tab-content show" data-aos="zoom-in" data-aos-duration="1000">
+            <div class="food-items">
+                <img src="./img/RECIPES/1-MAIN DISH/1-Miso-Ramen.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h2>Miso Ramen</h2>
+                    </div>
+                    <p>Flavored with pork and chicken broth with a mix of toppings such as chashu and ramen egg, this bowl of Miso Ramen is going to satisfy your craving. You can make delicious ramen with authentic broth in less than 30 minutes!</p>
+                    <a href="#popup1" class="btn">View Recipe</a>
+                    <div id="popup1" class="popup">
+                        <a href="#" class="close">&times;</a>
+                        <h2>Title Popup</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                    <a href="#" class="close-popup"></a>
+                </div>
+            </div>
+
+            <div class="food-items">
+                <img src="./img/RECIPES/1-MAIN DISH/2-Japanese-Curry.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h2>Japanese Chicken Curry</h2>
+                    </div>
+                    <p>Delicious Japanese chicken curry recipe for a weeknight dinner! Tender pieces of chicken, carrots, and potatoes cooked in a rich savory curry sauce, this Japanese version of curry is a must-have for your family meal. </p>
+                    <a href="#popup2" class="btn">View Recipe</a>
+                    <div id="popup2" class="popup">
+                        <a href="#" class="close">&times;</a>
+                        <h2>Title Popup</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                    <a href="#" class="close-popup"></a>
+                </div>
+            </div>
+
+            <div class="food-items">
+                <img src="./img/RECIPES/1-MAIN DISH/3-Tonkatsu.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h2>Tonkatsu (Japanese Pork Cutlet)</h2>
+                    </div>
+                    <p>Tonkatsu (Japanese Pork Cutlet) is one of the simplest meals you can make at home. Every bite is perfectly crunchy on the outside and juicy on the inside with the added flavor from Tonkatsu Sauce!</p>
+                    <a href="#popup3" class="btn">View Recipe</a>
+                    <div id="popup3" class="popup">
+                        <a href="#" class="close">&times;</a>
+                        <h2>Title Popup</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                    <a href="#" class="close-popup"></a>
+                </div>
+            </div>
+
+            <div class="food-items">
+                <img src="./img/RECIPES/1-MAIN DISH/4-Oyakodon.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h2>Oyakodon</h2>
+                    </div>
+                    <p>Oyakodon is a classic comfort food of Japanese home cooking. Tender pieces of chicken, onions, and eggs are simmered in an umami-rich sauce and then poured over a bowl of fluffy steamed rice.</p>
+                    <a href="#popup4" class="btn">View Recipe</a>
+                    <div id="popup4" class="popup">
+                        <a href="#" class="close">&times;</a>
+                        <h2>Title Popup</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                    <a href="#" class="close-popup"></a>
+                </div>
+            </div>
+
+            <div class="food-items">
+                <img src="./img/RECIPES/1-MAIN DISH/5-Okonomiyaki.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h2>Okonomiyaki</h2>
+                    </div>
+                    <p>Popular street food from Osaka, Japan, Okonomiyaki is a savory version of Japanese pancake, made with flour, eggs, shredded cabbage, and your choice of protein, and topped with a variety of condiments.</p>
+                    <a href="#popup5" class="btn">View Recipe</a>
+                    <div id="popup5" class="popup">
+                        <a href="#" class="close">&times;</a>
+                        <h2>Title Popup</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                    <a href="#" class="close-popup"></a>
+                </div>
+            </div>
+
+            <div class="food-items">
+                <img src="./img/RECIPES/1-MAIN DISH/6-Teriyaki Salmon.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h2>Teriyaki Salmon</h2>
+                    </div>
+                    <p>Use this quick and easy Teriyaki Salmon recipe to make a light and savory meal any night of the week. Salmon fillets are pan-grilled to tender perfection in the traditional method and finished with an authentic homemade teriyaki sauce.</p>
+                    <a href="#popup6" class="btn">View Recipe</a>
+                    <div id="popup6" class="popup">
+                        <a href="#" class="close">&times;</a>
+                        <h2>Title Popup</h2>
+                        <p>hakdoggadjahdhaj ashdjkasdhajashdasjkdh adasda</p>
+                    </div>
+                    <a href="#" class="close-popup"></a>
+                </div>
+            </div>
+
+            <div class="food-items">
+                <img src="Sandwich.jpeg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h2>BBQ Sandwich</h2>
+                    </div>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus reiciendis nam non quia! Earum eveniet quia minus nemo.</p>
+                    <a href="#popup7" class="btn">View Recipe</a>
+                    <div id="popup7" class="popup">
+                        <a href="#" class="close">&times;</a>
+                        <h2>Title Popup</h2>
+                        <p>hakdoggadjahdhaj ashdjkasdhajashdasjkdh adasda</p>
+                    </div>
+                    <a href="#" class="close-popup"></a>
+                </div>
+            </div>
+
+            <div class="food-items">
+                <img src="Sandwich.jpeg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h2>BBQ Sandwich</h2>
+                    </div>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus reiciendis nam non quia! Earum eveniet quia minus nemo.</p>
+                    <a href="#popup8" class="btn">View Recipe</a>
+                    <div id="popup8" class="popup">
+                        <a href="#" class="close">&times;</a>
+                        <h2>Title Popup</h2>
+                        <p>hakdoggadjahdhaj ashdjkasdhajashdasjkdh adasda</p>
+                    </div>
+                    <a href="#" class="close-popup"></a>
+                </div>
+            </div>
+
+            <div class="food-items">
+                <img src="Sandwich.jpeg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h2>BBQ Sandwich</h2>
+                    </div>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus reiciendis nam non quia! Earum eveniet quia minus nemo.</p>
+                    <a href="#popup9" class="btn">View Recipe</a>
+                    <div id="popup9" class="popup">
+                        <a href="#" class="close">&times;</a>
+                        <h2>Title Popup</h2>
+                        <p>hakdoggadjahdhaj ashdjkasdhajashdasjkdh adasda</p>
+                    </div>
+                    <a href="#" class="close-popup"></a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- #READ MORE LESS END -->
+    
+    <!-- FOOTER-QUOTE START -->
+
+    <section class="footer-quote flex-col">
+        <h1>From Our Kitchen To Yours, Let's Create Something Delicious</h1>
+        <a href="#" class="btn3">View Our Delicious Recipes</a>
+    </section>
+
+    <!-- FOOTER-QUOTE END -->
+    
+
+    
+    <!-- FOOTER START -->
+
+    <footer id="footer">
+        <div class="footer-top flex-row">
+
+            <div class="flex-col">
+                <h4 class="logo-name">AMBATUCOOKS</h4>
+
+                <p class="desc">"Food is not just fuel, it's information. It talks to your DNA and tells it what to do. The most powerful tool to change your health, environment and entire world is your fork. Every time you eat, you make a choice. With every bite, you hold the power to change your life and the lives of others. Choose wisely, savor every flavor and nourish your body with love and respect."<br>- Dr. Mark Hyman.</p>
+                <ul class="social-links">
+                    <li><a href="#"><i class="icon bx bxl-facebook"></i></a></li>
+                    <li><a href="#"><i class="icon bx bxl-twitter"></i></a></li>
+                    <li><a href="#"><i class="icon bx bxl-instagram"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="flex-col">
+                <h4 class="heading">ADDRESS</h4>
+
+                <p class="desc">Zone 6 Capisnon<br>Kauswagan, Cagayan de Oro City 9000</p>
+                <p class="desc">P: +63 997 259 4233<br>E: ambatucooks@gmail.com</p>
+            </div>
+
+            <div class="flex-col">
+                <h4 class="heading">MORE INFO</h4>
+                <a href="#menu">Menu</a>
+                <a href="#about">About</a>
+                <a href="#about">Make a Review</a>
+                <a href="#blogs">Blogs</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom flex-row">
+            <span>Copyright &copy 2023 All rights reserved | AmbatuCooks</span>
+        </div>
+    </footer>
+
+    <!-- FOOTER END -->
+
+
+
+    <!-- JQEURY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- OWL CARO -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- LIGHTGAL -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+
+    <script>
+        lightGallery(document.querySelector('.gallery-wrapper'));
+    </script>
+
+
+    <!-- LOCAL JS -->
+    <script src="./assets/script-recipe-list.js"></script>
+
+</body>
+
+</html>

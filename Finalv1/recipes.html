@@ -28,6 +28,10 @@
 
 <body>
 
+    <div class="loader">
+        <img src="./img/loader/loading-loader.gif" alt="loader gif">
+    </div>
+
     <div id="progress">
         <span id="progress-value">&#x1F815;</span>
     </div>
@@ -71,9 +75,13 @@
             </div>
 
             <ul id="nav-items" class="nav-items">
-                <li><a href="main.html" class="nav-links">HOME</a></li>
-                <li><a href="#menu" class="nav-links">MENU</a></li>
-                <li><a href="#blogs" class="nav-links">BLOG</a></li>
+                <li><a href="main.html#home" class="nav-links">HOME</a></li>
+                <li><a href="main.html#about" class="nav-links">ABOUT</a></li>
+                <li><a href="recipes.html" class="nav-links">MAIN MENU</a></li>
+                <li><a href="recipes-list.html" class="nav-links">COURSES</a></li>
+                <li><a href="main.html#reviews" class="nav-links">REVIEWS</a></li>
+                <li><a href="main.html#gallery" class="nav-links">GALLERY</a></li>
+                <li><a href="recipes.html#blogs" class="nav-links">BLOG</a></li>
                 <li><a href="#footer" class="nav-links">CONTACT</a></li>
             </ul>
 
@@ -177,7 +185,7 @@
     <section id="menu" class="menu-section">
         <div class="section-heading">
             <h3>Category Selections</h3>
-            <h1>Ambatu Menu</h1>
+            <h1>Ambatu Selected Recipes</h1>
             <div class="square-wrapper flex-row">
                 <div class="square"></div>
                 <div class="square"></div>
@@ -233,6 +241,7 @@
             
             <!-- ITEM START -->
             <div class="menu-item">
+                <a href="#">
                     <div class="menu-item-inner">
                         <div class="food-img">
                             <img src="./img/Main-dishes/3.png" alt="#">
@@ -248,6 +257,7 @@
                             </div>
                         </div>
                     </div>
+                </a>
             </div>
             <!-- ITEM END -->
 

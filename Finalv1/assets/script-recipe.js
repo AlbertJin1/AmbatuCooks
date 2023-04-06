@@ -113,6 +113,7 @@ $('.blog-carousel').owlCarousel({
     }
 })
 
+// REFRESH TO TOP
 if (history.scrollRestoration) {
     history.scrollRestoration = 'manual';
 } else {
@@ -121,6 +122,7 @@ if (history.scrollRestoration) {
     }
 }
 
+// PROGRESS SCROLL BACK TO TOP
 let calcScrollValue = () => {
     let scrollProgress = document.getElementById("progress");
     let progressValue = document.getElementById("progress-value");
@@ -141,3 +143,12 @@ let calcScrollValue = () => {
 };
 window.onscroll = calcScrollValue;
 window.onload = calcScrollValue;
+
+// LOADER
+var loader = document.querySelector(".loader")
+
+window.addEventListener("load",vanish);
+
+function vanish(){
+    loader.classList.add("disappear")
+}

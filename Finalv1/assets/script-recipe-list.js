@@ -1,25 +1,3 @@
-// HOME CARO
-$('.home-carousel').owlCarousel({
-    loop:true,
-    margin:0,
-    dots: false,
-    autoplay: true,
-    autoplayTimeout: 7000,
-    animateOut: 'fadeOut',
-    nav:false,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:1
-        },
-        1000:{
-            items:1
-        }
-    }
-})
-
 
 // NAVBAR
 window.addEventListener('scroll', function(){
@@ -95,63 +73,7 @@ darkBtn.onclick = function(){
 }
 
 
-// TEAM CAROU
-$('.team-carousel').owlCarousel({
-    loop:true,
-    margin:20,
-    dots: false,
-    nav:false,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:2
-        },
-        1000:{
-            items:3
-        }
-    }
-})
-
-// REVIEW CAROU
-$('.review-carousel').owlCarousel({
-    loop:true,
-    margin:10,
-    dots: false,
-    nav:false,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:2
-        },
-        1000:{
-            items:3
-        }
-    }
-})
-
-// BLOGS CAROU
-$('.blog-carousel').owlCarousel({
-    loop:true,
-    dots:false,
-    margin:5,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:2
-        },
-        1000:{
-            items:3
-        }
-    }
-})
-
-// REFRESH TO TOP
+// TOP ON RELOAD
 if (history.scrollRestoration) {
     history.scrollRestoration = 'manual';
 } else {
@@ -160,7 +82,7 @@ if (history.scrollRestoration) {
     }
 }
 
-// SCROLL PROGRESS BACK TO TOP
+// SCROLL TO TOP
 let calcScrollValue = () => {
     let scrollProgress = document.getElementById("progress");
     let progressValue = document.getElementById("progress-value");
@@ -191,3 +113,4 @@ window.addEventListener("load",vanish);
 function vanish(){
     loader.classList.add("disappear")
 }
+
