@@ -24,6 +24,69 @@ html {
     scroll-behavior: smooth;
 }
 
+/* LOADING */
+.loader-container{
+    z-index: 1001;
+    width: 100%;
+    height: 100vh;
+    background-color: #111;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader{
+    width: 50px;
+    height: 50px;
+    border: 5px solid;
+    color: #3498db;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: loader 1.2s linear infinite;
+}
+
+@keyframes loader{
+    25%{
+        color: #2ecc71;
+    }
+    50%{
+        color: #f1c40f;
+    }
+    75%{
+        color: #e74c3c;
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+/* BACK TO TOP BUTTON */
+#progress {
+    z-index: 1000;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    height: 70px;
+    width: 70px;
+    display: none;
+    place-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  #progress-value {
+    display: block;
+    height: calc(100% - 15px);
+    width: calc(100% - 15px);
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 35px;
+    color: #001a2e;
+  }
+
 /* START */
 :root {
     --bg-color-1: white;
@@ -240,6 +303,8 @@ ul {
 }
 
 .menu-btn-wrapper {
+    color: #5575B5;
+    font-size: 24px;
     display: none;
 }
 
@@ -525,7 +590,7 @@ input[type="search"]::-webkit-search-cancel-button {
     padding: 12px 10px;
     font-size: 16px;
     color-scheme: dark;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .booking-form form input::placeholder,
@@ -1192,15 +1257,22 @@ footer{
 
 
 
-
-
-
-
-
 /* MEDIA QUERIES */
+@media only screen and (max-width: 1300px){
+    .menu-item{
+        width: 100%;
+    }
+}
+
 @media only screen and (max-width: 1200px){
     #about .img-wrapper{
         width: 30rem;
+    }
+    .blog-title{
+        font-size:calc(100vw * 18/1000)!important;
+    }
+    .text-wrapper .desc{
+        font-size:calc(100vw * 14/1000)!important
     }
 }
 
@@ -1304,6 +1376,12 @@ footer{
         font-size: 15vw;
         margin: 15px 0;
     }
+    .blog-title{
+        font-size:calc(100vw * 23/1000)!important;
+    }
+    .text-wrapper .desc{
+        font-size:calc(100vw * 18/1000)!important
+    }
 }
 
 @media only screen and (max-width: 850px){
@@ -1343,9 +1421,6 @@ footer{
     .gallery-wrapper .gallery-img{
         width: 45vw;
     }
-    .menu-item{
-        width: 100%;
-    }
     .footer-top{
         padding: 35px 15px;
     }
@@ -1358,6 +1433,12 @@ footer{
     #about .text-wrapper{
         padding: 0;
         width: 100%;
+    }
+    .blog-title{
+        font-size:calc(100vw * 27/1000)!important;
+    }
+    .text-wrapper .desc{
+        font-size:calc(100vw * 23/1000)!important
     }
 }
 
@@ -1455,8 +1536,11 @@ footer{
         width: 100%;
         text-align: center;
     }
+    .menu-item .text .dish-details h2{
+        font-size: calc(100vw * 45/1000);
+    }
     .menu-item .text .desc p{
-        font-size: 18px;
+        font-size: calc(100vw * 32/1000)!important;
     }
     .menu-item .text .dish-details{
         flex-direction: column;
@@ -1479,6 +1563,12 @@ footer{
     .review-item p,
     .review-item .rating{
         text-align: center;
+    }
+    .blog-title{
+        font-size:calc(100vw * 45/1000)!important;
+    }
+    .text-wrapper .desc{
+        font-size:calc(100vw * 32/1000)!important
     }
     .footer-top .flex-col{
         width: 100%;

@@ -27,7 +27,14 @@
 </head>
 
 <body>
+    
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
 
+    <div id="progress">
+        <span id="progress-value">&#x1F815;</span>
+    </div>
     <header>
         
         <!-- PRENAV FIRST -->
@@ -71,7 +78,7 @@
             <ul id="nav-items" class="nav-items">
                 <li><a href="#home" class="nav-links">HOME</a></li>
                 <li><a href="#about" class="nav-links">ABOUT</a></li>
-                <li><a href="#menu" class="nav-links">MENU</a></li>
+                <li><a href="recipes.html" class="nav-links">MENU</a></li>
                 <li><a href="#reviews" class="nav-links">REVIEWS</a></li>
                 <li><a href="#gallery" class="nav-links">GALLERY</a></li>
                 <li><a href="#blogs" class="nav-links">BLOG</a></li>
@@ -198,440 +205,11 @@
     </section>
 
     <!-- QUOTE END -->
-
-
-
-
-    <!-- SECTION HEADING START -->
-
-    <section id="menu" class="menu-section">
-        <div class="section-heading">
-            <h3>Special Selections</h3>
-            <h1>From Our Menu</h1>
-            <div class="square-wrapper flex-row">
-                <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
-            </div>
-        </div>
-
-
-        <!-- MENU NAV -->
-        <div class="menu-tabs flex-row" data-aos="zoom-in" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom">
-            <div class="menu-tab-item active" data-target="#main-dishes">
-                <i class="bx bxs-bowl-hot"></i>
-                <span>Main Dishes</span>
-            </div>
-            <div class="menu-tab-item" data-target="#starters">
-                <i class="bx bx-restaurant"></i>
-                <span>Appetizers and Snacks</span>
-            </div>
-            <div class="menu-tab-item" data-target="#desserts">
-                <i class="bx bxs-popsicle"></i>
-                <span>Desserts</span>
-            </div>
-            <div class="menu-tab-item" data-target="#drinks">
-                <i class="bx bxs-drink"></i>
-                <span>Drinks</span>
-            </div>
-        </div>
-
-        <!-- MAIN DISHES -->
-        <div id="main-dishes" class="menu-tab-content show" data-aos="zoom-in" data-aos-duration="1000"> 
-            
-            <!-- ITEM START -->
-            <div class="menu-item">
-                <div class="menu-item-inner">
-                    <div class="food-img">
-                        <img src="./img/Main-dishes/1.png" alt="#">
-                    </div>
-                    <div class="text">
-                        <div class="dish-details">
-                            <h2>The Best Parmesan Chicken Bake</h2>
-                            <div class="line"></div>
-                            <!-- <span class="price">None</span> -->
-                        </div>
-                        <div class="desc">
-                            <p>This Parmesan-style chicken bake is done casserole style (so, no breading or frying!), but still offers up that irresistible combination of tender chicken, crunchy-cheesy coating, and flavorful sauce.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ITEM END -->
-            
-            <!-- ITEM START -->
-            <div class="menu-item">
-                <a href="#">
-                    <div class="menu-item-inner">
-                        <div class="food-img">
-                            <img src="./img/Main-dishes/3.png" alt="#">
-                        </div>
-                        <div class="text">
-                            <div class="dish-details">
-                                <h2>Campbell's Tuna Noodle Casserole</h2>
-                                <div class="line"></div>
-                                <!-- <span class="price">None</span> -->
-                            </div>
-                            <div class="desc">
-                                <p>This tuna noodle casserole uses condensed cream of mushroom soup to flavor a creamy sauce that is mixed with tuna, egg noodles, and peas, topped with a crunchy bread crumb topping, and baked to perfection.</p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!-- ITEM END -->
-
-            <!-- ITEM START -->
-            <div class="menu-item">
-                <div class="menu-item-inner">
-                    <div class="food-img">
-                        <img src="./img/Main-dishes/2.png" alt="#">
-                    </div>
-                    <div class="text">
-                        <div class="dish-details">
-                            <h2>Broccoli and Chicken Stir-Fry</h2>
-                            <div class="line"></div>
-                            <!-- <span class="price">None</span> -->
-                        </div>
-                        <div class="desc">
-                            <p>A chicken and broccoli recipe to make at home. Serve with rice.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ITEM END -->
-
-            <!-- ITEM START -->
-            <div class="menu-item">
-                <div class="menu-item-inner">
-                    <div class="food-img">
-                        <img src="./img/Main-dishes/4.png" alt="#">
-                    </div>
-                    <div class="text">
-                        <div class="dish-details">
-                            <h2>Phenomenal Pork Tacos</h2>
-                            <div class="line"></div>
-                            <!-- <span class="price">None</span> -->
-                        </div>
-                        <div class="desc">
-                            <p>These pork tacos made with ground pork, Mexican seasoning, and poblano pepper are served with lime crema and kiwi salsa for a truly delicious taco treat!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ITEM END -->
-
-            <!-- ITEM START -->
-            <div class="menu-item">
-                <div class="menu-item-inner">
-                    <div class="food-img">
-                        <img src="./img/Main-dishes/5.png" alt="#">
-                    </div>
-                    <div class="text">
-                        <div class="dish-details">
-                            <h2>Baked Lemon Butter Chicken Thighs</h2>
-                            <div class="line"></div>
-                            <!-- <span class="price">None</span> -->
-                        </div>
-                        <div class="desc">
-                            <p>These delicious lemon garlic chicken thighs are low carb, keto friendly, and easy enough for a weeknight meal. Guaranteed to impress the pickiest eaters! Serve over egg noodles, mashed potatoes, rice, or alongside your favorite vegetables.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ITEM END -->
-
-            <!-- ITEM START -->
-            <div class="menu-item">
-                <div class="menu-item-inner">
-                    <div class="food-img">
-                        <img src="./img/Main-dishes/6.png" alt="#">
-                    </div>
-                    <div class="text">
-                        <div class="dish-details">
-                            <h2>Chef John's Salisbury Steak</h2>
-                            <div class="line"></div>
-                            <!-- <span class="price">None</span> -->
-                        </div>
-                        <div class="desc">
-                            <p>Serve with buttered mashed potatoes and a vegetable side of your choice.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ITEM END -->
-
-        </div>
-
-        <!-- STARTERS -->
-        <div id="starters" class="menu-tab-content">
-
-            <!-- ITEM START -->
-            <div class="menu-item">
-                <div class="menu-item-inner">
-                    <div class="food-img">
-                        <img src="./img/Starters/1.jpg" alt="#">
-                    </div>
-                    <div class="text">
-                        <div class="dish-details">
-                            <h2>Starter Item</h2>
-                            <div class="line"></div>
-                            <!-- <span class="price">None</span> -->
-                        </div>
-                        <div class="desc">
-                            <p>hakdog way ligo ughh</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ITEM END -->
-
-            <!-- ITEM START -->
-            <div class="menu-item">
-                <div class="menu-item-inner">
-                    <div class="food-img">
-                        <img src="./img/Starters/2.jpg" alt="#">
-                    </div>
-                    <div class="text">
-                        <div class="dish-details">
-                            <h2>Starter Item</h2>
-                            <div class="line"></div>
-                            <!-- <span class="price">None</span> -->
-                        </div>
-                        <div class="desc">
-                            <p>hakdog way ligo ughh</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ITEM END -->
-
-            <!-- ITEM START -->
-            <div class="menu-item">
-                <div class="menu-item-inner">
-                    <div class="food-img">
-                        <img src="./img/Starters/3.jpg" alt="#">
-                    </div>
-                    <div class="text">
-                        <div class="dish-details">
-                            <h2>Starter Item</h2>
-                            <div class="line"></div>
-                            <!-- <span class="price">None</span> -->
-                        </div>
-                        <div class="desc">
-                            <p>hakdog way ligo ughh</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ITEM END -->
-
-            <!-- ITEM START -->
-            <div class="menu-item">
-                <div class="menu-item-inner">
-                    <div class="food-img">
-                        <img src="./img/Starters/4.jpg" alt="#">
-                    </div>
-                    <div class="text">
-                        <div class="dish-details">
-                            <h2>Starter Item</h2>
-                            <div class="line"></div>
-                            <!-- <span class="price">None</span> -->
-                        </div>
-                        <div class="desc">
-                            <p>hakdog way ligo ughh</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ITEM END -->
-            
-        </div>
-
-        <!-- DESSERTS -->
-        <div id="desserts" class="menu-tab-content">
-
-            <!-- ITEM START -->
-            <div class="menu-item">
-                <div class="menu-item-inner">
-                    <div class="food-img">
-                        <img src="./img/Dessert/1.jpg" alt="#">
-                    </div>
-                    <div class="text">
-                        <div class="dish-details">
-                            <h2>Dessert Item</h2>
-                            <div class="line"></div>
-                            <!-- <span class="price">None</span> -->
-                        </div>
-                        <div class="desc">
-                            <p>hakdog way ligo ughh</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ITEM END -->
-
-            <!-- ITEM START -->
-            <div class="menu-item">
-                <div class="menu-item-inner">
-                    <div class="food-img">
-                        <img src="./img/Dessert/2.jpg" alt="#">
-                    </div>
-                    <div class="text">
-                        <div class="dish-details">
-                            <h2>Dessert Item</h2>
-                            <div class="line"></div>
-                            <!-- <span class="price">None</span> -->
-                        </div>
-                        <div class="desc">
-                            <p>hakdog way ligo ughh</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ITEM END -->
-
-            <!-- ITEM START -->
-            <div class="menu-item">
-                <div class="menu-item-inner">
-                    <div class="food-img">
-                        <img src="./img/Dessert/3.jpg" alt="#">
-                    </div>
-                    <div class="text">
-                        <div class="dish-details">
-                            <h2>Dessert Item</h2>
-                            <div class="line"></div>
-                            <!-- <span class="price">None</span> -->
-                        </div>
-                        <div class="desc">
-                            <p>hakdog way ligo ughh</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ITEM END -->
-
-            <!-- ITEM START -->
-            <div class="menu-item">
-                <div class="menu-item-inner">
-                    <div class="food-img">
-                        <img src="./img/Dessert/4.jpg" alt="#">
-                    </div>
-                    <div class="text">
-                        <div class="dish-details">
-                            <h2>Dessert Item</h2>
-                            <div class="line"></div>
-                            <!-- <span class="price">None</span> -->
-                        </div>
-                        <div class="desc">
-                            <p>hakdog way ligo ughh</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ITEM END -->
-            
-        </div>
-
-        <!-- DRINKS -->
-        <div id="drinks" class="menu-tab-content">
-
-            <!-- ITEM START -->
-            <div class="menu-item">
-                <div class="menu-item-inner">
-                    <div class="food-img">
-                        <img src="./img/Drinks/1.jpg" alt="#">
-                    </div>
-                    <div class="text">
-                        <div class="dish-details">
-                            <h2>Drinks Item</h2>
-                            <div class="line"></div>
-                            <!-- <span class="price">None</span> -->
-                        </div>
-                        <div class="desc">
-                            <p>hakdog way ligo ughh</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ITEM END -->
-
-            <!-- ITEM START -->
-            <div class="menu-item">
-                <div class="menu-item-inner">
-                    <div class="food-img">
-                        <img src="./img/Drinks/2.jpg" alt="#">
-                    </div>
-                    <div class="text">
-                        <div class="dish-details">
-                            <h2>Drinks Item</h2>
-                            <div class="line"></div>
-                            <!-- <span class="price">None</span> -->
-                        </div>
-                        <div class="desc">
-                            <p>hakdog way ligo ughh</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ITEM END -->
-
-            <!-- ITEM START -->
-            <div class="menu-item">
-                <div class="menu-item-inner">
-                    <div class="food-img">
-                        <img src="./img/Drinks/3.jpg" alt="#">
-                    </div>
-                    <div class="text">
-                        <div class="dish-details">
-                            <h2>Drinks Item</h2>
-                            <div class="line"></div>
-                            <!-- <span class="price">None</span> -->
-                        </div>
-                        <div class="desc">
-                            <p>hakdog way ligo ughh</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ITEM END -->
-
-            <!-- ITEM START -->
-            <div class="menu-item">
-                <div class="menu-item-inner">
-                    <div class="food-img">
-                        <img src="./img/Drinks/4.jpg" alt="#">
-                    </div>
-                    <div class="text">
-                        <div class="dish-details">
-                            <h2>Drinks Item</h2>
-                            <div class="line"></div>
-                            <!-- <span class="price">None</span> -->
-                        </div>
-                        <div class="desc">
-                            <p>hakdog way ligo ughh</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ITEM END -->
-            
-        </div>
-        
-        <div class="btn-wrapper">
-            <a href="recipes.html" class="btn2">View Full Menu</a>
-        </div>
-
-    </section>
-
-    <!-- SECTION HEADING END -->
-   
-   
    
    
     <!-- GALLERY START -->
 
-    <section id="gallery" data-aos="fade-right" data-aos-duration="1000">
+    <section id="gallery">
         <h3>Our Gallery</h3>
         <h1>Our Untold Stories</h1>
         <div class="square-wrapper flex-row">
@@ -640,7 +218,7 @@
             <div class="square"></div>
         </div>
         
-        <div class="gallery-wrapper flex-row">
+        <div class="gallery-wrapper flex-row" data-aos="fade-right" data-aos-duration="1000">
 
             <!-- IMG START -->
             <a href="./img/Gallery/1.jpg" class="gallery-img">
@@ -943,7 +521,7 @@
 
         <div class="section-heading">
             <h3>Our Recipe</h3>
-            <h1>Most Viewed</h1>
+            <h1>Certified Ambatupicks</h1>
             <div class="square-wrapper flex-row">
                 <div class="square"></div>
                 <div class="square"></div>
@@ -1021,7 +599,7 @@
     <!-- FOOTER-QUOTE START -->
 
     <section class="footer-quote flex-col">
-        <h1>"Bringing People Together, One Delicious Recipe At A Time."</h1>
+        <h1>Bringing People Together, One Delicious Recipe At A Time</h1>
         <a href="recipes.html" class="btn3">View Our Delicious Recipes</a>
     </section>
 

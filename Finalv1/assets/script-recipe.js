@@ -1,25 +1,3 @@
-// HOME CARO
-$('.home-carousel').owlCarousel({
-    loop:true,
-    margin:0,
-    dots: false,
-    autoplay: true,
-    autoplayTimeout: 7000,
-    animateOut: 'fadeOut',
-    nav:false,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:1
-        },
-        1000:{
-            items:1
-        }
-    }
-})
-
 
 // NAVBAR
 window.addEventListener('scroll', function(){
@@ -95,71 +73,32 @@ darkBtn.onclick = function(){
 }
 
 // MENU SECTION
-// let menuTabs = document.querySelector('.menu-tabs');
+let menuTabs = document.querySelector('.menu-tabs');
 
-// menuTabs.addEventListener('click', function(e){
+menuTabs.addEventListener('click', function(e){
 
-//     if(e.target.classList.contains('menu-tab-item') && !e.target.classList.contains('active')){
+    if(e.target.classList.contains('menu-tab-item') && !e.target.classList.contains('active')){
 
-//         const target = e.target.getAttribute("data-target");
+        const target = e.target.getAttribute("data-target");
 
-//         menuTabs.querySelector('.active').classList.remove('active');
+        menuTabs.querySelector('.active').classList.remove('active');
 
-//         e.target.classList.add("active");
+        e.target.classList.add("active");
 
-//         let menuSection = document.querySelector(".menu-section");
+        let menuSection = document.querySelector(".menu-section");
 
-//         menuSection.querySelector(".menu-tab-content.show").classList.remove("show");
-//         menuSection.querySelector(target).classList.add("show");
-//     }
-
-//     else{
-//         return
-//     }
-// })
-
-// TEAM CAROU
-$('.team-carousel').owlCarousel({
-    loop:true,
-    margin:20,
-    dots: false,
-    nav:false,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:2
-        },
-        1000:{
-            items:3
-        }
+        menuSection.querySelector(".menu-tab-content.show").classList.remove("show");
+        menuSection.querySelector(target).classList.add("show");
     }
-})
 
-// REVIEW CAROU
-$('.review-carousel').owlCarousel({
-    loop:true,
-    margin:10,
-    dots: false,
-    nav:false,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:2
-        },
-        1000:{
-            items:3
-        }
+    else{
+        return
     }
 })
 
 // BLOGS CAROU
 $('.blog-carousel').owlCarousel({
     loop:true,
-    dots:false,
     margin:5,
     responsive:{
         0:{
@@ -202,7 +141,3 @@ let calcScrollValue = () => {
 };
 window.onscroll = calcScrollValue;
 window.onload = calcScrollValue;
-
-$(window).on("load",function(){
-    $(".loader-container").fadeOut(1000);
-});
