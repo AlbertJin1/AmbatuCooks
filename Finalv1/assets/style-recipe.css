@@ -552,10 +552,6 @@ input[type="search"]::-webkit-search-cancel-button {
     transition: all 0.1s ease-in-out;
 }
 
-.menu-item a{
-    display: flex;
-}
-
 .menu-item:hover {
     transform: scale(1.05);
 }
@@ -951,7 +947,9 @@ footer{
 
 
 /* MEDIA QUERIES */
-@media only screen and (max-width: 1397px){
+
+
+@media only screen and (max-width: 1663px){
     .menu-item{
         width: 100%;
     }
@@ -1095,36 +1093,6 @@ footer{
     .text-wrapper .desc{
         font-size:calc(100vw * 18/1000)!important
     }
-}
-
-@media only screen and (max-width: 850px){
-    #about .text-wrapper h1{
-        font-size: 48px;
-    }
-    h1{
-        font-size: 40px;
-    }
-    p, .event-item p{
-        font-size: 15px!important;
-    }
-    .menu-tab-item::after,
-    .menu-tab-item.active::after{
-        display: none;
-    }
-    .booking-form{
-        justify-content: center;
-        width: 100%;
-        align-items: center;
-    }
-    .menu-tabs{
-        flex-wrap: wrap;
-    }
-    .menu-tab-item{
-        width: 40%;
-    }
-}
-
-@media only screen and (max-width: 806px){
     .menu-tab-content{
         padding: 0;
     }
@@ -1174,6 +1142,36 @@ footer{
     .menu-item .text .dish-details .line{
         display: none;
     }
+}
+
+@media only screen and (max-width: 850px){
+    #about .text-wrapper h1{
+        font-size: 48px;
+    }
+    h1{
+        font-size: 40px;
+    }
+    p, .event-item p{
+        font-size: 15px!important;
+    }
+    .menu-tab-item::after,
+    .menu-tab-item.active::after{
+        display: none;
+    }
+    .booking-form{
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+    }
+    .menu-tabs{
+        flex-wrap: wrap;
+    }
+    .menu-tab-item{
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 806px){
     .nav-items .nav-links{
         font-size: 16px;
     }
@@ -1287,7 +1285,10 @@ footer{
         width: 100%;
     }
     .footer-quote h1{
-        font-size: 30px;
+        font-size: calc(100vw * 55/1000);
+    }
+    .btn3{
+        font-size: calc(100vw * 27/1000);
     }
 }
 
