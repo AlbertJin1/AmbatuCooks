@@ -980,6 +980,33 @@ footer {
 #recipes-main {
     background-color: var(--bg-color-2);
     padding-top: 50px;
+    max-height: 835px;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+#recipes-appe {
+    background-color: var(--bg-color-2);
+    padding-top: 50px;
+    max-height: 835px;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+#recipes-dessert {
+    background-color: var(--bg-color-2);
+    padding-top: 50px;
+    max-height: 835px;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+#recipes-beve {
+    background-color: var(--bg-color-2);
+    padding-top: 50px;
+    max-height: 835px;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
 }
 
 .menu {
@@ -1157,6 +1184,7 @@ a {
 .top h2{
     margin-bottom: 20px;
     padding: 0;
+    text-decoration: none;
     font-size: 20px;
 }
 
@@ -1170,6 +1198,20 @@ a {
     border-collapse: collapse;
     border-radius: 10px 10px 0 0;
     overflow: hidden;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nutrition{
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    margin-top: 20px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 th{
@@ -1186,6 +1228,7 @@ td,th{
     border: 1px solid var(--grey-color);
     padding: 15px;
     font-family: var(--font-family-1);
+    text-transform: capitalize;
 }
 
 td,ol{
@@ -1199,10 +1242,13 @@ td,ol{
 }
 
 .bottom h2{
+    margin-top: 20px;
     margin-bottom: 20px;
     padding: 0;
     font-size: 20px;
+    text-decoration: none;
 }
+
 .bottom li{
     line-height: 35px;
 }
@@ -1224,7 +1270,103 @@ td,ol{
     color: #000;
 } */
 
+/* SHOW MORE BUTTON */
+.toggle-button-container {
+    text-align: center; /* Center the button */
+    position: relative;
+    margin-bottom: 20px;
+}
 
+/* MAIN */
+.toggle-button-main{
+    background-color: var(--bg-color-1); 
+    border: 1px solid var(--heading-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer; 
+    transition: all .3s ease-in-out;
+    font-family: var(--font-family-1);
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+.toggle-button-main:hover {
+    color: white;
+    background-color: var(--primary-color);
+    transition: all .3s ease-in-out;
+}
+/* APPETIZER */
+.toggle-button-appe{
+    background-color: var(--bg-color-1); 
+    border: 1px solid var(--heading-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer; 
+    transition: all .3s ease-in-out;
+    font-family: var(--font-family-1);
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+.toggle-button-appe:hover {
+    color: white;
+    background-color: var(--primary-color);
+    transition: all .3s ease-in-out;
+}
+
+/* DESSERT */
+.toggle-button-dessert{
+    background-color: var(--bg-color-1); 
+    border: 1px solid var(--heading-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer; 
+    transition: all .3s ease-in-out;
+    font-family: var(--font-family-1);
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+.toggle-button-dessert:hover {
+    color: white;
+    background-color: var(--primary-color);
+    transition: all .3s ease-in-out;
+}
+
+/* DESSERT */
+.toggle-button-beve{
+    background-color: var(--bg-color-1); 
+    border: 1px solid var(--heading-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer; 
+    transition: all .3s ease-in-out;
+    font-family: var(--font-family-1);
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+.toggle-button-beve:hover {
+    color: white;
+    background-color: var(--primary-color);
+    transition: all .3s ease-in-out;
+}
 
 
 

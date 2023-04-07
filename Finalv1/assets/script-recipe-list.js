@@ -115,11 +115,62 @@ function vanish(){
 }
 
 
-window.addEventListener("hashchange", function(e) {
-    if (location.hash === ".popup") {
-      // Prevent scrolling to the top of the page
-      e.preventDefault();
-      // Reset the hash to the previous value
-      history.replaceState(null, null, " ");
+// FOR MAIN DISH SHOW BUTTON
+var bmain = document.querySelector('.toggle-button-main');
+var cmain = document.getElementById("recipes-main");
+
+bmain.addEventListener('click', function() {
+
+    if (cmain.style.maxHeight) {
+        cmain.style.maxHeight = null;
+        bmain.textContent = 'Show More';
+    } else {
+        cmain.style.maxHeight = cmain.scrollHeight + 'px';
+        bmain.textContent = 'Show Less';
     }
-  });
+});
+
+// FOR APPETIZER SHOW BUTTON
+var bappe = document.querySelector('.toggle-button-appe');
+var cappe = document.getElementById("recipes-appe");
+
+bappe.addEventListener('click', function() {
+
+    if (cappe.style.maxHeight) {
+        cappe.style.maxHeight = null;
+        bappe.textContent = 'Show More';
+    } else {
+        cappe.style.maxHeight = cappe.scrollHeight + 'px';
+        bappe.textContent = 'Show Less';
+    }
+});
+
+// FOR DESSERT SHOW BUTTON
+var bdessert = document.querySelector('.toggle-button-dessert');
+var cdessert = document.getElementById("recipes-dessert");
+
+bdessert.addEventListener('click', function() {
+
+    if (cdessert.style.maxHeight) {
+        cdessert.style.maxHeight = null;
+        bdessert.textContent = 'Show More';
+    } else {
+        cdessert.style.maxHeight = cdessert.scrollHeight + 'px';
+        bdessert.textContent = 'Show Less';
+    }
+});
+
+// FOR BEVERAGE SHOW BUTTON
+var bbeve = document.querySelector('.toggle-button-beve');
+var cbeve = document.getElementById("recipes-beve");
+
+bbeve.addEventListener('click', function() {
+
+    if (cbeve.style.maxHeight) {
+        cbeve.style.maxHeight = null;
+        bbeve.textContent = 'Show More';
+    } else {
+        cbeve.style.maxHeight = cbeve.scrollHeight + 'px';
+        bbeve.textContent = 'Show Less';
+    }
+});
