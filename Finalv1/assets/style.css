@@ -600,7 +600,7 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 #about .text-wrapper h3 {
-    font-size: 28px;
+    font-size: 36px;
     margin: 20px 0;
     letter-spacing: 0;
 }
@@ -1234,10 +1234,22 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+}
+
+.loader h1{
+    position: absolute;
+    text-align: center;
+    font-family: var(--font-family-2);
+    font-size: 100px;
+    text-shadow: 4px 6px 8px rgba(0, 0, 0, 0.30);
 }
 
 .loader img{
     width: 180px;
+    position: absolute;
+    overflow: hidden;
+    align-items: center;
 }
 
 .disappear{

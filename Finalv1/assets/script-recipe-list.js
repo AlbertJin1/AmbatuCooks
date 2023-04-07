@@ -114,3 +114,12 @@ function vanish(){
     loader.classList.add("disappear")
 }
 
+
+window.addEventListener("hashchange", function(e) {
+    if (location.hash === ".popup") {
+      // Prevent scrolling to the top of the page
+      e.preventDefault();
+      // Reset the hash to the previous value
+      history.replaceState(null, null, " ");
+    }
+  });

@@ -1,3 +1,25 @@
+// HOME CARO
+$('.home-carousel').owlCarousel({
+    loop:true,
+    margin:0,
+    dots: false,
+    autoplay: true,
+    autoplayTimeout: 7000,
+    animateOut: 'fadeOut',
+    nav:false,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:1
+        }
+    }
+})
+
 
 // NAVBAR
 window.addEventListener('scroll', function(){
@@ -99,6 +121,7 @@ menuTabs.addEventListener('click', function(e){
 // BLOGS CAROU
 $('.blog-carousel').owlCarousel({
     loop:true,
+    dots: false,
     margin:5,
     responsive:{
         0:{

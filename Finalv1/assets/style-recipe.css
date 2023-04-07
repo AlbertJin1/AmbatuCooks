@@ -640,7 +640,7 @@ input[type="search"]::-webkit-search-cancel-button {
 /* BLOGS */
 #blogs{
     background-color: var(--bg-color-1);
-    padding-top: 80px;
+    padding-top: 0;
 }
 
 #blogs .blog-carousel{
@@ -853,6 +853,21 @@ footer{
     align-items: center;
 }
 
+.loader h1{
+    position: absolute;
+    text-align: center;
+    font-family: var(--font-family-2);
+    font-size: 100px;
+    text-shadow: 4px 6px 8px rgba(0, 0, 0, 0.30);
+}
+
+.loader img{
+    width: 180px;
+    position: absolute;
+    overflow: hidden;
+    align-items: center;
+}
+
 .loader img{
     width: 180px;
 }
@@ -872,12 +887,89 @@ footer{
     }
 }
 
+/* VIDEO */
+.video {
+    background-color: var(--bg-color-1);
+    padding: 0;
+}
+
+.video h1,
+.video h2 {
+    z-index: 2;
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: capitalize;
+}
+
+.video h1 {
+    color: white;
+    font-size: 38px;
+    font-family: var(--font-family-2);
+    top: 85%;
+}
+
+.video h2 {
+    font-size: 26px;
+    color: rgb(255, 103, 103);
+    font-family: var(--font-family-1);
+    top: 77%;
+}
+
+.video-wrapper {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.video-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .90) 100%);
+}
 
 
 /* MEDIA QUERIES */
 @media only screen and (max-width: 1397px){
     .menu-item{
         width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1280px){
+    .video h1 {
+        color: white;
+        font-size: calc(100vw * 28/1000);
+        font-family: var(--font-family-2);
+        top: 85%;
+    }
+    
+    .video h2 {
+        font-size: calc(100vw * 24/1000);
+        color: rgb(255, 103, 103);
+        font-family: var(--font-family-1);
+        top: 77%;
     }
 }
 

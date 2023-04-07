@@ -29,11 +29,21 @@
 <body>
 
     <div class="loader">
+        <video autoplay muted loop>
+            <source src="./vid/background-load.mp4" type="video/mp4">
+        </video>
+        <!-- <h1>Loading...</h1> -->
         <img src="./img/loader/loading-loader.gif" alt="loader gif">
     </div>
 
     <div id="progress">
         <span id="progress-value">&#x1F815;</span>
+    </div>
+    
+    <div id="music">
+        <audio volume="0.5" autoplay loop>
+            <source src="./music/signal flags (from up on poppy hill lofi).mp3" type="audio/mpeg">
+        </audio>
     </div>
 
     <header>
@@ -102,13 +112,25 @@
         
     </header>
 
-    <section class="space"></section>
+    <!-- <section class="space"></section> -->
+
+    <section class="video">
+        <h2>Cooking is like love</h2>
+        <h1>it should be entered into with abandon or not at all</h1>
+        <div class="video-wrapper">
+            <video autoplay loop muted>
+                <source src="./vid/1-cooking-anime.mp4">
+            </video>
+            
+            <div class="video-gradient-overlay"></div>
+        </div>
+    </section>
 
     <!-- #RECIPE MENU -->
 
     <section id="recipes-main">
         <div class="section-heading">
-            <h3>Main Dishes</h3>
+            <h3>Main Dish</h3>
             <h1>Hearty Main Course Recipes That Will Satisfy Your Hunger</h1>
             <div class="square-wrapper flex-row">
                 <div class="square"></div>
@@ -117,7 +139,7 @@
             </div>
         </div>
 
-        <div class="menu" class="menu-tab-content show" data-aos="zoom-in" data-aos-duration="1000">
+        <div class="menu">
             <div class="food-items">
                 <img src="./img/RECIPES/1-MAIN DISH/1-Miso-Ramen.jpg">
                 <div class="details">
@@ -125,11 +147,94 @@
                         <h2>Miso Ramen</h2>
                     </div>
                     <p>Flavored with pork and chicken broth with a mix of toppings such as chashu and ramen egg, this bowl of Miso Ramen is going to satisfy your craving. You can make delicious ramen with authentic broth in less than 30 minutes!</p>
-                    <a href="#popup1" class="btn">View Recipe</a>
-                    <div id="popup1" class="popup">
+                    <a href="#popup1-main" class="btn">View Recipe</a>
+                    <div id="popup1-main" class="popup">
                         <a href="#" class="close">&times;</a>
                         <h2>Title Popup</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <div class="containers">
+                            <div class="top">
+                                <h2>INGREDIENTS:</h2>
+                                <table>
+                                    <tr> 
+                                        <th> Name </th>
+                                        <th> Quantity </th>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Cubed) Pork Belly </td>
+                                        <td> 4 lbs. </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Knorr Pork Cube </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Clear Soft Drink</td>
+                                        <td> 3 cups </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Water </td>
+                                        <td> 1 cup </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Banana Blossoms </td>
+                                        <td> 2 ounces </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Salted Black Beans </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> White Vinegar </td>
+                                        <td> 3 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Soy Sauce </td>
+                                        <td> ½ tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Chopped) Onion </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Brown Sugar </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Crushed and Chopped) Garlic </td>
+                                        <td> 6 cloves </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Crushed Peppercorn </td>
+                                        <td> ½ teaspoon </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="bottom">
+                                <h2>STEPS:</h2>
+                                <ol>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                </ol>
+                            </div>
+                        </div>
                     </div>
                     <a href="#" class="close-popup"></a>
                 </div>
@@ -142,11 +247,94 @@
                         <h2>Japanese Chicken Curry</h2>
                     </div>
                     <p>Delicious Japanese chicken curry recipe for a weeknight dinner! Tender pieces of chicken, carrots, and potatoes cooked in a rich savory curry sauce, this Japanese version of curry is a must-have for your family meal. </p>
-                    <a href="#popup2" class="btn">View Recipe</a>
-                    <div id="popup2" class="popup">
+                    <a href="#popup2-main" class="btn">View Recipe</a>
+                    <div id="popup2-main" class="popup">
                         <a href="#" class="close">&times;</a>
                         <h2>Title Popup</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <div class="containers">
+                            <div class="top">
+                                <h2>INGREDIENTS:</h2>
+                                <table>
+                                    <tr> 
+                                        <th> Name </th>
+                                        <th> Quantity </th>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Cubed) Pork Belly </td>
+                                        <td> 4 lbs. </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Knorr Pork Cube </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Clear Soft Drink</td>
+                                        <td> 3 cups </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Water </td>
+                                        <td> 1 cup </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Banana Blossoms </td>
+                                        <td> 2 ounces </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Salted Black Beans </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> White Vinegar </td>
+                                        <td> 3 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Soy Sauce </td>
+                                        <td> ½ tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Chopped) Onion </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Brown Sugar </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Crushed and Chopped) Garlic </td>
+                                        <td> 6 cloves </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Crushed Peppercorn </td>
+                                        <td> ½ teaspoon </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="bottom">
+                                <h2>STEPS:</h2>
+                                <ol>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                </ol>
+                            </div>
+                        </div>
                     </div>
                     <a href="#" class="close-popup"></a>
                 </div>
@@ -159,11 +347,94 @@
                         <h2>Tonkatsu (Japanese Pork Cutlet)</h2>
                     </div>
                     <p>Tonkatsu (Japanese Pork Cutlet) is one of the simplest meals you can make at home. Every bite is perfectly crunchy on the outside and juicy on the inside with the added flavor from Tonkatsu Sauce!</p>
-                    <a href="#popup3" class="btn">View Recipe</a>
-                    <div id="popup3" class="popup">
+                    <a href="#popup3-main" class="btn">View Recipe</a>
+                    <div id="popup3-main" class="popup">
                         <a href="#" class="close">&times;</a>
                         <h2>Title Popup</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <div class="containers">
+                            <div class="top">
+                                <h2>INGREDIENTS:</h2>
+                                <table>
+                                    <tr> 
+                                        <th> Name </th>
+                                        <th> Quantity </th>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Cubed) Pork Belly </td>
+                                        <td> 4 lbs. </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Knorr Pork Cube </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Clear Soft Drink</td>
+                                        <td> 3 cups </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Water </td>
+                                        <td> 1 cup </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Banana Blossoms </td>
+                                        <td> 2 ounces </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Salted Black Beans </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> White Vinegar </td>
+                                        <td> 3 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Soy Sauce </td>
+                                        <td> ½ tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Chopped) Onion </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Brown Sugar </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Crushed and Chopped) Garlic </td>
+                                        <td> 6 cloves </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Crushed Peppercorn </td>
+                                        <td> ½ teaspoon </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="bottom">
+                                <h2>STEPS:</h2>
+                                <ol>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                </ol>
+                            </div>
+                        </div>
                     </div>
                     <a href="#" class="close-popup"></a>
                 </div>
@@ -176,11 +447,94 @@
                         <h2>Oyakodon</h2>
                     </div>
                     <p>Oyakodon is a classic comfort food of Japanese home cooking. Tender pieces of chicken, onions, and eggs are simmered in an umami-rich sauce and then poured over a bowl of fluffy steamed rice.</p>
-                    <a href="#popup4" class="btn">View Recipe</a>
-                    <div id="popup4" class="popup">
+                    <a href="#popup4-main" class="btn">View Recipe</a>
+                    <div id="popup4-main" class="popup">
                         <a href="#" class="close">&times;</a>
                         <h2>Title Popup</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <div class="containers">
+                            <div class="top">
+                                <h2>INGREDIENTS:</h2>
+                                <table>
+                                    <tr> 
+                                        <th> Name </th>
+                                        <th> Quantity </th>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Cubed) Pork Belly </td>
+                                        <td> 4 lbs. </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Knorr Pork Cube </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Clear Soft Drink</td>
+                                        <td> 3 cups </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Water </td>
+                                        <td> 1 cup </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Banana Blossoms </td>
+                                        <td> 2 ounces </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Salted Black Beans </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> White Vinegar </td>
+                                        <td> 3 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Soy Sauce </td>
+                                        <td> ½ tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Chopped) Onion </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Brown Sugar </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Crushed and Chopped) Garlic </td>
+                                        <td> 6 cloves </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Crushed Peppercorn </td>
+                                        <td> ½ teaspoon </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="bottom">
+                                <h2>STEPS:</h2>
+                                <ol>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                </ol>
+                            </div>
+                        </div>
                     </div>
                     <a href="#" class="close-popup"></a>
                 </div>
@@ -193,11 +547,94 @@
                         <h2>Okonomiyaki</h2>
                     </div>
                     <p>Popular street food from Osaka, Japan, Okonomiyaki is a savory version of Japanese pancake, made with flour, eggs, shredded cabbage, and your choice of protein, and topped with a variety of condiments.</p>
-                    <a href="#popup5" class="btn">View Recipe</a>
-                    <div id="popup5" class="popup">
+                    <a href="#popup5-main" class="btn">View Recipe</a>
+                    <div id="popup5-main" class="popup">
                         <a href="#" class="close">&times;</a>
                         <h2>Title Popup</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <div class="containers">
+                            <div class="top">
+                                <h2>INGREDIENTS:</h2>
+                                <table>
+                                    <tr> 
+                                        <th> Name </th>
+                                        <th> Quantity </th>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Cubed) Pork Belly </td>
+                                        <td> 4 lbs. </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Knorr Pork Cube </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Clear Soft Drink</td>
+                                        <td> 3 cups </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Water </td>
+                                        <td> 1 cup </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Banana Blossoms </td>
+                                        <td> 2 ounces </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Salted Black Beans </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> White Vinegar </td>
+                                        <td> 3 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Soy Sauce </td>
+                                        <td> ½ tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Chopped) Onion </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Brown Sugar </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Crushed and Chopped) Garlic </td>
+                                        <td> 6 cloves </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Crushed Peppercorn </td>
+                                        <td> ½ teaspoon </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="bottom">
+                                <h2>STEPS:</h2>
+                                <ol>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                </ol>
+                            </div>
+                        </div>
                     </div>
                     <a href="#" class="close-popup"></a>
                 </div>
@@ -210,62 +647,3181 @@
                         <h2>Teriyaki Salmon</h2>
                     </div>
                     <p>Use this quick and easy Teriyaki Salmon recipe to make a light and savory meal any night of the week. Salmon fillets are pan-grilled to tender perfection in the traditional method and finished with an authentic homemade teriyaki sauce.</p>
-                    <a href="#popup6" class="btn">View Recipe</a>
-                    <div id="popup6" class="popup">
+                    <a href="#popup6-main" class="btn">View Recipe</a>
+                    <div id="popup6-main" class="popup">
                         <a href="#" class="close">&times;</a>
                         <h2>Title Popup</h2>
-                        <p>hakdoggadjahdhaj ashdjkasdhajashdasjkdh adasda</p>
+                        <div class="containers">
+                            <div class="top">
+                                <h2>INGREDIENTS:</h2>
+                                <table>
+                                    <tr> 
+                                        <th> Name </th>
+                                        <th> Quantity </th>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Cubed) Pork Belly </td>
+                                        <td> 4 lbs. </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Knorr Pork Cube </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Clear Soft Drink</td>
+                                        <td> 3 cups </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Water </td>
+                                        <td> 1 cup </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Banana Blossoms </td>
+                                        <td> 2 ounces </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Salted Black Beans </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> White Vinegar </td>
+                                        <td> 3 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Soy Sauce </td>
+                                        <td> ½ tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Chopped) Onion </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Brown Sugar </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Crushed and Chopped) Garlic </td>
+                                        <td> 6 cloves </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Crushed Peppercorn </td>
+                                        <td> ½ teaspoon </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="bottom">
+                                <h2>STEPS:</h2>
+                                <ol>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                </ol>
+                            </div>
+                        </div>
                     </div>
                     <a href="#" class="close-popup"></a>
                 </div>
             </div>
 
             <div class="food-items">
-                <img src="Sandwich.jpeg">
+                <img src="./img/RECIPES/1-MAIN DISH/7-Tamago Sando.jpg">
                 <div class="details">
                     <div class="details-sub">
-                        <h2>BBQ Sandwich</h2>
+                        <h2>Tamago Sando</h2>
                     </div>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus reiciendis nam non quia! Earum eveniet quia minus nemo.</p>
-                    <a href="#popup7" class="btn">View Recipe</a>
-                    <div id="popup7" class="popup">
+                    <p>Egg salad tucked between slices of white bread, Japanese Egg Sandwich (Tamago Sando) is a timeless snack you can find in every convenience store in Japan. The filling is creamy and bursting with a rich egg-yolk flavor, and the bread is soft and pillowy. Some claim it`s the absolute best egg sandwich they ever tasted!</p>
+                    <a href="#popup7-main" class="btn">View Recipe</a>
+                    <div id="popup7-main" class="popup">
                         <a href="#" class="close">&times;</a>
                         <h2>Title Popup</h2>
-                        <p>hakdoggadjahdhaj ashdjkasdhajashdasjkdh adasda</p>
+                        <div class="containers">
+                            <div class="top">
+                                <h2>INGREDIENTS:</h2>
+                                <table>
+                                    <tr> 
+                                        <th> Name </th>
+                                        <th> Quantity </th>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Cubed) Pork Belly </td>
+                                        <td> 4 lbs. </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Knorr Pork Cube </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Clear Soft Drink</td>
+                                        <td> 3 cups </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Water </td>
+                                        <td> 1 cup </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Banana Blossoms </td>
+                                        <td> 2 ounces </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Salted Black Beans </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> White Vinegar </td>
+                                        <td> 3 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Soy Sauce </td>
+                                        <td> ½ tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Chopped) Onion </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Brown Sugar </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Crushed and Chopped) Garlic </td>
+                                        <td> 6 cloves </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Crushed Peppercorn </td>
+                                        <td> ½ teaspoon </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="bottom">
+                                <h2>STEPS:</h2>
+                                <ol>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                </ol>
+                            </div>
+                        </div>
                     </div>
                     <a href="#" class="close-popup"></a>
                 </div>
             </div>
 
             <div class="food-items">
-                <img src="Sandwich.jpeg">
+                <img src="./img/RECIPES/1-MAIN DISH/8-Tantanmen.jpg">
                 <div class="details">
                     <div class="details-sub">
-                        <h2>BBQ Sandwich</h2>
+                        <h2>Tantanmen</h2>
                     </div>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus reiciendis nam non quia! Earum eveniet quia minus nemo.</p>
-                    <a href="#popup8" class="btn">View Recipe</a>
-                    <div id="popup8" class="popup">
+                    <p>Tan Tan Ramen (Tantanmen) is a rich and flavorful Japanese ramen noodle soup adapted from the famous Chinese Sichuan dan dan mian. It`s unique for both its savory topping and the spicy yet creamy soup broth. This hot bowl of ramen is too good to be missed!</p>
+                    <a href="#popup8-main" class="btn">View Recipe</a>
+                    <div id="popup8-main" class="popup">
                         <a href="#" class="close">&times;</a>
                         <h2>Title Popup</h2>
-                        <p>hakdoggadjahdhaj ashdjkasdhajashdasjkdh adasda</p>
+                        <div class="containers">
+                            <div class="top">
+                                <h2>INGREDIENTS:</h2>
+                                <table>
+                                    <tr> 
+                                        <th> Name </th>
+                                        <th> Quantity </th>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Cubed) Pork Belly </td>
+                                        <td> 4 lbs. </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Knorr Pork Cube </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Clear Soft Drink</td>
+                                        <td> 3 cups </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Water </td>
+                                        <td> 1 cup </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Banana Blossoms </td>
+                                        <td> 2 ounces </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Salted Black Beans </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> White Vinegar </td>
+                                        <td> 3 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Soy Sauce </td>
+                                        <td> ½ tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Chopped) Onion </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Brown Sugar </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Crushed and Chopped) Garlic </td>
+                                        <td> 6 cloves </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Crushed Peppercorn </td>
+                                        <td> ½ teaspoon </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="bottom">
+                                <h2>STEPS:</h2>
+                                <ol>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                </ol>
+                            </div>
+                        </div>
                     </div>
                     <a href="#" class="close-popup"></a>
                 </div>
             </div>
 
             <div class="food-items">
-                <img src="Sandwich.jpeg">
+                <img src="./img/RECIPES/1-MAIN DISH/9-Tamagotoji.jpg">
                 <div class="details">
                     <div class="details-sub">
-                        <h2>BBQ Sandwich</h2>
+                        <h2>Tamagotoji</h2>
                     </div>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus reiciendis nam non quia! Earum eveniet quia minus nemo.</p>
-                    <a href="#popup9" class="btn">View Recipe</a>
-                    <div id="popup9" class="popup">
+                    <p>In this comforting Japanese Simmered Egg and Yuba Tofu Skin (Tamagotoji), we gently cook the ingredients in a savory dashi broth and bind them together with lightly beaten eggs. The delicate, nutty soy milk skin pairs beautifully with soft-cooked fluffy eggs. Enjoy it as a side dish, in your hot noodle soup, or on a steamed rice bowl. </p>
+                    <a href="#popup9-main" class="btn">View Recipe</a>
+                    <div id="popup9-main" class="popup">
                         <a href="#" class="close">&times;</a>
                         <h2>Title Popup</h2>
-                        <p>hakdoggadjahdhaj ashdjkasdhajashdasjkdh adasda</p>
+                        <div class="containers">
+                            <div class="top">
+                                <h2>INGREDIENTS:</h2>
+                                <table>
+                                    <tr> 
+                                        <th> Name </th>
+                                        <th> Quantity </th>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Cubed) Pork Belly </td>
+                                        <td> 4 lbs. </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Knorr Pork Cube </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Clear Soft Drink</td>
+                                        <td> 3 cups </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Water </td>
+                                        <td> 1 cup </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Banana Blossoms </td>
+                                        <td> 2 ounces </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Salted Black Beans </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> White Vinegar </td>
+                                        <td> 3 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Soy Sauce </td>
+                                        <td> ½ tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Chopped) Onion </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Brown Sugar </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Crushed and Chopped) Garlic </td>
+                                        <td> 6 cloves </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Crushed Peppercorn </td>
+                                        <td> ½ teaspoon </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="bottom">
+                                <h2>STEPS:</h2>
+                                <ol>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="close-popup"></a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- #READ MORE LESS END -->
+
+    <!-- QUOTE START -->
+
+    <section id="quote">
+        <div class="text-wrapper">
+            <h2>From Classic to Creative</h2>
+            <h1>Explore Our Collection of Mouth-Watering Recipes</h1>
+        </div>
+    </section>
+
+    <!-- QUOTE END -->
+
+    <!-- #RECIPE MENU -->
+
+    <section id="recipes-main">
+        <div class="section-heading">
+            <h3>Appetizer</h3>
+            <h1>Start Your Meal off Right with These Delicious Appetizer Recipes</h1>
+            <div class="square-wrapper flex-row">
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+            </div>
+        </div>
+
+        <div class="menu">
+            <div class="food-items">
+                <img src="./img/RECIPES/1-MAIN DISH/1-Miso-Ramen.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h2>Miso Ramen</h2>
+                    </div>
+                    <p>Flavored with pork and chicken broth with a mix of toppings such as chashu and ramen egg, this bowl of Miso Ramen is going to satisfy your craving. You can make delicious ramen with authentic broth in less than 30 minutes!</p>
+                    <a href="#popup1-appe" class="btn">View Recipe</a>
+                    <div id="popup1-appe" class="popup">
+                        <a href="#" class="close">&times;</a>
+                        <h2>Title Popup</h2>
+                        <div class="containers">
+                            <div class="top">
+                                <h2>INGREDIENTS:</h2>
+                                <table>
+                                    <tr> 
+                                        <th> Name </th>
+                                        <th> Quantity </th>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Cubed) Pork Belly </td>
+                                        <td> 4 lbs. </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Knorr Pork Cube </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Clear Soft Drink</td>
+                                        <td> 3 cups </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Water </td>
+                                        <td> 1 cup </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Banana Blossoms </td>
+                                        <td> 2 ounces </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Salted Black Beans </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> White Vinegar </td>
+                                        <td> 3 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Soy Sauce </td>
+                                        <td> ½ tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Chopped) Onion </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Brown Sugar </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Crushed and Chopped) Garlic </td>
+                                        <td> 6 cloves </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Crushed Peppercorn </td>
+                                        <td> ½ teaspoon </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="bottom">
+                                <h2>STEPS:</h2>
+                                <ol>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="close-popup"></a>
+                </div>
+            </div>
+
+            <div class="food-items">
+                <img src="./img/RECIPES/1-MAIN DISH/2-Japanese-Curry.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h2>Japanese Chicken Curry</h2>
+                    </div>
+                    <p>Delicious Japanese chicken curry recipe for a weeknight dinner! Tender pieces of chicken, carrots, and potatoes cooked in a rich savory curry sauce, this Japanese version of curry is a must-have for your family meal. </p>
+                    <a href="#popup2-appe" class="btn">View Recipe</a>
+                    <div id="popup2-appe" class="popup">
+                        <a href="#" class="close">&times;</a>
+                        <h2>Title Popup</h2>
+                        <div class="containers">
+                            <div class="top">
+                                <h2>INGREDIENTS:</h2>
+                                <table>
+                                    <tr> 
+                                        <th> Name </th>
+                                        <th> Quantity </th>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Cubed) Pork Belly </td>
+                                        <td> 4 lbs. </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Knorr Pork Cube </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Clear Soft Drink</td>
+                                        <td> 3 cups </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Water </td>
+                                        <td> 1 cup </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Banana Blossoms </td>
+                                        <td> 2 ounces </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Salted Black Beans </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> White Vinegar </td>
+                                        <td> 3 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Soy Sauce </td>
+                                        <td> ½ tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Chopped) Onion </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Brown Sugar </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Crushed and Chopped) Garlic </td>
+                                        <td> 6 cloves </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Crushed Peppercorn </td>
+                                        <td> ½ teaspoon </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="bottom">
+                                <h2>STEPS:</h2>
+                                <ol>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="close-popup"></a>
+                </div>
+            </div>
+
+            <div class="food-items">
+                <img src="./img/RECIPES/1-MAIN DISH/3-Tonkatsu.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h2>Tonkatsu (Japanese Pork Cutlet)</h2>
+                    </div>
+                    <p>Tonkatsu (Japanese Pork Cutlet) is one of the simplest meals you can make at home. Every bite is perfectly crunchy on the outside and juicy on the inside with the added flavor from Tonkatsu Sauce!</p>
+                    <a href="#popup3-appe" class="btn">View Recipe</a>
+                    <div id="popup3-appe" class="popup">
+                        <a href="#" class="close">&times;</a>
+                        <h2>Title Popup</h2>
+                        <div class="containers">
+                            <div class="top">
+                                <h2>INGREDIENTS:</h2>
+                                <table>
+                                    <tr> 
+                                        <th> Name </th>
+                                        <th> Quantity </th>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Cubed) Pork Belly </td>
+                                        <td> 4 lbs. </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Knorr Pork Cube </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Clear Soft Drink</td>
+                                        <td> 3 cups </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Water </td>
+                                        <td> 1 cup </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Banana Blossoms </td>
+                                        <td> 2 ounces </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Salted Black Beans </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> White Vinegar </td>
+                                        <td> 3 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Soy Sauce </td>
+                                        <td> ½ tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Chopped) Onion </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Brown Sugar </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Crushed and Chopped) Garlic </td>
+                                        <td> 6 cloves </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Crushed Peppercorn </td>
+                                        <td> ½ teaspoon </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="bottom">
+                                <h2>STEPS:</h2>
+                                <ol>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="close-popup"></a>
+                </div>
+            </div>
+
+            <div class="food-items">
+                <img src="./img/RECIPES/1-MAIN DISH/4-Oyakodon.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h2>Oyakodon</h2>
+                    </div>
+                    <p>Oyakodon is a classic comfort food of Japanese home cooking. Tender pieces of chicken, onions, and eggs are simmered in an umami-rich sauce and then poured over a bowl of fluffy steamed rice.</p>
+                    <a href="#popup4-appe" class="btn">View Recipe</a>
+                    <div id="popup4-appe" class="popup">
+                        <a href="#" class="close">&times;</a>
+                        <h2>Title Popup</h2>
+                        <div class="containers">
+                            <div class="top">
+                                <h2>INGREDIENTS:</h2>
+                                <table>
+                                    <tr> 
+                                        <th> Name </th>
+                                        <th> Quantity </th>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Cubed) Pork Belly </td>
+                                        <td> 4 lbs. </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Knorr Pork Cube </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Clear Soft Drink</td>
+                                        <td> 3 cups </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Water </td>
+                                        <td> 1 cup </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Banana Blossoms </td>
+                                        <td> 2 ounces </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Salted Black Beans </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> White Vinegar </td>
+                                        <td> 3 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Soy Sauce </td>
+                                        <td> ½ tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Chopped) Onion </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Brown Sugar </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Crushed and Chopped) Garlic </td>
+                                        <td> 6 cloves </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Crushed Peppercorn </td>
+                                        <td> ½ teaspoon </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="bottom">
+                                <h2>STEPS:</h2>
+                                <ol>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="close-popup"></a>
+                </div>
+            </div>
+
+            <div class="food-items">
+                <img src="./img/RECIPES/1-MAIN DISH/5-Okonomiyaki.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h2>Okonomiyaki</h2>
+                    </div>
+                    <p>Popular street food from Osaka, Japan, Okonomiyaki is a savory version of Japanese pancake, made with flour, eggs, shredded cabbage, and your choice of protein, and topped with a variety of condiments.</p>
+                    <a href="#popup5-appe" class="btn">View Recipe</a>
+                    <div id="popup5-appe" class="popup">
+                        <a href="#" class="close">&times;</a>
+                        <h2>Title Popup</h2>
+                        <div class="containers">
+                            <div class="top">
+                                <h2>INGREDIENTS:</h2>
+                                <table>
+                                    <tr> 
+                                        <th> Name </th>
+                                        <th> Quantity </th>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Cubed) Pork Belly </td>
+                                        <td> 4 lbs. </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Knorr Pork Cube </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Clear Soft Drink</td>
+                                        <td> 3 cups </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Water </td>
+                                        <td> 1 cup </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Banana Blossoms </td>
+                                        <td> 2 ounces </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Salted Black Beans </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> White Vinegar </td>
+                                        <td> 3 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Soy Sauce </td>
+                                        <td> ½ tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Chopped) Onion </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Brown Sugar </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Crushed and Chopped) Garlic </td>
+                                        <td> 6 cloves </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Crushed Peppercorn </td>
+                                        <td> ½ teaspoon </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="bottom">
+                                <h2>STEPS:</h2>
+                                <ol>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="close-popup"></a>
+                </div>
+            </div>
+
+            <div class="food-items">
+                <img src="./img/RECIPES/1-MAIN DISH/6-Teriyaki Salmon.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h2>Teriyaki Salmon</h2>
+                    </div>
+                    <p>Use this quick and easy Teriyaki Salmon recipe to make a light and savory meal any night of the week. Salmon fillets are pan-grilled to tender perfection in the traditional method and finished with an authentic homemade teriyaki sauce.</p>
+                    <a href="#popup6-appe" class="btn">View Recipe</a>
+                    <div id="popup6-appe" class="popup">
+                        <a href="#" class="close">&times;</a>
+                        <h2>Title Popup</h2>
+                        <div class="containers">
+                            <div class="top">
+                                <h2>INGREDIENTS:</h2>
+                                <table>
+                                    <tr> 
+                                        <th> Name </th>
+                                        <th> Quantity </th>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Cubed) Pork Belly </td>
+                                        <td> 4 lbs. </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Knorr Pork Cube </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Clear Soft Drink</td>
+                                        <td> 3 cups </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Water </td>
+                                        <td> 1 cup </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Banana Blossoms </td>
+                                        <td> 2 ounces </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Salted Black Beans </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> White Vinegar </td>
+                                        <td> 3 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Soy Sauce </td>
+                                        <td> ½ tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Chopped) Onion </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Brown Sugar </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Crushed and Chopped) Garlic </td>
+                                        <td> 6 cloves </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Crushed Peppercorn </td>
+                                        <td> ½ teaspoon </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="bottom">
+                                <h2>STEPS:</h2>
+                                <ol>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="close-popup"></a>
+                </div>
+            </div>
+
+            <div class="food-items">
+                <img src="./img/RECIPES/1-MAIN DISH/7-Tamago Sando.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h2>Tamago Sando</h2>
+                    </div>
+                    <p>Egg salad tucked between slices of white bread, Japanese Egg Sandwich (Tamago Sando) is a timeless snack you can find in every convenience store in Japan. The filling is creamy and bursting with a rich egg-yolk flavor, and the bread is soft and pillowy. Some claim it`s the absolute best egg sandwich they ever tasted!</p>
+                    <a href="#popup7-appe" class="btn">View Recipe</a>
+                    <div id="popup7-appe" class="popup">
+                        <a href="#" class="close">&times;</a>
+                        <h2>Title Popup</h2>
+                        <div class="containers">
+                            <div class="top">
+                                <h2>INGREDIENTS:</h2>
+                                <table>
+                                    <tr> 
+                                        <th> Name </th>
+                                        <th> Quantity </th>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Cubed) Pork Belly </td>
+                                        <td> 4 lbs. </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Knorr Pork Cube </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Clear Soft Drink</td>
+                                        <td> 3 cups </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Water </td>
+                                        <td> 1 cup </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Banana Blossoms </td>
+                                        <td> 2 ounces </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Salted Black Beans </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> White Vinegar </td>
+                                        <td> 3 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Soy Sauce </td>
+                                        <td> ½ tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Chopped) Onion </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Brown Sugar </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Crushed and Chopped) Garlic </td>
+                                        <td> 6 cloves </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Crushed Peppercorn </td>
+                                        <td> ½ teaspoon </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="bottom">
+                                <h2>STEPS:</h2>
+                                <ol>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="close-popup"></a>
+                </div>
+            </div>
+
+            <div class="food-items">
+                <img src="./img/RECIPES/1-MAIN DISH/8-Tantanmen.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h2>Tantanmen</h2>
+                    </div>
+                    <p>Tan Tan Ramen (Tantanmen) is a rich and flavorful Japanese ramen noodle soup adapted from the famous Chinese Sichuan dan dan mian. It`s unique for both its savory topping and the spicy yet creamy soup broth. This hot bowl of ramen is too good to be missed!</p>
+                    <a href="#popup8-appe" class="btn">View Recipe</a>
+                    <div id="popup8-appe" class="popup">
+                        <a href="#" class="close">&times;</a>
+                        <h2>Title Popup</h2>
+                        <div class="containers">
+                            <div class="top">
+                                <h2>INGREDIENTS:</h2>
+                                <table>
+                                    <tr> 
+                                        <th> Name </th>
+                                        <th> Quantity </th>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Cubed) Pork Belly </td>
+                                        <td> 4 lbs. </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Knorr Pork Cube </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Clear Soft Drink</td>
+                                        <td> 3 cups </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Water </td>
+                                        <td> 1 cup </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Banana Blossoms </td>
+                                        <td> 2 ounces </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Salted Black Beans </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> White Vinegar </td>
+                                        <td> 3 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Soy Sauce </td>
+                                        <td> ½ tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Chopped) Onion </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Brown Sugar </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Crushed and Chopped) Garlic </td>
+                                        <td> 6 cloves </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Crushed Peppercorn </td>
+                                        <td> ½ teaspoon </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="bottom">
+                                <h2>STEPS:</h2>
+                                <ol>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="close-popup"></a>
+                </div>
+            </div>
+
+            <div class="food-items">
+                <img src="./img/RECIPES/1-MAIN DISH/9-Tamagotoji.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h2>Tamagotoji</h2>
+                    </div>
+                    <p>In this comforting Japanese Simmered Egg and Yuba Tofu Skin (Tamagotoji), we gently cook the ingredients in a savory dashi broth and bind them together with lightly beaten eggs. The delicate, nutty soy milk skin pairs beautifully with soft-cooked fluffy eggs. Enjoy it as a side dish, in your hot noodle soup, or on a steamed rice bowl. </p>
+                    <a href="#popup9-appe" class="btn">View Recipe</a>
+                    <div id="popup9-appe" class="popup">
+                        <a href="#" class="close">&times;</a>
+                        <h2>Title Popup</h2>
+                        <div class="containers">
+                            <div class="top">
+                                <h2>INGREDIENTS:</h2>
+                                <table>
+                                    <tr> 
+                                        <th> Name </th>
+                                        <th> Quantity </th>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Cubed) Pork Belly </td>
+                                        <td> 4 lbs. </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Knorr Pork Cube </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Clear Soft Drink</td>
+                                        <td> 3 cups </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Water </td>
+                                        <td> 1 cup </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Banana Blossoms </td>
+                                        <td> 2 ounces </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Salted Black Beans </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> White Vinegar </td>
+                                        <td> 3 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Soy Sauce </td>
+                                        <td> ½ tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Chopped) Onion </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Brown Sugar </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Crushed and Chopped) Garlic </td>
+                                        <td> 6 cloves </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Crushed Peppercorn </td>
+                                        <td> ½ teaspoon </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="bottom">
+                                <h2>STEPS:</h2>
+                                <ol>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="close-popup"></a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- #READ MORE LESS END -->
+
+    <!-- QUOTE START -->
+
+    <section id="quote">
+        <div class="text-wrapper">
+            <h2>Indulge Your Sweet Tooth with These Decadent Desserts</h2>
+            <h1>Perfect for Any Occasion and Guaranteed to Satisfy!</h1>
+        </div>
+    </section>
+
+    <!-- QUOTE END -->
+
+    <!-- #RECIPE MENU -->
+
+    <section id="recipes-main">
+        <div class="section-heading">
+            <h3>Dessert</h3>
+            <h1>Life is uncertain. Eat dessert first.</h1>
+            <div class="square-wrapper flex-row">
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+            </div>
+        </div>
+
+        <div class="menu">
+            <div class="food-items">
+                <img src="./img/RECIPES/1-MAIN DISH/1-Miso-Ramen.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h2>Miso Ramen</h2>
+                    </div>
+                    <p>Flavored with pork and chicken broth with a mix of toppings such as chashu and ramen egg, this bowl of Miso Ramen is going to satisfy your craving. You can make delicious ramen with authentic broth in less than 30 minutes!</p>
+                    <a href="#popup1-dessert" class="btn">View Recipe</a>
+                    <div id="popup1-dessert" class="popup">
+                        <a href="#" class="close">&times;</a>
+                        <h2>Title Popup</h2>
+                        <div class="containers">
+                            <div class="top">
+                                <h2>INGREDIENTS:</h2>
+                                <table>
+                                    <tr> 
+                                        <th> Name </th>
+                                        <th> Quantity </th>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Cubed) Pork Belly </td>
+                                        <td> 4 lbs. </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Knorr Pork Cube </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Clear Soft Drink</td>
+                                        <td> 3 cups </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Water </td>
+                                        <td> 1 cup </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Banana Blossoms </td>
+                                        <td> 2 ounces </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Salted Black Beans </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> White Vinegar </td>
+                                        <td> 3 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Soy Sauce </td>
+                                        <td> ½ tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Chopped) Onion </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Brown Sugar </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Crushed and Chopped) Garlic </td>
+                                        <td> 6 cloves </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Crushed Peppercorn </td>
+                                        <td> ½ teaspoon </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="bottom">
+                                <h2>STEPS:</h2>
+                                <ol>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="close-popup"></a>
+                </div>
+            </div>
+
+            <div class="food-items">
+                <img src="./img/RECIPES/1-MAIN DISH/2-Japanese-Curry.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h2>Japanese Chicken Curry</h2>
+                    </div>
+                    <p>Delicious Japanese chicken curry recipe for a weeknight dinner! Tender pieces of chicken, carrots, and potatoes cooked in a rich savory curry sauce, this Japanese version of curry is a must-have for your family meal. </p>
+                    <a href="#popup2-dessert" class="btn">View Recipe</a>
+                    <div id="popup2-dessert" class="popup">
+                        <a href="#" class="close">&times;</a>
+                        <h2>Title Popup</h2>
+                        <div class="containers">
+                            <div class="top">
+                                <h2>INGREDIENTS:</h2>
+                                <table>
+                                    <tr> 
+                                        <th> Name </th>
+                                        <th> Quantity </th>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Cubed) Pork Belly </td>
+                                        <td> 4 lbs. </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Knorr Pork Cube </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Clear Soft Drink</td>
+                                        <td> 3 cups </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Water </td>
+                                        <td> 1 cup </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Banana Blossoms </td>
+                                        <td> 2 ounces </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Salted Black Beans </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> White Vinegar </td>
+                                        <td> 3 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Soy Sauce </td>
+                                        <td> ½ tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Chopped) Onion </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Brown Sugar </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Crushed and Chopped) Garlic </td>
+                                        <td> 6 cloves </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Crushed Peppercorn </td>
+                                        <td> ½ teaspoon </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="bottom">
+                                <h2>STEPS:</h2>
+                                <ol>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="close-popup"></a>
+                </div>
+            </div>
+
+            <div class="food-items">
+                <img src="./img/RECIPES/1-MAIN DISH/3-Tonkatsu.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h2>Tonkatsu (Japanese Pork Cutlet)</h2>
+                    </div>
+                    <p>Tonkatsu (Japanese Pork Cutlet) is one of the simplest meals you can make at home. Every bite is perfectly crunchy on the outside and juicy on the inside with the added flavor from Tonkatsu Sauce!</p>
+                    <a href="#popup3-dessert" class="btn">View Recipe</a>
+                    <div id="popup3-dessert" class="popup">
+                        <a href="#" class="close">&times;</a>
+                        <h2>Title Popup</h2>
+                        <div class="containers">
+                            <div class="top">
+                                <h2>INGREDIENTS:</h2>
+                                <table>
+                                    <tr> 
+                                        <th> Name </th>
+                                        <th> Quantity </th>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Cubed) Pork Belly </td>
+                                        <td> 4 lbs. </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Knorr Pork Cube </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Clear Soft Drink</td>
+                                        <td> 3 cups </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Water </td>
+                                        <td> 1 cup </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Banana Blossoms </td>
+                                        <td> 2 ounces </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Salted Black Beans </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> White Vinegar </td>
+                                        <td> 3 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Soy Sauce </td>
+                                        <td> ½ tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Chopped) Onion </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Brown Sugar </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Crushed and Chopped) Garlic </td>
+                                        <td> 6 cloves </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Crushed Peppercorn </td>
+                                        <td> ½ teaspoon </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="bottom">
+                                <h2>STEPS:</h2>
+                                <ol>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="close-popup"></a>
+                </div>
+            </div>
+
+            <div class="food-items">
+                <img src="./img/RECIPES/1-MAIN DISH/4-Oyakodon.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h2>Oyakodon</h2>
+                    </div>
+                    <p>Oyakodon is a classic comfort food of Japanese home cooking. Tender pieces of chicken, onions, and eggs are simmered in an umami-rich sauce and then poured over a bowl of fluffy steamed rice.</p>
+                    <a href="#popup4-dessert" class="btn">View Recipe</a>
+                    <div id="popup4-dessert" class="popup">
+                        <a href="#" class="close">&times;</a>
+                        <h2>Title Popup</h2>
+                        <div class="containers">
+                            <div class="top">
+                                <h2>INGREDIENTS:</h2>
+                                <table>
+                                    <tr> 
+                                        <th> Name </th>
+                                        <th> Quantity </th>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Cubed) Pork Belly </td>
+                                        <td> 4 lbs. </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Knorr Pork Cube </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Clear Soft Drink</td>
+                                        <td> 3 cups </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Water </td>
+                                        <td> 1 cup </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Banana Blossoms </td>
+                                        <td> 2 ounces </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Salted Black Beans </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> White Vinegar </td>
+                                        <td> 3 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Soy Sauce </td>
+                                        <td> ½ tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Chopped) Onion </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Brown Sugar </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Crushed and Chopped) Garlic </td>
+                                        <td> 6 cloves </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Crushed Peppercorn </td>
+                                        <td> ½ teaspoon </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="bottom">
+                                <h2>STEPS:</h2>
+                                <ol>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="close-popup"></a>
+                </div>
+            </div>
+
+            <div class="food-items">
+                <img src="./img/RECIPES/1-MAIN DISH/5-Okonomiyaki.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h2>Okonomiyaki</h2>
+                    </div>
+                    <p>Popular street food from Osaka, Japan, Okonomiyaki is a savory version of Japanese pancake, made with flour, eggs, shredded cabbage, and your choice of protein, and topped with a variety of condiments.</p>
+                    <a href="#popup5-dessert" class="btn">View Recipe</a>
+                    <div id="popup5-dessert" class="popup">
+                        <a href="#" class="close">&times;</a>
+                        <h2>Title Popup</h2>
+                        <div class="containers">
+                            <div class="top">
+                                <h2>INGREDIENTS:</h2>
+                                <table>
+                                    <tr> 
+                                        <th> Name </th>
+                                        <th> Quantity </th>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Cubed) Pork Belly </td>
+                                        <td> 4 lbs. </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Knorr Pork Cube </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Clear Soft Drink</td>
+                                        <td> 3 cups </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Water </td>
+                                        <td> 1 cup </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Banana Blossoms </td>
+                                        <td> 2 ounces </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Salted Black Beans </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> White Vinegar </td>
+                                        <td> 3 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Soy Sauce </td>
+                                        <td> ½ tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Chopped) Onion </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Brown Sugar </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Crushed and Chopped) Garlic </td>
+                                        <td> 6 cloves </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Crushed Peppercorn </td>
+                                        <td> ½ teaspoon </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="bottom">
+                                <h2>STEPS:</h2>
+                                <ol>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="close-popup"></a>
+                </div>
+            </div>
+
+            <div class="food-items">
+                <img src="./img/RECIPES/1-MAIN DISH/6-Teriyaki Salmon.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h2>Teriyaki Salmon</h2>
+                    </div>
+                    <p>Use this quick and easy Teriyaki Salmon recipe to make a light and savory meal any night of the week. Salmon fillets are pan-grilled to tender perfection in the traditional method and finished with an authentic homemade teriyaki sauce.</p>
+                    <a href="#popup6-dessert" class="btn">View Recipe</a>
+                    <div id="popup6-dessert" class="popup">
+                        <a href="#" class="close">&times;</a>
+                        <h2>Title Popup</h2>
+                        <div class="containers">
+                            <div class="top">
+                                <h2>INGREDIENTS:</h2>
+                                <table>
+                                    <tr> 
+                                        <th> Name </th>
+                                        <th> Quantity </th>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Cubed) Pork Belly </td>
+                                        <td> 4 lbs. </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Knorr Pork Cube </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Clear Soft Drink</td>
+                                        <td> 3 cups </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Water </td>
+                                        <td> 1 cup </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Banana Blossoms </td>
+                                        <td> 2 ounces </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Salted Black Beans </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> White Vinegar </td>
+                                        <td> 3 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Soy Sauce </td>
+                                        <td> ½ tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Chopped) Onion </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Brown Sugar </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Crushed and Chopped) Garlic </td>
+                                        <td> 6 cloves </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Crushed Peppercorn </td>
+                                        <td> ½ teaspoon </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="bottom">
+                                <h2>STEPS:</h2>
+                                <ol>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="close-popup"></a>
+                </div>
+            </div>
+
+            <div class="food-items">
+                <img src="./img/RECIPES/1-MAIN DISH/7-Tamago Sando.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h2>Tamago Sando</h2>
+                    </div>
+                    <p>Egg salad tucked between slices of white bread, Japanese Egg Sandwich (Tamago Sando) is a timeless snack you can find in every convenience store in Japan. The filling is creamy and bursting with a rich egg-yolk flavor, and the bread is soft and pillowy. Some claim it`s the absolute best egg sandwich they ever tasted!</p>
+                    <a href="#popup7-dessert" class="btn">View Recipe</a>
+                    <div id="popup7-dessert" class="popup">
+                        <a href="#" class="close">&times;</a>
+                        <h2>Title Popup</h2>
+                        <div class="containers">
+                            <div class="top">
+                                <h2>INGREDIENTS:</h2>
+                                <table>
+                                    <tr> 
+                                        <th> Name </th>
+                                        <th> Quantity </th>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Cubed) Pork Belly </td>
+                                        <td> 4 lbs. </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Knorr Pork Cube </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Clear Soft Drink</td>
+                                        <td> 3 cups </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Water </td>
+                                        <td> 1 cup </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Banana Blossoms </td>
+                                        <td> 2 ounces </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Salted Black Beans </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> White Vinegar </td>
+                                        <td> 3 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Soy Sauce </td>
+                                        <td> ½ tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Chopped) Onion </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Brown Sugar </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Crushed and Chopped) Garlic </td>
+                                        <td> 6 cloves </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Crushed Peppercorn </td>
+                                        <td> ½ teaspoon </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="bottom">
+                                <h2>STEPS:</h2>
+                                <ol>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="close-popup"></a>
+                </div>
+            </div>
+
+            <div class="food-items">
+                <img src="./img/RECIPES/1-MAIN DISH/8-Tantanmen.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h2>Tantanmen</h2>
+                    </div>
+                    <p>Tan Tan Ramen (Tantanmen) is a rich and flavorful Japanese ramen noodle soup adapted from the famous Chinese Sichuan dan dan mian. It`s unique for both its savory topping and the spicy yet creamy soup broth. This hot bowl of ramen is too good to be missed!</p>
+                    <a href="#popup8-dessert" class="btn">View Recipe</a>
+                    <div id="popup8-dessert" class="popup">
+                        <a href="#" class="close">&times;</a>
+                        <h2>Title Popup</h2>
+                        <div class="containers">
+                            <div class="top">
+                                <h2>INGREDIENTS:</h2>
+                                <table>
+                                    <tr> 
+                                        <th> Name </th>
+                                        <th> Quantity </th>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Cubed) Pork Belly </td>
+                                        <td> 4 lbs. </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Knorr Pork Cube </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Clear Soft Drink</td>
+                                        <td> 3 cups </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Water </td>
+                                        <td> 1 cup </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Banana Blossoms </td>
+                                        <td> 2 ounces </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Salted Black Beans </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> White Vinegar </td>
+                                        <td> 3 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Soy Sauce </td>
+                                        <td> ½ tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Chopped) Onion </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Brown Sugar </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Crushed and Chopped) Garlic </td>
+                                        <td> 6 cloves </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Crushed Peppercorn </td>
+                                        <td> ½ teaspoon </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="bottom">
+                                <h2>STEPS:</h2>
+                                <ol>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="close-popup"></a>
+                </div>
+            </div>
+
+            <div class="food-items">
+                <img src="./img/RECIPES/1-MAIN DISH/9-Tamagotoji.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h2>Tamagotoji</h2>
+                    </div>
+                    <p>In this comforting Japanese Simmered Egg and Yuba Tofu Skin (Tamagotoji), we gently cook the ingredients in a savory dashi broth and bind them together with lightly beaten eggs. The delicate, nutty soy milk skin pairs beautifully with soft-cooked fluffy eggs. Enjoy it as a side dish, in your hot noodle soup, or on a steamed rice bowl. </p>
+                    <a href="#popup9-dessert" class="btn">View Recipe</a>
+                    <div id="popup9-dessert" class="popup">
+                        <a href="#" class="close">&times;</a>
+                        <h2>Title Popup</h2>
+                        <div class="containers">
+                            <div class="top">
+                                <h2>INGREDIENTS:</h2>
+                                <table>
+                                    <tr> 
+                                        <th> Name </th>
+                                        <th> Quantity </th>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Cubed) Pork Belly </td>
+                                        <td> 4 lbs. </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Knorr Pork Cube </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Clear Soft Drink</td>
+                                        <td> 3 cups </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Water </td>
+                                        <td> 1 cup </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Banana Blossoms </td>
+                                        <td> 2 ounces </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Salted Black Beans </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> White Vinegar </td>
+                                        <td> 3 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Soy Sauce </td>
+                                        <td> ½ tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Chopped) Onion </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Brown Sugar </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Crushed and Chopped) Garlic </td>
+                                        <td> 6 cloves </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Crushed Peppercorn </td>
+                                        <td> ½ teaspoon </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="bottom">
+                                <h2>STEPS:</h2>
+                                <ol>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="close-popup"></a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- #READ MORE LESS END -->
+
+    <!-- QUOTE START -->
+
+    <section id="quote">
+        <div class="text-wrapper">
+            <h2>Cool and Refreshing Beverage Recipes</h2>
+            <h1>To Quench Your Thirst</h1>
+        </div>
+    </section>
+
+    <!-- QUOTE END -->
+
+    <!-- #RECIPE MENU -->
+
+    <section id="recipes-main">
+        <div class="section-heading">
+            <h3>Dessert</h3>
+            <h1>Life is uncertain. Eat dessert first.</h1>
+            <div class="square-wrapper flex-row">
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+            </div>
+        </div>
+
+        <div class="menu">
+            <div class="food-items">
+                <img src="./img/RECIPES/1-MAIN DISH/1-Miso-Ramen.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h2>Miso Ramen</h2>
+                    </div>
+                    <p>Flavored with pork and chicken broth with a mix of toppings such as chashu and ramen egg, this bowl of Miso Ramen is going to satisfy your craving. You can make delicious ramen with authentic broth in less than 30 minutes!</p>
+                    <a href="#popup1-dessert" class="btn">View Recipe</a>
+                    <div id="popup1-dessert" class="popup">
+                        <a href="#" class="close">&times;</a>
+                        <h2>Title Popup</h2>
+                        <div class="containers">
+                            <div class="top">
+                                <h2>INGREDIENTS:</h2>
+                                <table>
+                                    <tr> 
+                                        <th> Name </th>
+                                        <th> Quantity </th>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Cubed) Pork Belly </td>
+                                        <td> 4 lbs. </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Knorr Pork Cube </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Clear Soft Drink</td>
+                                        <td> 3 cups </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Water </td>
+                                        <td> 1 cup </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Banana Blossoms </td>
+                                        <td> 2 ounces </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Salted Black Beans </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> White Vinegar </td>
+                                        <td> 3 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Soy Sauce </td>
+                                        <td> ½ tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Chopped) Onion </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Brown Sugar </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Crushed and Chopped) Garlic </td>
+                                        <td> 6 cloves </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Crushed Peppercorn </td>
+                                        <td> ½ teaspoon </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="bottom">
+                                <h2>STEPS:</h2>
+                                <ol>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="close-popup"></a>
+                </div>
+            </div>
+
+            <div class="food-items">
+                <img src="./img/RECIPES/1-MAIN DISH/2-Japanese-Curry.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h2>Japanese Chicken Curry</h2>
+                    </div>
+                    <p>Delicious Japanese chicken curry recipe for a weeknight dinner! Tender pieces of chicken, carrots, and potatoes cooked in a rich savory curry sauce, this Japanese version of curry is a must-have for your family meal. </p>
+                    <a href="#popup2-dessert" class="btn">View Recipe</a>
+                    <div id="popup2-dessert" class="popup">
+                        <a href="#" class="close">&times;</a>
+                        <h2>Title Popup</h2>
+                        <div class="containers">
+                            <div class="top">
+                                <h2>INGREDIENTS:</h2>
+                                <table>
+                                    <tr> 
+                                        <th> Name </th>
+                                        <th> Quantity </th>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Cubed) Pork Belly </td>
+                                        <td> 4 lbs. </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Knorr Pork Cube </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Clear Soft Drink</td>
+                                        <td> 3 cups </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Water </td>
+                                        <td> 1 cup </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Banana Blossoms </td>
+                                        <td> 2 ounces </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Salted Black Beans </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> White Vinegar </td>
+                                        <td> 3 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Soy Sauce </td>
+                                        <td> ½ tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Chopped) Onion </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Brown Sugar </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Crushed and Chopped) Garlic </td>
+                                        <td> 6 cloves </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Crushed Peppercorn </td>
+                                        <td> ½ teaspoon </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="bottom">
+                                <h2>STEPS:</h2>
+                                <ol>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="close-popup"></a>
+                </div>
+            </div>
+
+            <div class="food-items">
+                <img src="./img/RECIPES/1-MAIN DISH/3-Tonkatsu.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h2>Tonkatsu (Japanese Pork Cutlet)</h2>
+                    </div>
+                    <p>Tonkatsu (Japanese Pork Cutlet) is one of the simplest meals you can make at home. Every bite is perfectly crunchy on the outside and juicy on the inside with the added flavor from Tonkatsu Sauce!</p>
+                    <a href="#popup3-dessert" class="btn">View Recipe</a>
+                    <div id="popup3-dessert" class="popup">
+                        <a href="#" class="close">&times;</a>
+                        <h2>Title Popup</h2>
+                        <div class="containers">
+                            <div class="top">
+                                <h2>INGREDIENTS:</h2>
+                                <table>
+                                    <tr> 
+                                        <th> Name </th>
+                                        <th> Quantity </th>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Cubed) Pork Belly </td>
+                                        <td> 4 lbs. </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Knorr Pork Cube </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Clear Soft Drink</td>
+                                        <td> 3 cups </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Water </td>
+                                        <td> 1 cup </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Banana Blossoms </td>
+                                        <td> 2 ounces </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Salted Black Beans </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> White Vinegar </td>
+                                        <td> 3 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Soy Sauce </td>
+                                        <td> ½ tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Chopped) Onion </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Brown Sugar </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Crushed and Chopped) Garlic </td>
+                                        <td> 6 cloves </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Crushed Peppercorn </td>
+                                        <td> ½ teaspoon </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="bottom">
+                                <h2>STEPS:</h2>
+                                <ol>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="close-popup"></a>
+                </div>
+            </div>
+
+            <div class="food-items">
+                <img src="./img/RECIPES/1-MAIN DISH/4-Oyakodon.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h2>Oyakodon</h2>
+                    </div>
+                    <p>Oyakodon is a classic comfort food of Japanese home cooking. Tender pieces of chicken, onions, and eggs are simmered in an umami-rich sauce and then poured over a bowl of fluffy steamed rice.</p>
+                    <a href="#popup4-dessert" class="btn">View Recipe</a>
+                    <div id="popup4-dessert" class="popup">
+                        <a href="#" class="close">&times;</a>
+                        <h2>Title Popup</h2>
+                        <div class="containers">
+                            <div class="top">
+                                <h2>INGREDIENTS:</h2>
+                                <table>
+                                    <tr> 
+                                        <th> Name </th>
+                                        <th> Quantity </th>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Cubed) Pork Belly </td>
+                                        <td> 4 lbs. </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Knorr Pork Cube </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Clear Soft Drink</td>
+                                        <td> 3 cups </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Water </td>
+                                        <td> 1 cup </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Banana Blossoms </td>
+                                        <td> 2 ounces </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Salted Black Beans </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> White Vinegar </td>
+                                        <td> 3 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Soy Sauce </td>
+                                        <td> ½ tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Chopped) Onion </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Brown Sugar </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Crushed and Chopped) Garlic </td>
+                                        <td> 6 cloves </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Crushed Peppercorn </td>
+                                        <td> ½ teaspoon </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="bottom">
+                                <h2>STEPS:</h2>
+                                <ol>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="close-popup"></a>
+                </div>
+            </div>
+
+            <div class="food-items">
+                <img src="./img/RECIPES/1-MAIN DISH/5-Okonomiyaki.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h2>Okonomiyaki</h2>
+                    </div>
+                    <p>Popular street food from Osaka, Japan, Okonomiyaki is a savory version of Japanese pancake, made with flour, eggs, shredded cabbage, and your choice of protein, and topped with a variety of condiments.</p>
+                    <a href="#popup5-dessert" class="btn">View Recipe</a>
+                    <div id="popup5-dessert" class="popup">
+                        <a href="#" class="close">&times;</a>
+                        <h2>Title Popup</h2>
+                        <div class="containers">
+                            <div class="top">
+                                <h2>INGREDIENTS:</h2>
+                                <table>
+                                    <tr> 
+                                        <th> Name </th>
+                                        <th> Quantity </th>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Cubed) Pork Belly </td>
+                                        <td> 4 lbs. </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Knorr Pork Cube </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Clear Soft Drink</td>
+                                        <td> 3 cups </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Water </td>
+                                        <td> 1 cup </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Banana Blossoms </td>
+                                        <td> 2 ounces </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Salted Black Beans </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> White Vinegar </td>
+                                        <td> 3 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Soy Sauce </td>
+                                        <td> ½ tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Chopped) Onion </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Brown Sugar </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Crushed and Chopped) Garlic </td>
+                                        <td> 6 cloves </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Crushed Peppercorn </td>
+                                        <td> ½ teaspoon </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="bottom">
+                                <h2>STEPS:</h2>
+                                <ol>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="close-popup"></a>
+                </div>
+            </div>
+
+            <div class="food-items">
+                <img src="./img/RECIPES/1-MAIN DISH/6-Teriyaki Salmon.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h2>Teriyaki Salmon</h2>
+                    </div>
+                    <p>Use this quick and easy Teriyaki Salmon recipe to make a light and savory meal any night of the week. Salmon fillets are pan-grilled to tender perfection in the traditional method and finished with an authentic homemade teriyaki sauce.</p>
+                    <a href="#popup6-dessert" class="btn">View Recipe</a>
+                    <div id="popup6-dessert" class="popup">
+                        <a href="#" class="close">&times;</a>
+                        <h2>Title Popup</h2>
+                        <div class="containers">
+                            <div class="top">
+                                <h2>INGREDIENTS:</h2>
+                                <table>
+                                    <tr> 
+                                        <th> Name </th>
+                                        <th> Quantity </th>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Cubed) Pork Belly </td>
+                                        <td> 4 lbs. </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Knorr Pork Cube </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Clear Soft Drink</td>
+                                        <td> 3 cups </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Water </td>
+                                        <td> 1 cup </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Banana Blossoms </td>
+                                        <td> 2 ounces </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Salted Black Beans </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> White Vinegar </td>
+                                        <td> 3 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Soy Sauce </td>
+                                        <td> ½ tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Chopped) Onion </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Brown Sugar </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Crushed and Chopped) Garlic </td>
+                                        <td> 6 cloves </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Crushed Peppercorn </td>
+                                        <td> ½ teaspoon </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="bottom">
+                                <h2>STEPS:</h2>
+                                <ol>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="close-popup"></a>
+                </div>
+            </div>
+
+            <div class="food-items">
+                <img src="./img/RECIPES/1-MAIN DISH/7-Tamago Sando.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h2>Tamago Sando</h2>
+                    </div>
+                    <p>Egg salad tucked between slices of white bread, Japanese Egg Sandwich (Tamago Sando) is a timeless snack you can find in every convenience store in Japan. The filling is creamy and bursting with a rich egg-yolk flavor, and the bread is soft and pillowy. Some claim it`s the absolute best egg sandwich they ever tasted!</p>
+                    <a href="#popup7-beve" class="btn">View Recipe</a>
+                    <div id="popup7-beve" class="popup">
+                        <a href="#" class="close">&times;</a>
+                        <h2>Title Popup</h2>
+                        <div class="containers">
+                            <div class="top">
+                                <h2>INGREDIENTS:</h2>
+                                <table>
+                                    <tr> 
+                                        <th> Name </th>
+                                        <th> Quantity </th>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Cubed) Pork Belly </td>
+                                        <td> 4 lbs. </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Knorr Pork Cube </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Clear Soft Drink</td>
+                                        <td> 3 cups </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Water </td>
+                                        <td> 1 cup </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Banana Blossoms </td>
+                                        <td> 2 ounces </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Salted Black Beans </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> White Vinegar </td>
+                                        <td> 3 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Soy Sauce </td>
+                                        <td> ½ tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Chopped) Onion </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Brown Sugar </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Crushed and Chopped) Garlic </td>
+                                        <td> 6 cloves </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Crushed Peppercorn </td>
+                                        <td> ½ teaspoon </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="bottom">
+                                <h2>STEPS:</h2>
+                                <ol>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="close-popup"></a>
+                </div>
+            </div>
+
+            <div class="food-items">
+                <img src="./img/RECIPES/1-MAIN DISH/8-Tantanmen.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h2>Tantanmen</h2>
+                    </div>
+                    <p>Tan Tan Ramen (Tantanmen) is a rich and flavorful Japanese ramen noodle soup adapted from the famous Chinese Sichuan dan dan mian. It`s unique for both its savory topping and the spicy yet creamy soup broth. This hot bowl of ramen is too good to be missed!</p>
+                    <a href="#popup8-beve" class="btn">View Recipe</a>
+                    <div id="popup8-beve" class="popup">
+                        <a href="#" class="close">&times;</a>
+                        <h2>Title Popup</h2>
+                        <div class="containers">
+                            <div class="top">
+                                <h2>INGREDIENTS:</h2>
+                                <table>
+                                    <tr> 
+                                        <th> Name </th>
+                                        <th> Quantity </th>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Cubed) Pork Belly </td>
+                                        <td> 4 lbs. </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Knorr Pork Cube </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Clear Soft Drink</td>
+                                        <td> 3 cups </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Water </td>
+                                        <td> 1 cup </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Banana Blossoms </td>
+                                        <td> 2 ounces </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Salted Black Beans </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> White Vinegar </td>
+                                        <td> 3 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Soy Sauce </td>
+                                        <td> ½ tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Chopped) Onion </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Brown Sugar </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Crushed and Chopped) Garlic </td>
+                                        <td> 6 cloves </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Crushed Peppercorn </td>
+                                        <td> ½ teaspoon </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="bottom">
+                                <h2>STEPS:</h2>
+                                <ol>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="close-popup"></a>
+                </div>
+            </div>
+
+            <div class="food-items">
+                <img src="./img/RECIPES/1-MAIN DISH/9-Tamagotoji.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h2>Tamagotoji</h2>
+                    </div>
+                    <p>In this comforting Japanese Simmered Egg and Yuba Tofu Skin (Tamagotoji), we gently cook the ingredients in a savory dashi broth and bind them together with lightly beaten eggs. The delicate, nutty soy milk skin pairs beautifully with soft-cooked fluffy eggs. Enjoy it as a side dish, in your hot noodle soup, or on a steamed rice bowl. </p>
+                    <a href="#popup9-beve" class="btn">View Recipe</a>
+                    <div id="popup9-beve" class="popup">
+                        <a href="#" class="close">&times;</a>
+                        <h2>Title Popup</h2>
+                        <div class="containers">
+                            <div class="top">
+                                <h2>INGREDIENTS:</h2>
+                                <table>
+                                    <tr> 
+                                        <th> Name </th>
+                                        <th> Quantity </th>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Cubed) Pork Belly </td>
+                                        <td> 4 lbs. </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Knorr Pork Cube </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Clear Soft Drink</td>
+                                        <td> 3 cups </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Water </td>
+                                        <td> 1 cup </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Banana Blossoms </td>
+                                        <td> 2 ounces </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Salted Black Beans </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> White Vinegar </td>
+                                        <td> 3 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Soy Sauce </td>
+                                        <td> ½ tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Chopped) Onion </td>
+                                        <td> 1 piece </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Brown Sugar </td>
+                                        <td> 2 tablespoons </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> (Crushed and Chopped) Garlic </td>
+                                        <td> 6 cloves </td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <td> Crushed Peppercorn </td>
+                                        <td> ½ teaspoon </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="bottom">
+                                <h2>STEPS:</h2>
+                                <ol>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                    <li>aaaaaaaa</li>
+                                </ol>
+                            </div>
+                        </div>
                     </div>
                     <a href="#" class="close-popup"></a>
                 </div>
