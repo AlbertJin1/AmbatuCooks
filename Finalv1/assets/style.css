@@ -1246,7 +1246,7 @@ footer{
 }
 
 .loader img{
-    width: 180px;
+    width: 240px;
     position: absolute;
     overflow: hidden;
     align-items: center;
@@ -1456,6 +1456,9 @@ footer{
 }
 
 @media only screen and (max-width: 599px){
+    .loader img{
+        width: calc(100vw * 420/1000);
+    }
     .logo{
         margin-left: 0.5rem;
         flex: auto;
