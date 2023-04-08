@@ -1522,14 +1522,17 @@ footer{
     .square-wrapper::before{
         width: 50px;
     }
-    #quote .text-wrapper{
+    #quote .text-wrapper {
         margin: 0 10px;
     }
-    #quote .text-wrapper h1{
-        font-size: 48px;
+
+    #quote .text-wrapper h1 {
+        font-size: calc(100vw * 90/1000);
     }
-    #quote .text-wrapper h2{
-        font-size: 30px;
+
+    #quote .text-wrapper h2 {
+        font-size: calc(100vw * 50/1000);
+        margin-bottom: 20px;
     }
     .menu-tab-content{
         padding: 0;

@@ -2812,7 +2812,7 @@ td,ol{
     }
 
     #quote .text-wrapper h2 {
-        font-size: calc(100vw * 70/1000);
+        font-size: calc(100vw * 50/1000);
         margin-bottom: 20px;
 
     }
