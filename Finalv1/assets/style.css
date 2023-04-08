@@ -621,7 +621,7 @@ input[type="search"]::-webkit-search-cancel-button {
 /* QUOTE */
 #quote {
     padding: 150px 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/quote/quote.png);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/quote/quote1.3.jpg);
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1286,13 +1286,7 @@ footer{
     }
 }
 
-@media only screen and (max-width: 1080px){
-    #about .img-wrapper{
-        width: 22rem;
-    }
-    .gallery-wrapper .gallery-img{
-        width: 28vw;
-    }
+@media only screen and (max-width: 1130px){
     h4{
         font-size: 20px;
     }
@@ -1355,6 +1349,15 @@ footer{
     #home .slide .content .heading{
         font-size: 15vw;
         margin: 15px 0;
+    }
+}
+
+@media only screen and (max-width: 1080px){
+    #about .img-wrapper{
+        width: 22rem;
+    }
+    .gallery-wrapper .gallery-img{
+        width: 28vw;
     }
 }
 

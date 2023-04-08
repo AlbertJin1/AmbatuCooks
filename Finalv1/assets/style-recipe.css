@@ -983,13 +983,7 @@ footer{
     }
 }
 
-@media only screen and (max-width: 1080px){
-    #about .img-wrapper{
-        width: 22rem;
-    }
-    .gallery-wrapper .gallery-img{
-        width: 28vw;
-    }
+@media only screen and (max-width: 1120px){
     h4{
         font-size: 20px;
     }
@@ -1055,6 +1049,15 @@ footer{
     #home .slide .content .heading{
         font-size: 15vw;
         margin: 15px 0;
+    }
+}
+
+@media only screen and (max-width: 1080px){
+    #about .img-wrapper{
+        width: 22rem;
+    }
+    .gallery-wrapper .gallery-img{
+        width: 28vw;
     }
 }
 
