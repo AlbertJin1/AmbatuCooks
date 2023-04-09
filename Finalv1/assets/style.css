@@ -1274,22 +1274,7 @@ footer{
     }
 }
 
-@media only screen and (max-width: 1200px){
-    #about .img-wrapper{
-        width: 30rem;
-    }
-    .blog-title{
-        font-size:calc(100vw * 18/1000)!important;
-    }
-    .text-wrapper .desc{
-        font-size:calc(100vw * 14/1000)!important
-    }
-    #about .img-wrapper{
-        width: 25rem;
-    }
-}
-
-@media only screen and (max-width: 1130px){
+@media only screen and (max-width: 1206px){
     h4{
         font-size: 20px;
     }
@@ -1352,6 +1337,22 @@ footer{
     #home .slide .content .heading{
         font-size: 15vw;
         margin: 15px 0;
+    }
+}
+
+
+@media only screen and (max-width: 1200px){
+    #about .img-wrapper{
+        width: 30rem;
+    }
+    .blog-title{
+        font-size:calc(100vw * 18/1000)!important;
+    }
+    .text-wrapper .desc{
+        font-size:calc(100vw * 14/1000)!important
+    }
+    #about .img-wrapper{
+        width: 25rem;
     }
 }
 

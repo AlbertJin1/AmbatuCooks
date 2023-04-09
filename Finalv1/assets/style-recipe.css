@@ -967,19 +967,7 @@ footer{
     }
 }
 
-@media only screen and (max-width: 1200px){
-    #about .img-wrapper{
-        width: 30rem;
-    }
-    .blog-title{
-        font-size:calc(100vw * 18/1000)!important;
-    }
-    .text-wrapper .desc{
-        font-size:calc(100vw * 14/1000)!important
-    }
-}
-
-@media only screen and (max-width: 1120px){
+@media only screen and (max-width: 1206px){
     h4{
         font-size: 20px;
     }
@@ -1047,6 +1035,19 @@ footer{
         margin: 15px 0;
     }
 }
+
+@media only screen and (max-width: 1200px){
+    #about .img-wrapper{
+        width: 30rem;
+    }
+    .blog-title{
+        font-size:calc(100vw * 18/1000)!important;
+    }
+    .text-wrapper .desc{
+        font-size:calc(100vw * 14/1000)!important
+    }
+}
+
 
 @media only screen and (max-width: 1080px){
     #about .img-wrapper{
