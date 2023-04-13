@@ -1331,7 +1331,7 @@ footer{
         display: block;
     }
     .nav-items.active{
-        height: 340px;
+        height: 380px;
         visibility: visible;
         opacity: 1;
     }
