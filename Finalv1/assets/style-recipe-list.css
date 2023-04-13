@@ -1718,7 +1718,7 @@ td,ol{
     }
 
     .nav-items.active {
-        height: 440px;
+        height: 500px;
         visibility: visible;
         opacity: 1;
     }
