@@ -2885,6 +2885,9 @@ td,ol{
         overflow: hidden;
         
     }
+    .reference a{
+        font-size: calc(100vw * 60/1000);
+    }
 }
 @media only screen and (max-width: 583px){
     #recipes-main {
