@@ -419,23 +419,23 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 #home .slide1 {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/Home/home1.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/Home/home1j.jpg);
 }
 
 #home .slide2 {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/Home/home2.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/Home/home2j.jpg);
 }
 
 #home .slide3 {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/Home/home3.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/Home/home3j.jpg);
 }
 
 #home .slide4 {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/Home/home4.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/Home/home4j.jpg);
 }
 
 #home .slide5 {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/Home/home5.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/Home/home5j.jpg);
 }
 
 #home .slide6 {
@@ -522,7 +522,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
 /* ABOUT */
 #about {
-    padding: 0 4.5rem;
+    padding: 3rem 4.5rem;
     background-color: var(--bg-color-1);
     justify-content: flex-start;
     position: relative;
@@ -591,8 +591,8 @@ input[type="search"]::-webkit-search-cancel-button {
 
 /* ABOUT */
 #about .text-wrapper {
-    padding: 10px 60px;
-    width: 50%;
+    padding: 10px 100px;
+    width: 65%;
 }
 
 #about .text-wrapper h1 {
@@ -615,7 +615,7 @@ input[type="search"]::-webkit-search-cancel-button {
     margin-top: auto;
     position: absolute;
     width: 30rem;
-    right: 0px;
+    right: 8rem;
     bottom: 0;
 }
 
@@ -1380,13 +1380,17 @@ footer{
     }
     #about .img-wrapper{
         position: static;
-        width: 45%;
+        width: 60%;
         margin: 0 auto;
     }
     .footer-top .flex-col{
         width: 20rem;
         text-align: center;
         align-items: center;
+    }
+    #about .text-wrapper {
+        padding: 10px 50px;
+        width: 100%;
     }
 }
 
