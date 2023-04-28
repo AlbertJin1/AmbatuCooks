@@ -1105,7 +1105,7 @@ a {
     padding: 20px;
     width: 85%;
     height: 700px;
-    border-radius: 0.5em;
+    border-radius: 0.5em 0 0 0.5em;
     top: 55%;
     left: 50%;
     color: #000;
