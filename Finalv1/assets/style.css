@@ -615,7 +615,7 @@ input[type="search"]::-webkit-search-cancel-button {
     margin-top: auto;
     position: absolute;
     width: 30rem;
-    right: 50px;
+    right: 35px;
     bottom: 0;
 }
 
