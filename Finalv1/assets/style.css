@@ -528,6 +528,11 @@ input[type="search"]::-webkit-search-cancel-button {
     position: relative;
 }
 
+#about textarea{
+    resize: none;
+    height: 120px;
+}
+
 /* MESSAGE */
 .booking-form {
     width: 30%;
@@ -548,6 +553,7 @@ input[type="search"]::-webkit-search-cancel-button {
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 .booking-form form input,
@@ -569,7 +575,7 @@ input[type="search"]::-webkit-search-cancel-button {
     min-height: 2rem;
 }
 
-.btn1 {
+#btn1 {
     display: inline-block;
     background-color: white;
     border: 1px solid white;
@@ -582,9 +588,27 @@ input[type="search"]::-webkit-search-cancel-button {
     transition: all 0.3s ease-in-out;
     text-align: center;
     position: relative;
+    cursor: pointer;
 }
 
-.btn1:hover {
+#btn1:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+#reset{
+    width: 100%;
+    background-color: white;
+    color: black;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    cursor: pointer;
+}
+
+#reset:hover {
     background-color: var(--primary-color);
     color: white;
 }
