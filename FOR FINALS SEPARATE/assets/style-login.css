@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+/* font-family: 'Roboto', sans-serif; */
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+.gtp {
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../img/go-to-page/eva.jpg);
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#videoBG {
+    position: fixed;
+    z-index: -1;
+}
+
+/* INDEX */
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 80px;
+    z-index: 1;
+}
+
+.container .content {
+    width: 700px;
+    text-align: center;
+    background-color: #D3E0F9;
+    border: 1px solid black;
+    padding: 25px;
+}
+
+.container .content h3 {
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+.container .content p {
+    font-size: 20px;
+    padding: 10px 0;
+}
+
+.container .content p span {
+    color: #5575B5;
+}
+
+.container .content .logout {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: black;
+    color: #fff;
+    padding: 10px 35px;
+    font-size: 20px;
+    transition: all .3s ease-in-out;
+}
+
+.container .content .logout:hover {
+    background: #5575B5;
+}
+
+.container .content .continue {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: black;
+    color: #fff;
+    padding: 10px 35px;
+    font-size: 20px;
+    transition: all .3s ease-in-out;
+}
+
+.container .content .continue:hover {
+    background: #5575B5;
+}
+
+.logout,
+.continue {
+    margin: 10px;
+    text-transform: uppercase;
+}
+
+/* REGISTER/LOGIN FORM */
+.form-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container form {
+    text-align: center;
+    width: 500px;
+    background-color: #D3E0F9;
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 20px;
+    opacity: .85;
+    box-shadow: 4px 10px 8px rgba(0, 0, 0, 0.35);
+    animation: drop-in .5s ease 200ms backwards;
+}
+
+@keyframes drop-in {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    to {
+        opacity: .85;
+        transform: translate(0px);
+    }
+}
+
+img {
+    width: 100%;
+    border: 2px solid black;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.form-container form h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.form-container form .box {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 20px;
+    border: 2px solid black;
+    margin: 10px 0;
+}
+
+.form-container form .form-btn {
+    display: block;
+    margin: 10px 0;
+    background-color: black;
+    color: #fff;
+    padding: 15px 35px;
+    font-size: 20px;
+    width: 100%;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.form-container form .form-btn:hover {
+    background: #5575B5;
+}
+
+.form-container form p {
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+.form-container form p a {
+    color: #5575B5;
+    transition: all .15s ease-in-out;
+}
+
+.form-container form p a:hover {
+    color: #89b0ff;
+}
+
+.form-container form .error-msg {
+    display: block;
+    margin: 10px 0;
+    background: #5575B5;
+    font-size: 20px;
+    color: #fff;
+    padding: 10px;
+}
+
+/* VIDEO BACKGROUND */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    background-color: black;
+}
+
+.video-background video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    opacity: 0.5;
+}
+
+.pages a {
+    display: block;
+    margin: 10px 0;
+    background-color: black;
+    color: #fff;
+    padding: 15px 35px;
+    font-size: 20px;
+    width: 100%;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    text-transform: uppercase;
+}
+
+.pages a:hover {
+    background: #5575B5;
+}
+
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 750px) {
+    .video-background {
+        display: none;
+    }
+
+    .login {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/login/dreamyvid1.png) no-repeat center center fixed;
+        background-size: cover;
+        background-color: black;
+    }
+
+    .register {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/login/dreamyvid2.png) no-repeat center center fixed;
+        background-size: cover;
+        background-color: black;
+    }
+    .reset {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/login/dreamdream.png) no-repeat center center fixed;
+        background-size: cover;
+        background-color: black;
+    }
+}
+
+@media only screen and (max-width: 590px) {
+    .form-container form {
+        width: 85%;
+        overflow: hidden;
+        transform: scale(0.85);
+    }
+
+    .form-container form p {
+        font-size: 16px;
+    }
+}

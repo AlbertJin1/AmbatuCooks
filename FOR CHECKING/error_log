@@ -1,0 +1,4 @@
+[19-May-2023 13:54:08 Australia/Sydney] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ourgloba/ustp.ourglobalteam.com.au/delara-regualos/recipes-list.php on line 15
+[19-May-2023 13:54:08 Australia/Sydney] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/ourgloba/ustp.ourglobalteam.com.au/delara-regualos/recipes-list.php on line 16
+[19-May-2023 13:54:46 Australia/Sydney] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ourgloba/ustp.ourglobalteam.com.au/delara-regualos/recipes-list.php on line 15
+[19-May-2023 13:54:46 Australia/Sydney] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/ourgloba/ustp.ourglobalteam.com.au/delara-regualos/recipes-list.php on line 16
