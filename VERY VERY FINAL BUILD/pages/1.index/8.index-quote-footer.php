@@ -38,6 +38,7 @@
             <a href="#about">About</a>
             <a href="#consect">Contact Us</a>
             <a href="#blogs">Specials</a>
+            <a target="_blank" href="https://github.com/AlbertJin1/AmbatuCooks">Github</a>
         </div>
 
     </div>
