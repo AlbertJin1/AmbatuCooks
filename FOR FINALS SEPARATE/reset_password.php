@@ -110,7 +110,7 @@ if (isset($_SESSION['username'])) {
             <h1>
                 <img src="img/Logo/ambatulogoF.png" alt="logo">
             </h1>
-            <h3>login</h3>
+            <h3>reset password</h3>
             <?php
             if (isset($error)) {
                 foreach ($error as $error) {

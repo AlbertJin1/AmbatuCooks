@@ -1,7 +1,7 @@
 <!-- SECTION HEADING START -->
 
 <section id="menu" class="menu-section">
-    <div class="section-heading" class="menu-tab-content show" data-aos="zoom-in" data-aos-duration="1000">
+    <div class="section-heading" class="menu-tab-content show">
         <h3>Category Selections</h3>
         <h1>Ambatu Selected Recipes</h1>
         <div class="square-wrapper flex-row">
@@ -13,7 +13,7 @@
 
 
     <!-- MENU NAV -->
-    <div class="menu-tabs flex-row" data-aos="zoom-in" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom">
+    <div class="menu-tabs flex-row">
         <div class="menu-tab-item active" data-target="#main-dishes">
             <i class="bx bxs-bowl-hot"></i>
             <span>Main Dishes</span>
@@ -33,7 +33,7 @@
     </div>
 
     <!-- MAIN DISHES -->
-    <div id="main-dishes" class="menu-tab-content show" data-aos="zoom-in" data-aos-duration="1000">
+    <div id="main-dishes" class="menu-tab-content show">
 
         <!-- ITEM START -->
         <div class="menu-item">

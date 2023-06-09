@@ -11,7 +11,7 @@
         </div>
     </div>
 
-    <div class="team-carousel owl-carousel owl-theme" data-aos="fade-right" data-aos-duration="1000">
+    <div class="team-carousel owl-carousel owl-theme">
         <!-- CARD START -->
         <div class="team-card">
 
@@ -121,7 +121,7 @@
         </div>
     </div>
 
-    <div class="review-carousel owl-carousel owl-theme" data-aos="fade-up" data-aos-duration="1000">
+    <div class="review-carousel owl-carousel owl-theme">
         <!-- REVIEW START -->
         <div class="review-item">
             <div class="container">

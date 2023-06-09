@@ -2,7 +2,7 @@
 
 <section id="blogs">
 
-    <div class="section-heading" class="menu-tab-content show" data-aos="zoom-in" data-aos-duration="1000">
+    <div class="section-heading" class="menu-tab-content show">
         <h3>Our Recipe</h3>
         <h1>Certified Ambatupicks</h1>
         <div class="square-wrapper flex-row">
@@ -12,7 +12,7 @@
         </div>
     </div>
 
-    <div class="blog-carousel owl-carousel owl-theme" data-aos="fade-right" data-aos-duration="1000">
+    <div class="blog-carousel owl-carousel owl-theme">
 
         <!-- BLOG POST START -->
         <a href="recipes-list.php#popup1-main" class="blog-post">
