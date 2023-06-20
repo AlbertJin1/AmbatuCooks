@@ -99,7 +99,7 @@ if (isset($_SESSION['username'])) {
 <body class="reset">
 
     <div class="video-background">
-        <video id="dreamyvid" autoplay loop>
+        <video id="dreamyvid" autoplay loop playsinline>
             <source src="vid/dreamdream.mp4" type="video/mp4">
         </video>
     </div>

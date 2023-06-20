@@ -57,7 +57,7 @@ require 'pages/2.main-menu/1.recipes-php-com.php';
         <h2>Cooking is like love</h2>
         <h1>it should be entered into with abandon or not at all</h1>
         <div class="video-wrapper">
-            <video autoplay loop muted>
+            <video autoplay loop muted playsinline>
                 <source src="./vid/3-cooking-anime.mp4">
             </video>
 

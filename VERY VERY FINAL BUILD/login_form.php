@@ -66,7 +66,7 @@ if (isset($_SESSION['username'])) {
 <body class="login">
 
     <div class="video-background">
-        <video id="dreamyvid" autoplay loop>
+        <video id="dreamyvid" autoplay loop playsinline>
             <source src="vid/moon river - dreamy.mp4" type="video/mp4">
         </video>
     </div>

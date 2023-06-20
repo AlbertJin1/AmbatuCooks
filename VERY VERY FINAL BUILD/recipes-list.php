@@ -57,10 +57,9 @@ require 'pages/3.courses/1.recipeslist-php-com.php';
         <h2>Cooking is like love</h2>
         <h1>it should be entered into with abandon or not at all</h1>
         <div class="video-wrapper">
-            <video autoplay loop muted>
-                <source src="./vid/1-cooking-anime.mp4">
+            <video id="video" autoplay loop muted playsinline>
+                <source src="./vid/1-cooking-anime.mp4" type="video/mp4">
             </video>
-
             <div class="video-gradient-overlay"></div>
         </div>
     </section>
@@ -75,7 +74,7 @@ require 'pages/3.courses/1.recipeslist-php-com.php';
     include 'pages/3.courses/9.recipeslist-foot-scripts.php';
 
     ?>
-    
+
 </body>
 
 </html>
