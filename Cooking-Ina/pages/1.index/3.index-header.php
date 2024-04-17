@@ -36,8 +36,8 @@
 
     <div class="logo">
         <h5>
-            <!-- Ambatu<span>Cooks</span> -->
-            <img href="index.php" src="./img/Logo/AMBATU.png" alt="">
+            <!-- Cooking<span>Ina</span> -->
+            <img href="index.php" src="./img/Logo/icon-cooking-ina.png" alt="">
         </h5>
     </div>
 

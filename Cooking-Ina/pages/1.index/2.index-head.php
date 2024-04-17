@@ -2,7 +2,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="icon" href="./img/ICON/ambatuicon.png" type="image/x-icon">
+<link rel="icon" href="./img/ICON/icon-cooking-ina.png" type="image/x-icon">
 
 <!-- PRELOAD -->
 <link rel="preload" href="./assets/style.css" as="style">
@@ -36,4 +36,4 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intersection-observer/1.0.0/intersection-observer.min.js"></script>
 
-<title>Ambatu Cooks</title>
+<title>Cooking Ina</title>
