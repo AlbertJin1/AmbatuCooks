@@ -55,12 +55,12 @@ html {
 
 /* START */
 :root {
-    --bg-color-1: white;
-    --bg-color-2: #D3E0F9;
-    --grey-color: rgba(0, 0, 0, 0.20);
-    --heading-color: #2c2c2c;
+    --bg-color-1: #E5E8E1;
+    --bg-color-2: #6D9773;
+    --grey-color: #0C3B2E;
+    --heading-color: #FFBA00;
     --text-color: #353535;
-    --primary-color: #5575B5;
+    --primary-color: #0C3B2E;
     --font-family-1: 'Roboto', sans-serif;
     --font-family-2: 'Cookie', sans-serif;
     --nav-items-border-bottom: 1px solid rgba(0, 0, 0, 0.07);
@@ -73,7 +73,7 @@ html {
     --grey-color: #383737;
     --heading-color: #FFFFFF;
     --text-color: #FFFFFFcc;
-    --primary-color: #5575B5;
+    --primary-color: #0C3B2E;
     --font-family-1: 'Roboto', sans-serif;
     --font-family-2: 'Cookie', sans-serif;
     --nav-items-border-bottom: 1px solid rgba(255, 255, 255, 0.07);
