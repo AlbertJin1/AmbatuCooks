@@ -6,7 +6,7 @@
                 User: <span><?php echo getLoggedInUserName(); ?></span>
             <?php } ?>
             <?php if ($isLogged2) { ?>
-                Phone no: <span>+63 997 267 1584</span> or email us: <span>ambatucooks@gmail.com</span>
+                Phone no: <span>+63 997 267 1584</span> or email us: <span>CookingIna@gmail.com</span>
             <?php } ?>
         </div>
         <div class="opening-times flex-row">

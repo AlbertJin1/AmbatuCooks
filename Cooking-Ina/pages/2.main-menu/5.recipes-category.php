@@ -40,16 +40,16 @@
             <div class="menu-item-inner">
                 <a href="recipes-list.php#popup1-main">
                     <div class="food-img">
-                        <img class="lazy" data-src="./img/MAIN MENU/1-MAIN DISH/1-Miso-Ramen.jpg" alt="#">
+                        <img class="lazy" data-src="./img/MAIN MENU/1-MAIN DISH/ribs.png" alt="#">
                     </div>
                     <div class="text">
                         <div class="dish-details">
-                            <h2>Miso Ramen Recipe</h2>
+                            <h2>Baby Back Ribs</h2>
                             <div class="line"></div>
                             <!-- <span class="price">None</span> -->
                         </div>
                         <div class="desc">
-                            <p>Flavored with pork and chicken broth with a mix of toppings such as chashu and ramen egg, this bowl of Miso Ramen is going to satisfy your craving. You can make delicious ramen with authentic broth in less than 30 minutes!</p>
+                            <p>These baby back ribs are tender, and the meat falls right off the bone. Generally, people think of baby back ribs as a meal they would only order at a restaurant, but they are so easy to make at home. This recipe could not be more simple.</p>
                         </div>
                     </div>
                 </a>
@@ -62,16 +62,16 @@
             <div class="menu-item-inner">
                 <a href="recipes-list.php#popup2-main">
                     <div class="food-img">
-                        <img class="lazy" data-src="./img/MAIN MENU/1-MAIN DISH/2-Japanese-Curry.jpg" alt="#">
+                        <img class="lazy" data-src="./img/MAIN MENU/1-MAIN DISH/lumpia.png" alt="#">
                     </div>
                     <div class="text">
                         <div class="dish-details">
-                            <h2>Japanese Chicken Curry</h2>
+                            <h2>Lumpiang Shanghai</h2>
                             <div class="line"></div>
                             <!-- <span class="price">None</span> -->
                         </div>
                         <div class="desc">
-                            <p>Delicious Japanese chicken curry recipe for a weeknight dinner! Tender pieces of chicken, carrots, and potatoes cooked in a rich savory curry sauce, this Japanese version of curry is a must-have for your family meal.</p>
+                            <p>Lumpiang Shanghai is a Filipino deep-fried appetizer consisting of a mixture of giniling with vegetables like carrots, chopped scallions or red onions and garlic, wrapped in a thin egg crêpe.</p>
                         </div>
                     </div>
                 </a>
@@ -84,16 +84,16 @@
             <div class="menu-item-inner">
                 <a href="recipes-list.php#popup3-main">
                     <div class="food-img">
-                        <img class="lazy" data-src="./img/MAIN MENU/1-MAIN DISH/3-Tonkatsu.jpg" alt="#">
+                        <img class="lazy" data-src="./img/MAIN MENU/1-MAIN DISH/manok.png" alt="#">
                     </div>
                     <div class="text">
                         <div class="dish-details">
-                            <h2>Tonkatsu</h2>
+                            <h2>Rellenong Manok</h2>
                             <div class="line"></div>
                             <!-- <span class="price">None</span> -->
                         </div>
                         <div class="desc">
-                            <p>Tonkatsu (Japanese Pork Cutlet) is one of the simplest meals you can make at home. Every bite is perfectly crunchy on the outside and juicy on the inside with the added flavor from Tonkatsu Sauce!</p>
+                            <p>Rellenong Manok is impressive as it is delicious! This stuffed chicken with ground pork filling is baked to golden perfection for the perfect dinner entree your guests will be raving about!</p>
                         </div>
                     </div>
                 </a>
@@ -106,16 +106,16 @@
             <div class="menu-item-inner">
                 <a href="recipes-list.php#popup4-main">
                     <div class="food-img">
-                        <img class="lazy" data-src="./img/MAIN MENU/1-MAIN DISH/4-Oyakodon.jpg" alt="#">
+                        <img class="lazy" data-src="./img/MAIN MENU/1-MAIN DISH/tuna.png" alt="#">
                     </div>
                     <div class="text">
                         <div class="dish-details">
-                            <h2>Oyakodon</h2>
+                            <h2>Grilled Tuna Belly</h2>
                             <div class="line"></div>
                             <!-- <span class="price">None</span> -->
                         </div>
                         <div class="desc">
-                            <p>Oyakodon is a classic comfort food of Japanese home cooking. Tender pieces of chicken, onions, and eggs are simmered in an umami-rich sauce and then poured over a bowl of fluffy steamed rice. Simple, delicious, and utterly comforting, this is the kind of one-bowl meal you can cook in less than 30 minutes!</p>
+                            <p>Tuna belly is perfect for grilling. This grilled tuna belly recipe is easy to follow and the result is great. You should be enjoying your tasty and delicious tuna belly after a few hours of preparation. </p>
                         </div>
                     </div>
                 </a>
@@ -137,16 +137,16 @@
             <div class="menu-item-inner">
                 <a href="recipes-list.php#popup1-appe">
                     <div class="food-img">
-                        <img class="lazy" data-src="./img/MAIN MENU/2-APPETIZER/1-Chawanmushi.jpg" alt="#">
+                        <img class="lazy" data-src="./img/MAIN MENU/2-APPETIZER/adobo.png alt="#">
                     </div>
                     <div class="text">
                         <div class="dish-details">
-                            <h2>Chawanmushi</h2>
+                            <h2>Chicken Adobo</h2>
                             <div class="line"></div>
                             <!-- <span class="price">None</span> -->
                         </div>
                         <div class="desc">
-                            <p>hawanmushi is a classic Japanese savory custard that`s steamed and served in a delicate cup. Tender chicken pieces, colorful kamaboko fish cake, and shimeji mushrooms are draped in a smooth and silky custard seasoned with dashi soup stock.</p>
+                            <p>hicken Adobo is an authentic Filipino dish and is one of the mostly recognized Filipino foods. Not to be mistaken with Mexican adobo, this dish is uniquely prepared by stewing chicken in vinegar and soy sauce.</p>
                         </div>
                     </div>
                 </a>
