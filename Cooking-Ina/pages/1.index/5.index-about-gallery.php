@@ -47,8 +47,8 @@
     <div class="gallery-wrapper flex-row" data-aos="fade-right" data-aos-duration="1000">
 
         <!-- IMG START -->
-        <a href="./img/Gallery/1.jpg" class="gallery-img">
-            <img class="lazy" data-src="./img/Gallery/1.jpg" alt="#">
+        <a href="./img/Gallery/chiken-adobo.png" class="gallery-img">
+            <img class="lazy" data-src="./img/Gallery/chiken-adobo.png" alt="#">
             <div class="overlay">
                 <i class="icon bx bx-search"></i>
             </div>
@@ -56,8 +56,8 @@
         <!-- IMG END -->
 
         <!-- IMG START -->
-        <a href="./img/Gallery/2.jpg" class="gallery-img">
-            <img class="lazy" data-src="./img/Gallery/2.jpg" alt="#">
+        <a href="./img/Gallery/lumpia.png" class="gallery-img">
+            <img class="lazy" data-src="./img/Gallery/lumpia.png" alt="#">
             <div class="overlay">
                 <i class="icon bx bx-search"></i>
             </div>
@@ -65,8 +65,8 @@
         <!-- IMG END -->
 
         <!-- IMG START -->
-        <a href="./img/Gallery/3.jpg" class="gallery-img">
-            <img class="lazy" data-src="./img/Gallery/3.jpg" alt="#">
+        <a href="./img/Gallery/melon.png" class="gallery-img">
+            <img class="lazy" data-src="./img/Gallery/melon.png" alt="#">
             <div class="overlay">
                 <i class="icon bx bx-search"></i>
             </div>
@@ -74,8 +74,8 @@
         <!-- IMG END -->
 
         <!-- IMG START -->
-        <a href="./img/Gallery/4.jpg" class="gallery-img">
-            <img class="lazy" data-src="./img/Gallery/4.jpg" alt="#">
+        <a href="./img/Gallery/eggplant.png" class="gallery-img">
+            <img class="lazy" data-src="./img/Gallery/eggplant.png" alt="#">
             <div class="overlay">
                 <i class="icon bx bx-search"></i>
             </div>
@@ -83,8 +83,8 @@
         <!-- IMG END -->
 
         <!-- IMG START -->
-        <a href="./img/Gallery/5.jpg" class="gallery-img">
-            <img class="lazy" data-src="./img/Gallery/5.jpg" alt="#">
+        <a href="./img/Gallery/beefsteak.png" class="gallery-img">
+            <img class="lazy" data-src="./img/Gallery/beefsteak.png" alt="#">
             <div class="overlay">
                 <i class="icon bx bx-search"></i>
             </div>
@@ -92,8 +92,8 @@
         <!-- IMG END -->
 
         <!-- IMG START -->
-        <a href="./img/Gallery/6.jpg" class="gallery-img">
-            <img class="lazy" data-src="./img/Gallery/6.jpg" alt="#">
+        <a href="./img/Gallery/pandesal.png" class="gallery-img">
+            <img class="lazy" data-src="./img/Gallery/pandesal.png" alt="#">
             <div class="overlay">
                 <i class="icon bx bx-search"></i>
             </div>
