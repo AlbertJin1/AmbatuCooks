@@ -8,6 +8,7 @@
             <div class="square"></div>
             <div class="square"></div>
             <div class="square"></div>
+            <div class="square"></div>
         </div>
     </div>
 
@@ -16,7 +17,7 @@
         <div class="team-card">
 
             <div class="img-wrapper">
-                <img class="lazy" data-src="./img/team/team-albert-1.png" alt="#">
+                <img class="lazy" data-src="./img/team/albert.png" alt="#">
             </div>
 
             <div class="text-wrapper">
@@ -45,18 +46,47 @@
         <div class="team-card">
 
             <div class="img-wrapper">
-                <img class="lazy" data-src="./img/team/team-risu.png" alt="#">
+                <img class="lazy" data-src="./img/team/henley.png" alt="#">
             </div>
 
             <div class="text-wrapper">
-                <h4 class="name">Irisjen De Lara</h4>
-                <h5 class="desc">Web Developer</h5>
+                <h4 class="name">John Henley Llamos</h4>
+                <h5 class="desc">Lead Web Designer & Researcher</h5>
             </div>
 
             <ul class="social-links flex-col">
 
                 <li>
-                    <a href="https://web.facebook.com/iris.jen.9" target="_blank"><i class="icon bx bxl-facebook"></i></a>
+                    <a href="https://www.facebook.com/johnhenley.llamos.7/" target="_blank"><i class="icon bx bxl-facebook"></i></a>
+                </li>
+                <li>
+                    <a href="https://x.com/Henley8379?t=hXMR9cR-rfpmY0_SNIRDfQ&s=09"><i class="icon bx bxl-twitter"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/_enleyaaaa?igsh=bjdycnI0dnMxbzBi"><i class="icon bx bxl-instagram"></i></a>
+                </li>
+
+            </ul>
+
+        </div>
+        <!-- CARD END -->
+
+        <!-- CARD START -->
+        <div class="team-card">
+
+            <div class="img-wrapper">
+                <img class="lazy" data-src="./img/team/brei.png" alt="#">
+            </div>
+
+            <div class="text-wrapper">
+                <h4 class="name">Brieanne Joyce Alsonado</h4>
+                <h5 class="desc">Designer & Writer </h5>
+            </div>
+
+            <ul class="social-links flex-col">
+
+                <li>
+                    <a href="https://www.facebook.com/brieanne.alsonado" target="_blank"><i class="icon bx bxl-facebook"></i></a>
                 </li>
                 <li>
                     <a href="#"><i class="icon bx bxl-twitter"></i></a>
@@ -70,22 +100,22 @@
         </div>
         <!-- CARD END -->
 
-        <!-- CARD START -->
+         <!-- CARD START -->
         <div class="team-card">
 
             <div class="img-wrapper">
-                <img class="lazy" data-src="./img/team/team-ambatu.png" alt="#">
+                <img class="lazy" data-src="./img/team/josh.png" alt="#">
             </div>
 
             <div class="text-wrapper">
-                <h4 class="name">Dreamy Bull</h4>
-                <h5 class="desc">Our Motivator</h5>
+                <h4 class="name">Joshua Felicitas</h4>
+                <h5 class="desc">Drafter & Web Developer</h5>
             </div>
 
             <ul class="social-links flex-col">
 
                 <li>
-                    <a href="#"><i class="icon bx bxl-facebook"></i></a>
+                    <a href="https://www.facebook.com/joshuafelicis/photos_by" target="_blank"><i class="icon bx bxl-facebook"></i></a>
                 </li>
                 <li>
                     <a href="#"><i class="icon bx bxl-twitter"></i></a>
