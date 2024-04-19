@@ -14,7 +14,7 @@
     <div class="footer-top flex-row">
 
         <div class="flex-col">
-            <h4 class="logo-name">AMBATUCOOKS</h4>
+            <h4 class="logo-name">COOKING INA</h4>
 
             <p class="desc">"Food is not just fuel, it's information. It talks to your DNA and tells it what to do. The most powerful tool to change your health, environment and entire world is your fork. Every time you eat, you make a choice. With every bite, you hold the power to change your life and the lives of others. Choose wisely, savor every flavor and nourish your body with love and respect."<br>- Dr. Mark Hyman.</p>
             <ul class="social-links">
@@ -28,7 +28,7 @@
             <h4 class="heading">ADDRESS</h4>
 
             <p class="desc">Zone 6 Capisnon<br>Kauswagan, Cagayan de Oro City 9000</p>
-            <p class="desc">P: +63 997 267 1584<br>E: ambatucooks@gmail.com</p>
+            <p class="desc">P: +63 997 267 1584<br>E: CookingIna@gmail.com</p>
         </div>
 
         <div class="flex-col">
@@ -44,7 +44,7 @@
     </div>
 
     <div class="footer-bottom flex-row">
-        <span>Copyright &copy 2023 All rights reserved | AmbatuCooks</span>
+        <span>Copyright &copy 2024 All rights reserved | CookingIna</span>
     </div>
 </footer>
 

@@ -43,7 +43,7 @@
 
 <div class="text-wrapper">
     <h5 class="blog-title">Buko Pandan</h5>
-    <p class="desc">Buko Pandan is a popular Filipino Dessert made using young coconut,  pandan leaves (or Screwpine leaves), and sago pearls. At first glance, this dessert dish can be mistaken for Buko Salad. Both desserts are almost similar visually.</p>
+    <p class="desc">Buko Pandan is a popular Filipino Dessert made using young coconut,  pandan leaves, and sago pearls. At first glance, this dessert dish can be mistaken for Buko Salad.</p>
     <p class="time"><i class="icon bx bx-time-five"></i>Prep Time: <span>10 mins</span></p>
     <p class="time"><i class="icon bx bx-time-five"></i>Cook Time: <span>10 mins</span></p>
     <p class="time"><i class="icon bx bx-time-five"></i>Total Time: <span>20 mins</span></p>
