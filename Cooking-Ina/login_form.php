@@ -1,0 +1,109 @@
+<?php
+
+session_start();
+
+// VALIDATE LOGIN
+function validateLogin($username, $password) {
+    $users = getUsersData();
+    if ($users !== null) {
+        foreach ($users as $user) {
+            if ($user['username'] === $username && $user['password'] === $password) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+// RETRIEVE USER DATA FROM FILE
+function getUsersData() {
+    $filePath = 'users.txt';
+    if (file_exists($filePath)) {
+        $content = file_get_contents($filePath);
+        if (!empty($content)) {
+            return unserialize($content);
+        }
+    }
+    return null;
+}
+
+// LOGIN
+if (isset($_POST['submit'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    if (validateLogin($username, $password)) {
+        $_SESSION['username'] = $username;
+        header('location:recipes-list.php');
+    } else {
+        $error[] = 'INVALID USERNAME OR PASSWORD!';
+
+    }
+}
+
+// IF USER IS ALREADY LOGGED IN = REDIRECT TO COURSES
+if (isset($_SESSION['username'])) {
+    header('location:recipes-list.php');
+}
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Cooking Ina - Login</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/ICON/ambatuicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="assets/style-login.css">
+
+</head>
+
+<body class="login">
+
+    <div class="video-background">
+        <video id="dreamyvid" autoplay loop playsinline>
+            <source src="vid/moon river - dreamy.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div id="form-con" class="form-container">
+
+        <form action="" method="post">
+            <h1>
+                <img src="img/Logo/ambatulogoF.png" alt="logo">
+            </h1>
+            <h3>login</h3>
+            <?php
+            if (isset($error)) {
+                foreach ($error as $error) {
+                    echo '<span class="error-msg">' . $error . '</span>';
+                }
+            }
+            ?>
+            <input type="text" name="username" placeholder="USERNAME" class="box" required>
+            <input type="password" name="password" placeholder="PASSWORD" class="box" required>
+            <input type="submit" value="LOGIN NOW" name="submit" class="form-btn">
+            <input type="reset" value="CLEAR" id="reset" class="form-btn">
+            <div class="pages" id="pages-form">
+                <a class="goto-forms" href="go-to-page.php">Go to Page</a>
+            </div>
+            <p>DON'T HAVE AN ACCOUNT? <a class="page" href="register_form.php">REGISTER NOW</a></p>
+            <p>FORGOT PASSWORD? <a class="page" href="reset_password.php">RESET PASSWORD</a></p>
+
+        </form>
+
+        <script>
+            var myVideo = document.getElementById("dreamyvid");
+            myVideo.volume = 0.25;
+        </script>
+
+    </div>
+
+</body>
+
+</html>
