@@ -38,7 +38,7 @@
 .container .content {
     width: 700px;
     text-align: center;
-    background-color: #D3E0F9;
+    background-color: #E5E8E1;
     border: 1px solid black;
     padding: 25px;
 }
@@ -54,7 +54,7 @@
 }
 
 .container .content p span {
-    color: #5575B5;
+    color: #E5E8E1;
 }
 
 .container .content .logout {
@@ -68,7 +68,7 @@
 }
 
 .container .content .logout:hover {
-    background: #5575B5;
+    background: #E5E8E1;
 }
 
 .container .content .continue {
@@ -82,7 +82,7 @@
 }
 
 .container .content .continue:hover {
-    background: #5575B5;
+    background: #E5E8E1;
 }
 
 .logout,
@@ -102,8 +102,8 @@
 .form-container form {
     text-align: center;
     width: 500px;
-    background-color: #D3E0F9;
-    border: 2px solid black;
+    background-color: #0C3B2E;
+    border: 2px solid #E5E8E1;
     padding: 20px;
     border-radius: 20px;
     opacity: .85;
@@ -125,7 +125,7 @@
 
 img {
     width: 100%;
-    border: 2px solid black;
+    border: 2px solid #E5E8E1;
     padding: 20px;
     margin-bottom: 10px;
     border-radius: 10px;
@@ -135,6 +135,7 @@ img {
 .form-container form h3 {
     font-size: 30px;
     margin-bottom: 10px;
+    color:#E5E8E1;
     text-transform: uppercase;
 }
 
@@ -149,7 +150,7 @@ img {
 .form-container form .form-btn {
     display: block;
     margin: 10px 0;
-    background-color: black;
+    background-color: #6D9773;
     color: #fff;
     padding: 15px 35px;
     font-size: 20px;
@@ -159,27 +160,28 @@ img {
 }
 
 .form-container form .form-btn:hover {
-    background: #5575B5;
+    background: #E5E8E1;
 }
 
 .form-container form p {
     font-size: 20px;
     padding-top: 10px;
+    color: #E5E8E1;
 }
 
 .form-container form p a {
-    color: #5575B5;
+    color: #FFBA00;
     transition: all .15s ease-in-out;
 }
 
 .form-container form p a:hover {
-    color: #89b0ff;
+    color: #BB8A52;
 }
 
 .form-container form .error-msg {
     display: block;
     margin: 10px 0;
-    background: #5575B5;
+    background: #E5E8E1;
     font-size: 20px;
     color: #fff;
     padding: 10px;
@@ -214,7 +216,7 @@ img {
 .pages a {
     display: block;
     margin: 10px 0;
-    background-color: black;
+    background-color: #6D9773;
     color: #fff;
     padding: 15px 35px;
     font-size: 20px;
@@ -225,7 +227,7 @@ img {
 }
 
 .pages a:hover {
-    background: #5575B5;
+    background: #E5E8E1;
 }
 
 
