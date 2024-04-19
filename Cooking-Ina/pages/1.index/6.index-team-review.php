@@ -22,7 +22,7 @@
 
             <div class="text-wrapper">
                 <h4 class="name">Jessie Albert Regualos</h4>
-                <h5 class="desc">Lead Web Designer & Lead Web Developer</h5>
+                <h5 class="desc">Lead Developer & Drafter</h5>
             </div>
 
             <ul class="social-links flex-col">
@@ -51,7 +51,7 @@
 
             <div class="text-wrapper">
                 <h4 class="name">John Henley Llamos</h4>
-                <h5 class="desc">Lead Web Designer & Researcher</h5>
+                <h5 class="desc">Lead Designer & Researcher</h5>
             </div>
 
             <ul class="social-links flex-col">
@@ -109,7 +109,7 @@
 
             <div class="text-wrapper">
                 <h4 class="name">Joshua Felicitas</h4>
-                <h5 class="desc">Drafter & Web Developer</h5>
+                <h5 class="desc">Drafter & Developer</h5>
             </div>
 
             <ul class="social-links flex-col">

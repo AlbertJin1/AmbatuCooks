@@ -84,7 +84,7 @@ if (isset($_SESSION['username'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="img/ICON/ambatuicon.png" type="image/x-icon">
+    <link rel="icon" href="img/ICON/CookingInalogoof.png" type="image/x-icon">
 
     <link rel="stylesheet" href="assets/style-login.css">
 
@@ -102,7 +102,7 @@ if (isset($_SESSION['username'])) {
 
         <form action="" method="post">
             <h1>
-                <img src="img/Logo/ambatulogoF.png" alt="logo">
+                <img src="img/Logo/CookingInalogoof.png" alt="logo">
             </h1>
             <h3>register</h3>
             <?php

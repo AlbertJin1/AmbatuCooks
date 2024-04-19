@@ -5,7 +5,7 @@
     <div class="text-wrapper" data-aos="fade-left" data-aos-duration="1000">
         <h1>DREAMY BULL</h1>
         <h3 id="title-change">Ambassador Chef</h3>
-        <p id="desc-change">Hey there, have you ever been in the mood to whip up something bussing buss in the kitchen but you're not quite sure what to make? Well, let me tell you about this amazing recipe website! <br>It's the perfect place to find all sorts of Japanese tasty recipes, from quick and easy meals to fancy desserts. Trust me, this website will be <br>your go-to source for all your cooking needs!</p>
+        <p id="desc-change">Hey there, have you ever been in the mood to whip up something bussing buss in the kitchen but you're not quite sure what to make? Well, let me tell you about this amazing recipe website! <br>It's the perfect place to find all sorts of Filipino tasty recipes, from quick and easy meals to fancy desserts. Trust me, this website will be <br>your go-to source for all your cooking needs!</p>
         <div class="sign">
             <img class="lazy" data-src="./img/sign/sign-light.png" alt="#" id="signImg">
         </div>
