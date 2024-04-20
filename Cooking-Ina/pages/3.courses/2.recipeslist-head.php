@@ -2,7 +2,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="icon" href="./img/ICON/ambatuicon.png" type="image/x-icon">
+<link rel="icon" href="./img/ICON/icon-cooking-ina.png" type="image/x-icon">
 
 <!-- PRELOAD -->
 <link rel="preload" href="./assets/style-recipe-list.css" as="style">
@@ -30,4 +30,4 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.4.0/css/lightgallery.min.css" />
 
-<title>Courses - Ambatu Cooks</title>
+<title>Courses - Cooking Ina</title>
