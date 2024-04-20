@@ -205,7 +205,7 @@
         </div>
 
         <div class="food-items">
-            <img src="./img/RECIPES/1-MAIN DISH/3.jpg">
+            <img src="./img/RECIPES/1-MAIN DISH/3.png">
             <div class="details">
                 <div class="details-sub">
                     <h2>Rellenong Manok</h2>
