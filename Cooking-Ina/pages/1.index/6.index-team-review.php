@@ -13,6 +13,39 @@
     </div>
 
     <div class="team-carousel owl-carousel owl-theme" data-aos="fade-right" data-aos-duration="1000">
+
+        <!-- CARD END -->
+
+        <!-- CARD START -->
+        <div class="team-card">
+
+            <div class="img-wrapper">
+                <img class="lazy" data-src="./img/team/josh.png" alt="#">
+            </div>
+
+            <div class="text-wrapper">
+                <h4 class="name">Joshua Felicitas</h4>
+                <h5 class="desc">Drafter & Developer</h5>
+            </div>
+
+            <ul class="social-links flex-col">
+
+                <li>
+                    <a href="https://www.facebook.com/joshuafelicis/photos_by" target="_blank"><i
+                            class="icon bx bxl-facebook"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="icon bx bxl-twitter"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="icon bx bxl-instagram"></i></a>
+                </li>
+
+            </ul>
+
+        </div>
+        <!-- CARD END -->
+
         <!-- CARD START -->
         <div class="team-card">
 
@@ -28,7 +61,8 @@
             <ul class="social-links flex-col">
 
                 <li>
-                    <a href="https://web.facebook.com/yotsuchi.albertjin1/" target="_blank"><i class="icon bx bxl-facebook"></i></a>
+                    <a href="https://web.facebook.com/yotsuchi.albertjin1/" target="_blank"><i
+                            class="icon bx bxl-facebook"></i></a>
                 </li>
                 <li>
                     <a href="#"><i class="icon bx bxl-twitter"></i></a>
@@ -57,13 +91,16 @@
             <ul class="social-links flex-col">
 
                 <li>
-                    <a href="https://www.facebook.com/johnhenley.llamos.7/" target="_blank"><i class="icon bx bxl-facebook"></i></a>
+                    <a href="https://www.facebook.com/johnhenley.llamos.7/" target="_blank"><i
+                            class="icon bx bxl-facebook"></i></a>
                 </li>
                 <li>
-                    <a href="https://x.com/Henley8379?t=hXMR9cR-rfpmY0_SNIRDfQ&s=09"><i class="icon bx bxl-twitter"></i></a>
+                    <a href="https://x.com/Henley8379?t=hXMR9cR-rfpmY0_SNIRDfQ&s=09"><i
+                            class="icon bx bxl-twitter"></i></a>
                 </li>
                 <li>
-                    <a href="https://www.instagram.com/_enleyaaaa?igsh=bjdycnI0dnMxbzBi"><i class="icon bx bxl-instagram"></i></a>
+                    <a href="https://www.instagram.com/_enleyaaaa?igsh=bjdycnI0dnMxbzBi"><i
+                            class="icon bx bxl-instagram"></i></a>
                 </li>
 
             </ul>
@@ -86,7 +123,8 @@
             <ul class="social-links flex-col">
 
                 <li>
-                    <a href="https://www.facebook.com/brieanne.alsonado" target="_blank"><i class="icon bx bxl-facebook"></i></a>
+                    <a href="https://www.facebook.com/brieanne.alsonado" target="_blank"><i
+                            class="icon bx bxl-facebook"></i></a>
                 </li>
                 <li>
                     <a href="#"><i class="icon bx bxl-twitter"></i></a>
@@ -98,36 +136,7 @@
             </ul>
 
         </div>
-        <!-- CARD END -->
 
-         <!-- CARD START -->
-        <div class="team-card">
-
-            <div class="img-wrapper">
-                <img class="lazy" data-src="./img/team/josh.png" alt="#">
-            </div>
-
-            <div class="text-wrapper">
-                <h4 class="name">Joshua Felicitas</h4>
-                <h5 class="desc">Drafter & Developer</h5>
-            </div>
-
-            <ul class="social-links flex-col">
-
-                <li>
-                    <a href="https://www.facebook.com/joshuafelicis/photos_by" target="_blank"><i class="icon bx bxl-facebook"></i></a>
-                </li>
-                <li>
-                    <a href="#"><i class="icon bx bxl-twitter"></i></a>
-                </li>
-                <li>
-                    <a href="#"><i class="icon bx bxl-instagram"></i></a>
-                </li>
-
-            </ul>
-
-        </div>
-        <!-- CARD END -->
 
     </div>
 
