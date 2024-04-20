@@ -91,24 +91,6 @@
 </a>
 <!-- BLOG POST END -->
 
-<!-- BLOG POST START -->
-<a href="recipes-list.php#popup1-main" class="blog-post">
-
-<div class="img-wrapper">
-    <img class="lazy" data-src="./img/Blog/1-Miso-Ramen.jpg" alt="#">
-    <div class="overlay"><i class="icon bx bx-link"></i></div>
-</div>
-
-<div class="text-wrapper">
-    <h5 class="blog-title">Miso Ramen 味噌ラーメン</h5>
-    <p class="desc">Flavored with pork and chicken broth with a mix of toppings such as chashu and ramen egg, this bowl of Miso Ramen is going to satisfy your craving.</p>
-    <p class="time"><i class="icon bx bx-time-five"></i>Prep Time: <span>10 mins</span></p>
-    <p class="time"><i class="icon bx bx-time-five"></i>Cook Time: <span>15 mins</span></p>
-    <p class="time"><i class="icon bx bx-time-five"></i>Total Time: <span>25 mins</span></p>
-</div>
-
-</a>
-<!-- BLOG POST END -->
     </div>
 
 </section>
