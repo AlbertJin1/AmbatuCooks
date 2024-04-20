@@ -58,7 +58,7 @@ html {
     --bg-color-1: #E5E8E1;
     --bg-color-2: #6D9773;
     --grey-color: #0C3B2E;
-    --heading-color: #FFBA00;
+    --heading-color: #0C3B2E;
     --text-color: #353535;
     --primary-color: #0C3B2E;
     --font-family-1: 'Roboto', sans-serif;
@@ -73,7 +73,7 @@ html {
     --grey-color: #383737;
     --heading-color: #FFFFFF;
     --text-color: #FFFFFFcc;
-    --primary-color: #5575B5;
+    --primary-color: #FFBA00;
     --font-family-1: 'Roboto', sans-serif;
     --font-family-2: 'Cookie', sans-serif;
     --nav-items-border-bottom: 1px solid rgba(255, 255, 255, 0.07);
@@ -847,7 +847,7 @@ footer {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #A7BEEA;
+    background-color: #0C3B2E;
     height: 100%;
     width: 100%;
     display: flex;
