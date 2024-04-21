@@ -24,7 +24,7 @@ require 'pages/2.main-menu/1.recipes-php-com.php';
             <source src="./vid/background-load.mp4" type="video/mp4">
         </video> -->
         <!-- <h1>Loading...</h1> -->
-        <img src="./img/loader/loading-loader.gif" alt="loader gif">
+        <!-- <img src="./img/loader/loading-loader.gif" alt="loader gif"> -->
     </div>
 
     <div id="progress">
@@ -33,7 +33,7 @@ require 'pages/2.main-menu/1.recipes-php-com.php';
 
     <div id="music">
         <audio id="bg-music" autoplay loop>
-            <source src="./music/ogg/merry-go-round of life (howl's moving castle lofi).ogg" type="audio/ogg">
+            <!-- <source src="./music/ogg/merry-go-round of life (howl's moving castle lofi).ogg" type="audio/ogg"> -->
         </audio>
     </div>
 

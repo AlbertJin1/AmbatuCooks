@@ -24,7 +24,7 @@ require 'pages/3.courses/1.recipeslist-php-com.php';
             <source src="./vid/background-load.mp4" type="video/mp4">
         </video> -->
         <!-- <h1>Loading...</h1> -->
-        <img src="./img/loader/loading-loader.gif" alt="loader gif">
+        <!-- <img src="./img/loader/loading-loader.gif" alt="loader gif"> -->
     </div>
 
     <div id="progress">
@@ -37,7 +37,7 @@ require 'pages/3.courses/1.recipeslist-php-com.php';
 
     <div id="music">
         <audio id="bg-music" volume="0.5" autoplay loop>
-            <source src="./music/ogg/signal flags (from up on poppy hill lofi).ogg" type="audio/ogg">
+            <!-- <source src="./music/ogg/signal flags (from up on poppy hill lofi).ogg" type="audio/ogg"> -->
         </audio>
     </div>
 

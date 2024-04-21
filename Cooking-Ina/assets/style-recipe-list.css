@@ -871,6 +871,45 @@ footer {
 
 /* LOADER */
 .loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #E5E8E1;
+    transition: opacity 0.75s, visibility 0.75s;
+    z-index: 10;
+}
+
+.loader--hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid white;
+    border-top-color: #0C3B2E;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0turn);
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+/* .loader {
     z-index: 1001;
     position: fixed;
     top: 0;
@@ -913,7 +952,7 @@ footer {
         opacity: 0;
         visibility: hidden;
     }
-}
+} */
 
 /* VIDEO */
 .video {
@@ -1183,19 +1222,20 @@ a {
     background-color: var(--primary-color);
 }
 
-.top h2{
+.top h2 {
     margin-bottom: 20px;
     padding: 0;
     text-decoration: none;
     font-size: 20px;
 }
 
-.top, .bottom{
+.top,
+.bottom {
     width: 100%;
     height: 50%;
 }
 
-.top table{
+.top table {
     width: 100%;
     border-collapse: collapse;
     border-radius: 10px 10px 0 0;
@@ -1205,7 +1245,7 @@ a {
     margin-right: auto;
 }
 
-.nutrition{
+.nutrition {
     width: 100%;
     border-collapse: collapse;
     border-radius: 10px 10px 0 0;
@@ -1216,34 +1256,36 @@ a {
     margin-right: auto;
 }
 
-th{
+th {
     background-color: var(--primary-color);
     font-size: 18px;
     color: white;
 }
 
-td{
+td {
     font-size: 16px;
 }
 
-td,th{
+td,
+th {
     border: 1px solid var(--grey-color);
     padding: 15px;
     font-family: var(--font-family-1);
     text-transform: capitalize;
 }
 
-td,ol{
+td,
+ol {
     color: var(--text-color);
 }
 
 
-.bottom{
+.bottom {
     margin-top: 10px;
     padding: 10px 0 10px 0;
 }
 
-.bottom h2{
+.bottom h2 {
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 0;
@@ -1251,15 +1293,15 @@ td,ol{
     text-decoration: none;
 }
 
-.bottom li{
+.bottom li {
     line-height: 35px;
 }
 
-.bottom ol>li::marker{
+.bottom ol>li::marker {
     font-weight: bold;
 }
 
-.bottom ol{
+.bottom ol {
     padding-left: 20px;
 }
 
@@ -1274,22 +1316,23 @@ td,ol{
 
 /* SHOW MORE BUTTON */
 .toggle-button-container {
-    text-align: center; /* Center the button */
+    text-align: center;
+    /* Center the button */
     position: relative;
     margin-bottom: 20px;
 }
 
 /* MAIN */
-.toggle-button-main{
-    background-color: var(--bg-color-1); 
+.toggle-button-main {
+    background-color: var(--bg-color-1);
     border: 1px solid var(--heading-color);
     color: var(--text-color);
     padding: 10px 20px;
-    text-align: center; 
-    text-decoration: none; 
+    text-align: center;
+    text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    cursor: pointer; 
+    cursor: pointer;
     transition: all .3s ease-in-out;
     font-family: var(--font-family-1);
     font-weight: 500;
@@ -1301,17 +1344,18 @@ td,ol{
     background-color: var(--primary-color);
     transition: all .3s ease-in-out;
 }
+
 /* APPETIZER */
-.toggle-button-appe{
-    background-color: var(--bg-color-1); 
+.toggle-button-appe {
+    background-color: var(--bg-color-1);
     border: 1px solid var(--heading-color);
     color: var(--text-color);
     padding: 10px 20px;
-    text-align: center; 
-    text-decoration: none; 
+    text-align: center;
+    text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    cursor: pointer; 
+    cursor: pointer;
     transition: all .3s ease-in-out;
     font-family: var(--font-family-1);
     font-weight: 500;
@@ -1325,16 +1369,16 @@ td,ol{
 }
 
 /* DESSERT */
-.toggle-button-dessert{
-    background-color: var(--bg-color-1); 
+.toggle-button-dessert {
+    background-color: var(--bg-color-1);
     border: 1px solid var(--heading-color);
     color: var(--text-color);
     padding: 10px 20px;
-    text-align: center; 
-    text-decoration: none; 
+    text-align: center;
+    text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    cursor: pointer; 
+    cursor: pointer;
     transition: all .3s ease-in-out;
     font-family: var(--font-family-1);
     font-weight: 500;
@@ -1348,16 +1392,16 @@ td,ol{
 }
 
 /* BEVERAGE */
-.toggle-button-beve{
-    background-color: var(--bg-color-1); 
+.toggle-button-beve {
+    background-color: var(--bg-color-1);
     border: 1px solid var(--heading-color);
     color: var(--text-color);
     padding: 10px 20px;
-    text-align: center; 
-    text-decoration: none; 
+    text-align: center;
+    text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    cursor: pointer; 
+    cursor: pointer;
     transition: all .3s ease-in-out;
     font-family: var(--font-family-1);
     font-weight: 500;
@@ -1371,14 +1415,14 @@ td,ol{
 }
 
 /* REFERENCE BUTTON */
-.reference{
+.reference {
     text-decoration: none;
     text-align: center;
     justify-content: center;
     margin-top: 20px;
 }
 
-.reference a{
+.reference a {
     font-family: var(--font-family-1);
     color: var(--heading-color);
     font-size: 36px;
@@ -1393,360 +1437,367 @@ td,ol{
 
 
 /* MEDIA QUERIES */
-@media only screen and (max-width: 1810px){
+@media only screen and (max-width: 1810px) {
     #recipes-main {
         max-height: 834px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 834px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 834px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 834px;
         overflow: hidden;
-        
+
     }
 }
 
-@media only screen and (max-width: 1788px){
+@media only screen and (max-width: 1788px) {
     #recipes-main {
         max-height: 830px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 830px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 830px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 830px;
         overflow: hidden;
-        
+
     }
 }
 
-@media only screen and (max-width: 1754px){
+@media only screen and (max-width: 1754px) {
     #recipes-main {
         max-height: 827px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 827px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 827px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 827px;
         overflow: hidden;
-        
+
     }
 }
 
-@media only screen and (max-width: 1738px){
+@media only screen and (max-width: 1738px) {
     #recipes-main {
         max-height: 824px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 824px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 824px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 824px;
         overflow: hidden;
-        
-    }
-}
-@media only screen and (max-width: 1720px){
-    #recipes-main {
-        max-height: 820px;
-        overflow: hidden;
-        
-    }
-    
-    #recipes-appe {
-        max-height: 820px;
-        overflow: hidden;
-        
-    }
-    
-    #recipes-dessert {
-        max-height: 820px;
-        overflow: hidden;
-        
-    }
-    
-    #recipes-beve {
-        max-height: 820px;
-        overflow: hidden;
-        
-    }
-}
-@media only screen and (max-width: 1704px){
-    #recipes-main {
-        max-height: 817px;
-        overflow: hidden;
-        
-    }
-    
-    #recipes-appe {
-        max-height: 817px;
-        overflow: hidden;
-        
-    }
-    
-    #recipes-dessert {
-        max-height: 817px;
-        overflow: hidden;
-        
-    }
-    
-    #recipes-beve {
-        max-height: 817px;
-        overflow: hidden;
-        
-    }
-}
-@media only screen and (max-width: 1679px){
-    #recipes-main {
-        max-height: 840px;
-        overflow: hidden;
-        
-    }
-    
-    #recipes-appe {
-        max-height: 840px;
-        overflow: hidden;
-        
-    }
-    
-    #recipes-dessert {
-        max-height: 840px;
-        overflow: hidden;
-        
-    }
-    
-    #recipes-beve {
-        max-height: 840px;
-        overflow: hidden;
-        
-    }
-}
-@media only screen and (max-width: 1672px){
-    #recipes-main {
-        max-height: 865px;
-        overflow: hidden;
-        
-    }
-    
-    #recipes-appe {
-        max-height: 865px;
-        overflow: hidden;
-        
-    }
-    
-    #recipes-dessert {
-        max-height: 865px;
-        overflow: hidden;
-        
-    }
-    
-    #recipes-beve {
-        max-height: 865px;
-        overflow: hidden;
-        
-    }
-}
-@media only screen and (max-width: 1633px){
-    #recipes-main {
-        max-height: 855px;
-        overflow: hidden;
-        
-    }
-    
-    #recipes-appe {
-        max-height: 855px;
-        overflow: hidden;
-        
-    }
-    
-    #recipes-dessert {
-        max-height: 855px;
-        overflow: hidden;
-        
-    }
-    
-    #recipes-beve {
-        max-height: 855px;
-        overflow: hidden;
-        
+
     }
 }
 
-@media only screen and (max-width: 1585px){
+@media only screen and (max-width: 1720px) {
     #recipes-main {
-        max-height: 845px;
+        max-height: 820px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
-        max-height: 845px;
+        max-height: 820px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
-        max-height: 845px;
+        max-height: 820px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
-        max-height: 845px;
+        max-height: 820px;
         overflow: hidden;
-        
+
     }
 }
 
-@media only screen and (max-width: 1539px){
+@media only screen and (max-width: 1704px) {
     #recipes-main {
-        max-height: 835px;
+        max-height: 817px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
-        max-height: 835px;
+        max-height: 817px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
-        max-height: 835px;
+        max-height: 817px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
-        max-height: 835px;
+        max-height: 817px;
         overflow: hidden;
-        
+
     }
 }
 
-@media only screen and (max-width: 1497px){
+@media only screen and (max-width: 1679px) {
     #recipes-main {
-        max-height: 825px;
+        max-height: 840px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
-        max-height: 825px;
+        max-height: 840px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
-        max-height: 825px;
+        max-height: 840px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
-        max-height: 825px;
+        max-height: 840px;
         overflow: hidden;
-        
+
     }
 }
-@media only screen and (max-width: 1451px){
+
+@media only screen and (max-width: 1672px) {
     #recipes-main {
-        max-height: 817px;
+        max-height: 865px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
-        max-height: 817px;
+        max-height: 865px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
-        max-height: 817px;
+        max-height: 865px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
-        max-height: 817px;
+        max-height: 865px;
         overflow: hidden;
-        
+
     }
 }
-@media only screen and (max-width: 1434px){
+
+@media only screen and (max-width: 1633px) {
+    #recipes-main {
+        max-height: 855px;
+        overflow: hidden;
+
+    }
+
+    #recipes-appe {
+        max-height: 855px;
+        overflow: hidden;
+
+    }
+
+    #recipes-dessert {
+        max-height: 855px;
+        overflow: hidden;
+
+    }
+
+    #recipes-beve {
+        max-height: 855px;
+        overflow: hidden;
+
+    }
+}
+
+@media only screen and (max-width: 1585px) {
+    #recipes-main {
+        max-height: 845px;
+        overflow: hidden;
+
+    }
+
+    #recipes-appe {
+        max-height: 845px;
+        overflow: hidden;
+
+    }
+
+    #recipes-dessert {
+        max-height: 845px;
+        overflow: hidden;
+
+    }
+
+    #recipes-beve {
+        max-height: 845px;
+        overflow: hidden;
+
+    }
+}
+
+@media only screen and (max-width: 1539px) {
+    #recipes-main {
+        max-height: 835px;
+        overflow: hidden;
+
+    }
+
+    #recipes-appe {
+        max-height: 835px;
+        overflow: hidden;
+
+    }
+
+    #recipes-dessert {
+        max-height: 835px;
+        overflow: hidden;
+
+    }
+
+    #recipes-beve {
+        max-height: 835px;
+        overflow: hidden;
+
+    }
+}
+
+@media only screen and (max-width: 1497px) {
+    #recipes-main {
+        max-height: 825px;
+        overflow: hidden;
+
+    }
+
+    #recipes-appe {
+        max-height: 825px;
+        overflow: hidden;
+
+    }
+
+    #recipes-dessert {
+        max-height: 825px;
+        overflow: hidden;
+
+    }
+
+    #recipes-beve {
+        max-height: 825px;
+        overflow: hidden;
+
+    }
+}
+
+@media only screen and (max-width: 1451px) {
+    #recipes-main {
+        max-height: 817px;
+        overflow: hidden;
+
+    }
+
+    #recipes-appe {
+        max-height: 817px;
+        overflow: hidden;
+
+    }
+
+    #recipes-dessert {
+        max-height: 817px;
+        overflow: hidden;
+
+    }
+
+    #recipes-beve {
+        max-height: 817px;
+        overflow: hidden;
+
+    }
+}
+
+@media only screen and (max-width: 1434px) {
     #recipes-main {
         max-height: 840px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 840px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 840px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 840px;
         overflow: hidden;
-        
+
     }
 }
 
@@ -1756,115 +1807,119 @@ td,ol{
         width: 100%;
     }
 }
-@media only screen and (max-width: 1392px){
+
+@media only screen and (max-width: 1392px) {
     #recipes-main {
         max-height: 833px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 833px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 833px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 833px;
         overflow: hidden;
-        
-    }
-}
-@media only screen and (max-width: 1364px){
-    #recipes-main {
-        max-height: 820px;
-        overflow: hidden;
-        
-    }
-    
-    #recipes-appe {
-        max-height: 820px;
-        overflow: hidden;
-        
-    }
-    
-    #recipes-dessert {
-        max-height: 820px;
-        overflow: hidden;
-        
-    }
-    
-    #recipes-beve {
-        max-height: 820px;
-        overflow: hidden;
-        
-    }
-}
-@media only screen and (max-width: 1300px){
-    #recipes-main {
-        max-height: 810px;
-        overflow: hidden;
-        
-    }
-    
-    #recipes-appe {
-        max-height: 810px;
-        overflow: hidden;
-        
-    }
-    
-    #recipes-dessert {
-        max-height: 810px;
-        overflow: hidden;
-        
-    }
-    
-    #recipes-beve {
-        max-height: 810px;
-        overflow: hidden;
-        
-    }
-}
-@media only screen and (max-width: 1289px){
-    #recipes-main {
-        max-height: 885px;
-        overflow: hidden;
-        
-    }
-    
-    #recipes-appe {
-        max-height: 885px;
-        overflow: hidden;
-        
-    }
-    
-    #recipes-dessert {
-        max-height: 885px;
-        overflow: hidden;
-        
-    }
-    
-    #recipes-beve {
-        max-height: 885px;
-        overflow: hidden;
-        
+
     }
 }
 
-@media only screen and (max-width: 1280px){
+@media only screen and (max-width: 1364px) {
+    #recipes-main {
+        max-height: 820px;
+        overflow: hidden;
+
+    }
+
+    #recipes-appe {
+        max-height: 820px;
+        overflow: hidden;
+
+    }
+
+    #recipes-dessert {
+        max-height: 820px;
+        overflow: hidden;
+
+    }
+
+    #recipes-beve {
+        max-height: 820px;
+        overflow: hidden;
+
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    #recipes-main {
+        max-height: 810px;
+        overflow: hidden;
+
+    }
+
+    #recipes-appe {
+        max-height: 810px;
+        overflow: hidden;
+
+    }
+
+    #recipes-dessert {
+        max-height: 810px;
+        overflow: hidden;
+
+    }
+
+    #recipes-beve {
+        max-height: 810px;
+        overflow: hidden;
+
+    }
+}
+
+@media only screen and (max-width: 1289px) {
+    #recipes-main {
+        max-height: 885px;
+        overflow: hidden;
+
+    }
+
+    #recipes-appe {
+        max-height: 885px;
+        overflow: hidden;
+
+    }
+
+    #recipes-dessert {
+        max-height: 885px;
+        overflow: hidden;
+
+    }
+
+    #recipes-beve {
+        max-height: 885px;
+        overflow: hidden;
+
+    }
+}
+
+@media only screen and (max-width: 1280px) {
     .video h1 {
         color: white;
         font-size: calc(100vw * 28/1000);
         font-family: var(--font-family-2);
         top: 85%;
     }
-    
+
     .video h2 {
         font-size: calc(100vw * 24/1000);
         color: rgb(255, 103, 103);
@@ -1873,79 +1928,81 @@ td,ol{
     }
 }
 
-@media only screen and (max-width: 1269px){
+@media only screen and (max-width: 1269px) {
     #recipes-main {
         max-height: 875px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 875px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 875px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 875px;
         overflow: hidden;
-        
+
     }
 }
-@media only screen and (max-width: 1240px){
+
+@media only screen and (max-width: 1240px) {
     #recipes-main {
         max-height: 865px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 865px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 865px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 865px;
         overflow: hidden;
-        
+
     }
 }
-@media only screen and (max-width: 1210px){
+
+@media only screen and (max-width: 1210px) {
     #recipes-main {
         max-height: 855px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 855px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 855px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 855px;
         overflow: hidden;
-        
+
     }
 }
 
@@ -1962,54 +2019,56 @@ td,ol{
         font-size: calc(100vw * 14/1000) !important
     }
 }
-@media only screen and (max-width: 1181px){
+
+@media only screen and (max-width: 1181px) {
     #recipes-main {
         max-height: 845px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 845px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 845px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 845px;
         overflow: hidden;
-        
+
     }
 }
-@media only screen and (max-width: 1155px){
+
+@media only screen and (max-width: 1155px) {
     #recipes-main {
         max-height: 865px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 865px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 865px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 865px;
         overflow: hidden;
-        
+
     }
 
     h4 {
@@ -2092,54 +2151,56 @@ td,ol{
         margin: 15px 0;
     }
 }
-@media only screen and (max-width: 1129px){
+
+@media only screen and (max-width: 1129px) {
     #recipes-main {
         max-height: 855px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 855px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 855px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 855px;
         overflow: hidden;
-        
+
     }
 }
-@media only screen and (max-width: 1097px){
+
+@media only screen and (max-width: 1097px) {
     #recipes-main {
         max-height: 845px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 845px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 845px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 845px;
         overflow: hidden;
-        
+
     }
 }
 
@@ -2152,29 +2213,30 @@ td,ol{
         width: 28vw;
     }
 }
-@media only screen and (max-width: 1039px){
+
+@media only screen and (max-width: 1039px) {
     #recipes-main {
         max-height: 825px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 825px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 825px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 825px;
         overflow: hidden;
-        
+
     }
 }
 
@@ -2215,53 +2277,55 @@ td,ol{
         padding: 30px;
         grid-gap: 30px 0;
     }
+
     #recipes-main {
         max-height: 865px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 865px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 865px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 865px;
         overflow: hidden;
-        
+
     }
 }
-@media only screen and (max-width: 990px){
+
+@media only screen and (max-width: 990px) {
     #recipes-main {
         max-height: 920px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 920px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 920px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 920px;
         overflow: hidden;
-        
+
     }
 }
 
@@ -2273,111 +2337,117 @@ td,ol{
     .text-wrapper .desc {
         font-size: calc(100vw * 18/1000) !important
     }
-    #quote .text-wrapper h2{
+
+    #quote .text-wrapper h2 {
         font-size: calc(100vw * 35/1000);
     }
-    #quote .text-wrapper h1{
+
+    #quote .text-wrapper h1 {
         font-size: calc(100vw * 60/1000);
     }
 }
-@media only screen and (max-width: 940px){
+
+@media only screen and (max-width: 940px) {
     #recipes-main {
         max-height: 900px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 900px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 900px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 900px;
         overflow: hidden;
-        
+
     }
 }
-@media only screen and (max-width: 919px){
+
+@media only screen and (max-width: 919px) {
     #recipes-main {
         max-height: 1045px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 1045px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 1045px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 1045px;
         overflow: hidden;
-        
+
     }
 }
-@media only screen and (max-width: 895px){
+
+@media only screen and (max-width: 895px) {
     #recipes-main {
         max-height: 1030px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 1030px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 1030px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 1030px;
         overflow: hidden;
-        
+
     }
 }
-@media only screen and (max-width: 869px){
+
+@media only screen and (max-width: 869px) {
     #recipes-main {
         max-height: 1015px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 1015px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 1015px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 1015px;
         overflow: hidden;
-        
+
     }
 }
 
@@ -2413,53 +2483,55 @@ td,ol{
     .menu-tab-item {
         width: 40%;
     }
+
     #recipes-main {
         max-height: 980px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 980px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 980px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 980px;
         overflow: hidden;
-        
+
     }
 }
-@media only screen and (max-width: 824px){
+
+@media only screen and (max-width: 824px) {
     #recipes-main {
         max-height: 970px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 970px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 970px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 970px;
         overflow: hidden;
-        
+
     }
 }
 
@@ -2563,179 +2635,186 @@ td,ol{
         font-size: calc(100vw * 23/1000) !important
     }
 }
-@media only screen and (max-width: 768px){
+
+@media only screen and (max-width: 768px) {
     #recipes-main {
         max-height: 955px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 955px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 955px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 955px;
         overflow: hidden;
-        
+
     }
 }
-@media only screen and (max-width: 746px){
+
+@media only screen and (max-width: 746px) {
     #recipes-main {
         max-height: 945px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 945px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 945px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 945px;
         overflow: hidden;
-        
+
     }
 }
-@media only screen and (max-width: 741px){
+
+@media only screen and (max-width: 741px) {
     #recipes-main {
         max-height: 985px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 985px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 985px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 985px;
         overflow: hidden;
-        
+
     }
 }
-@media only screen and (max-width: 720px){
+
+@media only screen and (max-width: 720px) {
     #recipes-main {
         max-height: 970px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 970px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 970px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 970px;
         overflow: hidden;
-        
+
     }
 }
-@media only screen and (max-width: 659px){
+
+@media only screen and (max-width: 659px) {
     #recipes-main {
         max-height: 955px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 955px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 955px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 955px;
         overflow: hidden;
-        
+
     }
 }
-@media only screen and (max-width: 633px){
+
+@media only screen and (max-width: 633px) {
     #recipes-main {
         max-height: 940px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 940px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 940px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 940px;
         overflow: hidden;
-        
+
     }
 }
-@media only screen and (max-width: 611px){
+
+@media only screen and (max-width: 611px) {
     #recipes-main {
         max-height: 925px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 925px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 925px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 925px;
         overflow: hidden;
-        
+
     }
 }
 
@@ -2852,140 +2931,149 @@ td,ol{
     .footer-quote h1 {
         font-size: 30px;
     }
-    .loader h1{
+
+    .loader h1 {
         font-size: calc(100vw * 165/1000);
     }
-    .loader img{
+
+    .loader img {
         width: calc(100vw * 420/1000);
     }
-    .footer-quote h1{
+
+    .footer-quote h1 {
         font-size: calc(100vw * 55/1000);
     }
+
     #recipes-main {
         max-height: 865px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 865px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 865px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 865px;
         overflow: hidden;
-        
+
     }
-    .reference a{
+
+    .reference a {
         font-size: calc(100vw * 60/1000);
     }
 }
-@media only screen and (max-width: 583px){
+
+@media only screen and (max-width: 583px) {
     #recipes-main {
         max-height: 850px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 850px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 850px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 850px;
         overflow: hidden;
-        
+
     }
 }
-@media only screen and (max-width: 517px){
+
+@media only screen and (max-width: 517px) {
     #recipes-main {
         max-height: 835px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 835px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 835px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 835px;
         overflow: hidden;
-        
+
     }
 }
-@media only screen and (max-width: 504px){
+
+@media only screen and (max-width: 504px) {
     #recipes-main {
         max-height: 855px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 855px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 825px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 855px;
         overflow: hidden;
-        
+
     }
 }
-@media only screen and (max-width: 478px){
+
+@media only screen and (max-width: 478px) {
     #recipes-main {
         max-height: 865px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 865px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 865px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 865px;
         overflow: hidden;
-        
+
     }
 }
 
@@ -3007,303 +3095,315 @@ td,ol{
     .details p {
         font-size: calc(100vw * 37/1000) !important;
     }
+
     #recipes-main {
         max-height: 875px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 875px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 875px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 875px;
         overflow: hidden;
-        
+
     }
 }
-@media only screen and (max-width: 463px){
+
+@media only screen and (max-width: 463px) {
     #recipes-main {
         max-height: 900px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 900px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 900px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 900px;
         overflow: hidden;
-        
+
     }
 }
-@media only screen and (max-width: 459px){
+
+@media only screen and (max-width: 459px) {
     #recipes-main {
         max-height: 894px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 894px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 894px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 894px;
         overflow: hidden;
-        
+
     }
 }
-@media only screen and (max-width: 449px){
+
+@media only screen and (max-width: 449px) {
     #recipes-main {
         max-height: 890px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 890px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 890px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 890px;
         overflow: hidden;
-        
+
     }
 }
-@media only screen and (max-width: 441px){
+
+@media only screen and (max-width: 441px) {
     #recipes-main {
         max-height: 882px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 882px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 882px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 882px;
         overflow: hidden;
-        
+
     }
 }
-@media only screen and (max-width: 429px){
+
+@media only screen and (max-width: 429px) {
     #recipes-main {
         max-height: 874px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 874px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 874px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 874px;
         overflow: hidden;
-        
+
     }
 }
-@media only screen and (max-width: 417px){
+
+@media only screen and (max-width: 417px) {
     #recipes-main {
         max-height: 866px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 866px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 866px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 866px;
         overflow: hidden;
-        
+
     }
 }
-@media only screen and (max-width: 407px){
+
+@media only screen and (max-width: 407px) {
     #recipes-main {
         max-height: 855px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 855px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 855px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 855px;
         overflow: hidden;
-        
+
     }
 }
-@media only screen and (max-width: 389px){
+
+@media only screen and (max-width: 389px) {
     #recipes-main {
         max-height: 845px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 845px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 845px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 845px;
         overflow: hidden;
-        
+
     }
 }
-@media only screen and (max-width: 372px){
+
+@media only screen and (max-width: 372px) {
     #recipes-main {
         max-height: 835px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 835px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 835px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 835px;
         overflow: hidden;
-        
+
     }
 }
-@media only screen and (max-width: 359px){
+
+@media only screen and (max-width: 359px) {
     #recipes-main {
         max-height: 825px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 825px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 825px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 825px;
         overflow: hidden;
-        
+
     }
 }
-@media only screen and (max-width: 343px){
+
+@media only screen and (max-width: 343px) {
     #recipes-main {
         max-height: 815px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 815px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 815px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 815px;
         overflow: hidden;
-        
+
     }
 }
 
@@ -3322,182 +3422,190 @@ td,ol{
     .review-item .details {
         font-size: 16px;
     }
-    .details>.btn{
+
+    .details>.btn {
         font-size: calc(100vw * 40/1000);
     }
 }
-@media only screen and (max-width: 326px){
+
+@media only screen and (max-width: 326px) {
     #recipes-main {
         max-height: 805px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 805px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 805px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 805px;
         overflow: hidden;
-        
+
     }
 }
-@media only screen and (max-width: 312px){
+
+@media only screen and (max-width: 312px) {
     #recipes-main {
         max-height: 795px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 795px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 795px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 795px;
         overflow: hidden;
-        
+
     }
 }
-@media only screen and (max-width: 296px){
+
+@media only screen and (max-width: 296px) {
     #recipes-main {
         max-height: 785px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 785px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 785px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 785px;
         overflow: hidden;
-        
+
     }
 }
-@media only screen and (max-width: 289px){
+
+@media only screen and (max-width: 289px) {
     #recipes-main {
         max-height: 810px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 810px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 810px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 810px;
         overflow: hidden;
-        
+
     }
 }
-@media only screen and (max-width: 279px){
+
+@media only screen and (max-width: 279px) {
     #recipes-main {
         max-height: 800px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 800px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 800px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 800px;
         overflow: hidden;
-        
+
     }
 }
-@media only screen and (max-width: 269px){
+
+@media only screen and (max-width: 269px) {
     #recipes-main {
         max-height: 830px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 830px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 830px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 830px;
         overflow: hidden;
-        
+
     }
 }
-@media only screen and (max-width: 259px){
+
+@media only screen and (max-width: 259px) {
     #recipes-main {
         max-height: 818px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-appe {
         max-height: 818px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-dessert {
         max-height: 818px;
         overflow: hidden;
-        
+
     }
-    
+
     #recipes-beve {
         max-height: 818px;
         overflow: hidden;
-        
+
     }
 }

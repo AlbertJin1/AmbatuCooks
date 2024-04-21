@@ -3,9 +3,9 @@
 session_start();
 
 // IF USER IS NOT LOGGED IN IT WILL REDIRECT BACK TO LOGIN FORM
-if (!isset($_SESSION['username'])) {
-    header('location:login_form.php');
-}
+// if (!isset($_SESSION['username'])) {
+//     header('location:login_form.php');
+// }
 
 // Function to retrieve users data from file
 function getUsersData()

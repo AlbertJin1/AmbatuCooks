@@ -26,4 +26,14 @@
 
     // var myload = document.getElementById("bg-ambatu");
     // myload.volume = 0.2;
+
+    window.addEventListener("load", () => {
+        const loader = document.querySelector(".loader");
+
+        loader.classList.add("loader--hidden");
+
+        loader.addEventListener("transitionend", () => {
+            document.body.removeChild(loader);
+        });
+    });
 </script>
