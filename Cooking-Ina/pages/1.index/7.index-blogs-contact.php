@@ -4,7 +4,7 @@
 
     <div class="section-heading" class="menu-tab-content show" data-aos="zoom-in" data-aos-duration="1000">
         <h3>Our Recipe</h3>
-        <h1>To Recomend</h1>
+        <h1>To Recommend</h1>
         <div class="square-wrapper flex-row">
             <div class="square"></div>
             <div class="square"></div>
