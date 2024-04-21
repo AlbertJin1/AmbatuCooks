@@ -1,0 +1,239 @@
+/* POPPINS FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+    background: #0C3B2E;
+    padding: 0 20px 0 20px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.side-image {
+    background-image: url("https://i.imgur.com/G5blwBq.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px 0 0 10px;
+    position: relative;
+}
+
+.row {
+    width: 900px;
+    height: 600px;
+    border-radius: 10px;
+    background: #fff;
+    padding: 0px;
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text p {
+    color: #fff;
+    font-size: 36px;
+    font-family: "Alkatra", system-ui;
+}
+
+.text-sub p{
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 15px;
+    opacity: .65;
+}
+
+i {
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: #E5E8E1;
+    border-radius: 10px;
+}
+
+.input-box {
+    width: 330px;
+    box-sizing: border-box;
+}
+
+img {
+    width: 70px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.input-box header {
+    font-weight: 900;
+    text-align: center;
+    font-size: 55px;
+    color: black;
+    padding: 0;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 0 10px 0 10px;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 40%;
+    right: 15px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+}
+
+.forgotpass{
+    text-decoration: none;
+    color: black;
+    opacity: .88;
+    transition: .4s;
+    text-align: end;
+    margin: 0 0 10px 0;
+}
+
+.forgotpass:hover{
+    color: #6d9773a8;
+}
+
+.input {
+    height: 45px;
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    outline: none;
+    margin-bottom: 10px;
+    color: #40414a;
+    padding-right: 35px;
+}
+
+.input-box .input-field label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-field input:focus~label {
+    top: -10px;
+    font-size: 13px;
+}
+
+.input-field input:valid~label {
+    top: -10px;
+    font-size: 13px;
+    color: #5d5076;
+}
+
+.input-field .input:focus,
+.input-field .input:valid {
+    border-bottom: 1px solid #6D9773;
+}
+
+.submit {
+    border: none;
+    outline: none;
+    height: 45px;
+    background: #6D9773;
+    border-radius: 10px;
+    color: #fff;
+    transition: .4s;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.submit:hover {
+    background: #6d9773a8;
+    color: #fff;
+}
+
+.signin {
+    text-align: center;
+    font-size: small;
+    margin-top: 25px;
+}
+
+.signin1 {
+    text-align: center;
+    font-size: small;
+    margin-top: 25px;
+}
+
+.signin1 a{
+    text-decoration: none;
+    color: #BB8A52;
+    transition: .4s;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.signin1 a:hover{
+    color: #bb8a52b6;
+}
+
+span a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #BB8A52;
+    transition: .5s;
+}
+
+span a:hover {
+    text-decoration: underline;
+    color: #bb8a52be;
+}
+
+@media only screen and (max-width: 768px) {
+    .side-image {
+        border-radius: 10px 10px 0 0;
+    }
+
+    img {
+        width: 35px;
+        position: absolute;
+        top: 20px;
+        left: 47%;
+    }
+
+    .text {
+        position: absolute;
+        top: 70%;
+        text-align: center;
+    }
+
+    .text p,
+    i {
+        font-size: 16px;
+    }
+
+    .row {
+        max-width: 420px;
+        width: 100%;
+    }
+}
