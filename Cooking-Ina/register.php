@@ -67,7 +67,7 @@
                             <label for="email">Email</label>
                         </div>
                         <div class="input-field">
-                            <input type="password" class="input" id="password" required>
+                            <input type="password" class="input-pass" id="password" required>
                             <label for="password">Password</label>
                             <span class="toggle-password" onclick="togglePasswordVisibility('password', 'eye-icon')">
                                 <i id="eye-icon" class="fas fa-eye"></i>
@@ -75,7 +75,7 @@
                         </div>
 
                         <div class="input-field">
-                            <input type="password" class="input" id="confirmPassword" required>
+                            <input type="password" class="input-pass" id="confirmPassword" required>
                             <label for="confirmPassword">Confirm Password</label>
                             <span class="toggle-password"
                                 onclick="togglePasswordVisibility('confirmPassword', 'eye-icon1')">

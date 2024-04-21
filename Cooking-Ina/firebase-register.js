@@ -16,8 +16,6 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-
-
 const submit = document.getElementById('registerButton');
 submit.addEventListener("click", function (event) {
     event.preventDefault();
@@ -120,6 +118,13 @@ submit.addEventListener("click", function (event) {
                         title: 'Account Created',
                         text: 'Your account has been created successfully!'
                     }).then(() => {
+                        // Clear input fields
+                        document.getElementById('firstName').value = '';
+                        document.getElementById('lastName').value = '';
+                        document.getElementById('email').value = '';
+                        document.getElementById('password').value = '';
+                        document.getElementById('confirmPassword').value = '';
+                        // Redirect to login.php
                         window.location.href = "login.php";
                     });
                 })
