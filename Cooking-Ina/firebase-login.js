@@ -67,7 +67,7 @@ submit.addEventListener("click", function (event) {
                     document.getElementById('email').value = '';
                     document.getElementById('password').value = '';
                     // Redirect to home page
-                    window.location.href = "recipes-list.php";
+                    window.location.href = "index.php";
                 });
             } else {
                 Swal.fire({

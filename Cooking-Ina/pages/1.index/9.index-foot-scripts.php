@@ -16,6 +16,8 @@
 <script>
     lightGallery(document.querySelector('.gallery-wrapper'));
 </script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+
 
 <!-- LOCAL JS -->
 <script src="./assets/script.js"></script>
@@ -33,7 +35,10 @@
         loader.classList.add("loader--hidden");
 
         loader.addEventListener("transitionend", () => {
-            document.body.removeChild(loader);
+            // Delay the removal of the loader by a short interval
+            setTimeout(() => {
+                document.body.removeChild(loader);
+            }, 500); // Adjust the delay time as needed
         });
     });
 </script>

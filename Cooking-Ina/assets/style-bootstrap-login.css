@@ -1,9 +1,63 @@
 /* POPPINS FONT */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 
 * {
     font-family: 'Poppins', sans-serif;
+}
+
+/* LOADER */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #E5E8E1;
+    transition: opacity 0.75s, visibility 0.75s;
+    z-index: 10;
+}
+
+.loader--hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.75s, visibility 0.75s;
+}
+
+.loader::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid white;
+    border-top-color: #0C3B2E;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0turn);
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+/* VIDEO */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(5px);
+    /* Adjust the blur amount as needed */
 }
 
 .wrapper {
@@ -19,13 +73,45 @@
 }
 
 .side-image {
-    background-image: url("https://i.imgur.com/G5blwBq.jpg");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://i.imgur.com/r5PCgC1.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 10px 0 0 10px;
     position: relative;
 }
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    margin-bottom: 20px;
+    /* Adjust margin as needed */
+}
+
+.text p {
+    font-size: 36px;
+    font-family: "Dancing Script", cursive;
+    text-shadow: 4px 6px 5px black;
+    text-align: center;
+}
+
+.text i {
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    /* Ensures signature is not italicized */
+}
+
+.text-sub p{
+    text-align: center;
+}
+
+
 
 .row {
     width: 900px;
@@ -36,38 +122,18 @@
     box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
 }
 
-.text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.text p {
-    color: #fff;
-    font-size: 36px;
-    font-family: "Alkatra", system-ui;
-}
-
-.text-sub p{
-    margin-bottom: 20px;
-    text-align: center;
-    font-size: 15px;
-    opacity: .65;
-}
-
-i {
-    font-weight: 400;
-    font-size: 15px;
-}
-
 .right {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    background: #E5E8E1;
-    border-radius: 10px;
+    background: rgba(229, 232, 225, 0.5);
+    /* Set background color with some opacity */
+    border-radius: 0 10px 10px 0;
+    padding: 20px;
+    /* Add padding for spacing */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    /* Add a subtle shadow effect */
 }
 
 .input-box {
@@ -103,10 +169,10 @@ img {
     right: 15px;
     transform: translateY(-50%);
     cursor: pointer;
-    color: #888;
+    color: #d8d8d8;
 }
 
-.forgotpass{
+.forgotpass {
     text-decoration: none;
     color: black;
     opacity: .88;
@@ -115,8 +181,8 @@ img {
     margin: 0 0 10px 0;
 }
 
-.forgotpass:hover{
-    color: #6d9773a8;
+.forgotpass:hover {
+    color: #4f6953;
 }
 
 .input {
@@ -129,6 +195,7 @@ img {
     margin-bottom: 10px;
     color: #40414a;
 }
+
 .input-pass {
     height: 45px;
     width: 100%;
@@ -169,13 +236,14 @@ img {
     border: none;
     outline: none;
     height: 45px;
-    background: #6D9773;
+    background: #5d8863;
     border-radius: 10px;
     color: #fff;
     transition: .4s;
     margin-top: 10px;
     font-size: 18px;
     font-weight: 500;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .submit:hover {
@@ -195,28 +263,28 @@ img {
     margin-top: 25px;
 }
 
-.signin1 a{
+.signin1 a {
     text-decoration: none;
-    color: #BB8A52;
+    color: rgb(236, 236, 236);
     transition: .4s;
     font-size: 20px;
     font-weight: 600;
 }
 
-.signin1 a:hover{
-    color: #bb8a52b6;
+.signin1 a:hover {
+    color: rgba(198, 255, 207, 0.74);
 }
 
 span a {
     text-decoration: none;
     font-weight: 700;
-    color: #BB8A52;
+    color: rgb(236, 236, 236);
     transition: .5s;
 }
 
 span a:hover {
     text-decoration: underline;
-    color: #bb8a52be;
+    color: rgba(198, 255, 207, 0.74);
 }
 
 @media only screen and (max-width: 768px) {
@@ -225,25 +293,20 @@ span a:hover {
     }
 
     img {
-        width: 35px;
-        position: absolute;
-        top: 20px;
-        left: 47%;
+        width: 45px;
+        position: static;
     }
 
-    .text {
-        position: absolute;
-        top: 70%;
-        text-align: center;
-    }
-
-    .text p,
-    i {
-        font-size: 16px;
+    .text p {
+        font-size: 24px;
     }
 
     .row {
         max-width: 420px;
         width: 100%;
+    }
+
+    .right {
+        border-radius: 0 0 10px 10px;
     }
 }

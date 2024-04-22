@@ -13,6 +13,9 @@
 <!-- LIGHTGAL -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+
+
 <script>
     lightGallery(document.querySelector('.gallery-wrapper'));
 </script>

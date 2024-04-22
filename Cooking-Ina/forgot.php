@@ -14,6 +14,13 @@
 </head>
 
 <body>
+    <div id="loader" class="loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <video autoplay muted loop id="bg-video">
+        <source src="vid/bg-green.mp4" type="video/mp4">
+    </video>
     <div class="wrapper">
         <div class="container main">
             <div class="row">
@@ -23,7 +30,8 @@
 
                     <img src="img/Logo/icon-cooking-ina.png" alt="">
                     <div class="text">
-                        <p>Eat | Play | Sleep <i>- CookingIna</i></p>
+                        <p>Eat | Play | Sleep</p>
+                        <i>- CookingIna -</i>
                     </div>
 
                 </div>
@@ -45,7 +53,7 @@
                             <input type="submit" class="submit" value="Reset" id="forgotPasswordButton">
                         </div>
                         <div class="signin1">
-                            <a href="javascript:history.back()">Back</a>
+                            <a href="login.php">Back</a>
                         </div>
                     </div>
                 </div>
@@ -54,6 +62,13 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Hide the loader when the content is fully loaded
+            var loader = document.getElementById("loader");
+            loader.classList.add("loader--hidden");
+        });
+    </script>
 </body>
 
 </html>

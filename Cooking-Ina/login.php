@@ -31,6 +31,13 @@
 </head>
 
 <body>
+    <div id="loader" class="loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <video autoplay muted loop id="bg-video">
+        <source src="vid/bg-green.mp4" type="video/mp4">
+    </video>
     <div class="wrapper">
         <div class="container main">
             <div class="row">
@@ -40,7 +47,8 @@
 
                     <img src="img/Logo/icon-cooking-ina.png" alt="">
                     <div class="text">
-                        <p>Cooking is like magic <i>- CookingIna</i></p>
+                        <p>Cooking is like magic</p>
+                        <i>- CookingIna -</i>
                     </div>
 
                 </div>
@@ -80,8 +88,15 @@
             </div>
         </div>
     </div>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Hide the loader when the content is fully loaded
+            var loader = document.getElementById("loader");
+            loader.classList.add("loader--hidden");
+        });
+    </script>
 </body>
 
 </html>

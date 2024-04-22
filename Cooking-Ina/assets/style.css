@@ -1372,13 +1372,7 @@ footer {
 } */
 
 /* MEDIA QUERIES */
-@media only screen and (max-width: 1300px) {
-    .menu-item {
-        width: 100%;
-    }
-}
-
-@media only screen and (max-width: 1289px) {
+@media only screen and (max-width: 1380px) {
     h4 {
         font-size: 20px;
     }
@@ -1455,6 +1449,13 @@ footer {
         margin: 15px 0;
     }
 }
+
+@media only screen and (max-width: 1300px) {
+    .menu-item {
+        width: 100%;
+    }
+}
+
 
 
 @media only screen and (max-width: 1200px) {
