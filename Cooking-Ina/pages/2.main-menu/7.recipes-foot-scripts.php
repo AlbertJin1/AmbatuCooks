@@ -32,10 +32,17 @@
     window.addEventListener("load", () => {
         const loader = document.querySelector(".loader");
 
-        loader.classList.add("loader--hidden");
+        if (loader) { // Check if loader element exists
+            loader.classList.add("loader--hidden");
 
-        loader.addEventListener("transitionend", () => {
-            document.body.removeChild(loader);
-        });
+            loader.addEventListener("transitionend", () => {
+                // Delay the removal of the loader by a short interval
+                setTimeout(() => {
+                    if (loader.parentNode) { // Check if loader has a parent node
+                        loader.parentNode.removeChild(loader);
+                    }
+                }, 500); // Adjust the delay time as needed
+            });
+        }
     });
 </script>

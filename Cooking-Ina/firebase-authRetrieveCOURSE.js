@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     icon: 'info',
                     title: 'Oops...',
                     text: 'You need to log in first!',
-                    timer: 3000, // Timer in milliseconds (3 seconds)
+                    timer: 2000, // Timer in milliseconds (3 seconds)
                     timerProgressBar: true, // Show progress bar
                     allowOutsideClick: false, // Prevent outside click from closing
                     showConfirmButton: false // Hide confirm button
@@ -61,6 +61,23 @@ document.addEventListener("DOMContentLoaded", function () {
                     window.location.href = "login.php";
                 });
             }
+        }
+    });
+
+    onAuthStateChanged(auth, (user) => {
+        const userIcon = document.getElementById("userIcon");
+        if (user) {
+            // User is signed in
+            // Show the user icon
+            userIcon.style.display = "inline-block";
+            userIcon.addEventListener('click', () => {
+                // Navigate to user-profile.php
+                window.location.href = "user-profile.php";
+            });
+        } else {
+            // User is signed out
+            // Hide the user icon
+            userIcon.style.display = "none";
         }
     });
 

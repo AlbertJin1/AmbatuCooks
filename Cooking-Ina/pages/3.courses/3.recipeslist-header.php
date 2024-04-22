@@ -1,4 +1,3 @@
-
 <!-- PRENAV FIRST -->
 <div id="prenav-text">
     <div class="flex-row">
@@ -31,6 +30,7 @@
     </ul>
     <ul class="nav-btns">
         <div class="nav-icon">
+            <i class='bx bx-user' id="userIcon"></i>
             <i class="darkbtn bx bx-moon"></i>
         </div>
     </ul>

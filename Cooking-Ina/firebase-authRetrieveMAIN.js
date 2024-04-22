@@ -48,6 +48,23 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    onAuthStateChanged(auth, (user) => {
+        const userIcon = document.getElementById("userIcon");
+        if (user) {
+            // User is signed in
+            // Show the user icon
+            userIcon.style.display = "inline-block";
+            userIcon.addEventListener('click', () => {
+                // Navigate to user-profile.php
+                window.location.href = "user-profile.php";
+            });
+        } else {
+            // User is signed out
+            // Hide the user icon
+            userIcon.style.display = "none";
+        }
+    });
+
     // Update navigation links based on authentication state
     const navItems = document.getElementById("nav-items");
     if (navItems) {
