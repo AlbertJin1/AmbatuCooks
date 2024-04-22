@@ -7,6 +7,7 @@
     <title>User Profile | CookingIna</title>
     <link rel="stylesheet" href="assets/style-user-profile.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <script type="module" src="user-profile.js" defer></script>
     <style>
@@ -14,6 +15,24 @@
             resize: none;
         }
     </style>
+    <script>
+        function togglePasswordVisibility(inputId, iconId) {
+            const passwordInput = document.getElementById(inputId);
+            const eyeIcon = document.getElementById(iconId);
+
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                eyeIcon.classList.remove("fa-eye");
+                eyeIcon.classList.add("fa-eye-slash");
+            } else {
+                passwordInput.type = "password";
+                eyeIcon.classList.remove("fa-eye-slash");
+                eyeIcon.classList.add("fa-eye");
+            }
+            // Ensure the eye icon remains visible
+            eyeIcon.style.display = "inline-block";
+        }
+    </script>
 </head>
 
 <body style="background-color: #E5E8E1;">
@@ -48,8 +67,10 @@
                                         Upload new photo
                                         <input type="file" class="account-settings-fileinput">
                                     </label> &nbsp;
-                                    <button type="button" class="btn btn-default md-btn-flat" id="resetPhoto">Reset</button>
-                                    <div class="small mt-1">Allowed JPG, GIF or PNG. Max size of 800K. Size is 200px X 200px.</div>
+                                    <button type="button" class="btn btn-default md-btn-flat"
+                                        id="resetPhoto">Reset</button>
+                                    <div class="small mt-1">Allowed JPG, GIF or PNG. Max size of 800K. Size is 200px X
+                                        200px.</div>
                                 </div>
                             </div>
                             <hr class="border-light m-0">
@@ -76,15 +97,33 @@
                             <div class="card-body pb-2">
                                 <div class="form-group">
                                     <label class="form-label">Current password</label>
-                                    <input type="password" class="form-control" id="oldPassword">
+                                    <div class="password-input">
+                                        <input type="password" class="form-control" id="oldPassword">
+                                        <span class="toggle-password"
+                                            onclick="togglePasswordVisibility('oldPassword', 'oldEye-icon')">
+                                            <i id="oldEye-icon" class="fas fa-eye"></i>
+                                        </span>
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label">New password</label>
-                                    <input type="password" class="form-control" id="newPassword">
+                                    <div class="password-input">
+                                        <input type="password" class="form-control" id="newPassword">
+                                        <span class="toggle-password"
+                                            onclick="togglePasswordVisibility('newPassword', 'newEye-icon')">
+                                            <i id="newEye-icon" class="fas fa-eye"></i>
+                                        </span>
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label">Repeat new password</label>
-                                    <input type="password" class="form-control" id="confirmPassword">
+                                    <div class="password-input">
+                                        <input type="password" class="form-control" id="confirmPassword">
+                                        <span class="toggle-password"
+                                            onclick="togglePasswordVisibility('confirmPassword', 'confirmEye-icon')">
+                                            <i id="confirmEye-icon" class="fas fa-eye"></i>
+                                        </span>
+                                    </div>
                                 </div>
                                 <button type="button" class="btn btn-primary" id="changePassBtn">Change
                                     Password</button>&nbsp;

@@ -13,7 +13,7 @@ body {
     margin-top: 20px;
 }
 
-#cardHold{
+#cardHold {
     border-radius: 10px;
 }
 
@@ -161,4 +161,30 @@ html:not(.dark-style) .account-settings-links .list-group-item.active {
     to {
         transform: rotate(1turn);
     }
+}
+
+/* Password visibility toggle */
+.password-input {
+    position: relative;
+}
+
+.password-input input[type="password"] {
+    padding-right: 30px;
+}
+
+.password-input .toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+/* Toggle eye icon */
+.password-input .fas.fa-eye-slash {
+    display: none;
+}
+
+.password-input .fas.fa-eye {
+    display: block;
 }

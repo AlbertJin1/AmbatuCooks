@@ -113,3 +113,19 @@ submit.addEventListener("click", function (event) {
             });
         });
 });
+// Check if the user is already logged in
+auth.onAuthStateChanged((user) => {
+    if (user) {
+        // User is logged in, redirect to home page
+        Swal.fire({
+            icon: 'info',
+            title: 'Already Logged In',
+            text: 'You are already logged in.',
+            timer: 2000, // Timer for 2 seconds
+            showConfirmButton: false,
+            willClose: () => {
+                window.location.href = "index.php";
+            }
+        });
+    }
+});
