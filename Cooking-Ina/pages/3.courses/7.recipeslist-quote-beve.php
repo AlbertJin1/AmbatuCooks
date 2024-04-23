@@ -304,7 +304,7 @@
         </div>
 
         <div class="food-items">
-            <img src="./img/RECIPES/4-BEVERAGE/5-Aka Shiso Juice.jpg">
+            <img src="./img/RECIPES/4-BEVERAGE/Mango Juice.png">
             <div class="details">
                 <div class="details-sub">
                     <h2>Mango Juice</h2>
