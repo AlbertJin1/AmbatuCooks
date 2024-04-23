@@ -17,8 +17,6 @@ import {
     getStorage, ref, uploadBytes, getDownloadURL
 } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-storage.js";
 
-
-
 // Firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyCW7W43zrdrBrF50yG2S6szorhMiWU2060",
@@ -35,46 +33,32 @@ const db = getFirestore(app);
 const auth = getAuth(app);
 const storage = getStorage(app);
 
-document.addEventListener('DOMContentLoaded', async function () {
-    await new Promise((resolve) => {
-        const unsubscribe = onAuthStateChanged(auth, (user) => {
-            unsubscribe(); // Stop listening for further changes
-            resolve(user); // Resolve the promise with the user
-        });
-    }).then(async (user) => {
+document.addEventListener('DOMContentLoaded', function () {
+    onAuthStateChanged(auth, async (user) => {
         if (user) {
             const userProfile = await getUserProfile(user.uid);
             if (userProfile) {
                 populateForm(userProfile);
             }
-
-            // Display email in the email field
-            const userEmail = user.email;
-            document.getElementById('email').value = userEmail || '';
+            document.getElementById('email').value = user.email || '';
         } else {
             Swal.fire({
                 icon: 'error',
                 title: 'User Not Logged In',
                 text: 'Please log in to view and edit your profile.'
             }).then(() => {
-                window.location.href = 'login.php'; // Redirect to login.php
+                window.location.href = 'login.php';
             });
         }
     });
 
-    const saveBtn = document.getElementById('saveBtn');
-    saveBtn.addEventListener('click', handleSaveProfile);
-
-    const changePasswordBtn = document.getElementById('changePassBtn');
-    changePasswordBtn.addEventListener('click', handleChangePassword);
-
-    const fileInput = document.querySelector('.account-settings-fileinput');
-    fileInput.addEventListener('change', handleFileUpload);
+    document.getElementById('saveBtn').addEventListener('click', handleSaveProfile);
+    document.getElementById('changePassBtn').addEventListener('click', handleChangePassword);
+    document.getElementById('profileImageInput').addEventListener('change', handleFileUpload);
 });
 
 async function getUserProfile(userId) {
     const userDocRef = doc(db, 'users', userId);
-
     try {
         const docSnap = await getDoc(userDocRef);
         if (docSnap.exists()) {
@@ -106,34 +90,11 @@ function populateForm(userProfile) {
     document.getElementById('webGoogle').value = userProfile.webGoogle || '';
     document.getElementById('webLinkedIn').value = userProfile.webLinkedIn || '';
     document.getElementById('webInstagram').value = userProfile.webInstagram || '';
-
-    // Display profile picture
-    const profilePicture = document.getElementById('profilePicture');
-    profilePicture.src = userProfile.profilePicture || 'https://bootdey.com/img/Content/avatar/avatar1.png';
-
-    // Display email in the email field if it exists
-    const userEmail = auth.currentUser.email;
-    if (userEmail) {
-        document.getElementById('email').value = userEmail;
-    }
+    document.getElementById('profilePicture').src = userProfile.profilePicture || 'https://bootdey.com/img/Content/avatar/avatar1.png';
 }
 
 async function handleSaveProfile() {
-    const firstName = document.getElementById('firstName').value.trim();
-    const lastName = document.getElementById('lastName').value.trim();
-    const phoneNumber = document.getElementById('phoneNumber').value.trim();
-    const address = document.getElementById('address').value.trim();
-    const bio = document.getElementById('bio').value.trim();
-    const birthday = document.getElementById('birthday').value.trim();
-    const country = document.getElementById('country').value.trim();
-    const webTwitter = document.getElementById('webTwitter').value.trim();
-    const webFB = document.getElementById('webFB').value.trim();
-    const webGoogle = document.getElementById('webGoogle').value.trim();
-    const webLinkedIn = document.getElementById('webLinkedIn').value.trim();
-    const webInstagram = document.getElementById('webInstagram').value.trim();
-
     const user = auth.currentUser;
-
     if (!user) {
         Swal.fire({
             icon: 'error',
@@ -143,11 +104,28 @@ async function handleSaveProfile() {
         return;
     }
 
+    const profileData = {
+        firstName: document.getElementById('firstName').value.trim(),
+        lastName: document.getElementById('lastName').value.trim(),
+        phoneNumber: document.getElementById('phoneNumber').value.trim(),
+        address: document.getElementById('address').value.trim(),
+        bio: document.getElementById('bio').value.trim(),
+        birthday: document.getElementById('birthday').value.trim(),
+        country: document.getElementById('country').value.trim(),
+        webTwitter: document.getElementById('webTwitter').value.trim(),
+        webFB: document.getElementById('webFB').value.trim(),
+        webGoogle: document.getElementById('webGoogle').value.trim(),
+        webLinkedIn: document.getElementById('webLinkedIn').value.trim(),
+        webInstagram: document.getElementById('webInstagram').value.trim()
+    };
+
     try {
-        await saveProfile(user.uid, { firstName, lastName, phoneNumber, address, bio, birthday, country, webTwitter, webFB, webGoogle, webLinkedIn, webInstagram });
+        await updateDoc(doc(db, 'users', user.uid), profileData);
         Swal.fire({
             icon: 'success',
             title: 'Profile saved successfully!'
+        }).then(() => {
+            location.reload(); // Refresh the page after a successful save
         });
     } catch (error) {
         console.error('Error saving profile:', error);
@@ -159,20 +137,8 @@ async function handleSaveProfile() {
     }
 }
 
-async function saveProfile(userId, profileData) {
-    const userDocRef = doc(db, 'users', userId);
-
-    try {
-        await updateDoc(userDocRef, profileData);
-    } catch (error) {
-        console.error('Error updating profile:', error);
-        throw error;
-    }
-}
-
 async function handleChangePassword() {
     const user = auth.currentUser;
-
     if (!user) {
         Swal.fire({
             icon: 'error',
@@ -186,7 +152,6 @@ async function handleChangePassword() {
     const newPassword = document.getElementById('newPassword').value.trim();
     const confirmPassword = document.getElementById('confirmPassword').value.trim();
 
-    // Check if any of the fields are empty
     if (!oldPassword || !newPassword || !confirmPassword) {
         Swal.fire({
             icon: 'error',
@@ -196,7 +161,6 @@ async function handleChangePassword() {
         return;
     }
 
-    // Validate the new password format
     if (!validatePassword(newPassword)) {
         Swal.fire({
             icon: 'error',
@@ -206,7 +170,6 @@ async function handleChangePassword() {
         return;
     }
 
-    // Check if the new passwords match
     if (newPassword !== confirmPassword) {
         Swal.fire({
             icon: 'error',
@@ -217,14 +180,9 @@ async function handleChangePassword() {
     }
 
     try {
-        // Reauthenticate the user with their current password before changing it
         const credential = EmailAuthProvider.credential(user.email, oldPassword);
         await reauthenticateWithCredential(user, credential);
-
-        // Change the password
         await updatePassword(user, newPassword);
-
-        // Logout and redirect to login page
         await signOut(auth);
         Swal.fire({
             icon: 'success',
@@ -232,7 +190,7 @@ async function handleChangePassword() {
             text: 'Your password has been updated. You are now logged out.',
             allowOutsideClick: false
         }).then(() => {
-            window.location.href = 'login.php'; // Redirect to login.php
+            window.location.href = 'login.php';
         });
     } catch (error) {
         console.error('Error changing password:', error);
@@ -249,65 +207,44 @@ function validatePassword(password) {
     return regex.test(password);
 }
 
-async function handleFileUpload(event) {
+let cropper;
+document.getElementById('profileImageInput').addEventListener('change', function (event) {
     const file = event.target.files[0];
-    const userId = auth.currentUser.uid;
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            const imageElement = document.getElementById('imageToCrop');
+            imageElement.src = e.target.result; // Set the source of the image
 
-    try {
-        // Upload file to Firebase Storage
-        const storageRef = ref(storage, `profilePictures/${userId}/${file.name}`);
-        const uploadTask = uploadBytes(storageRef, file);
-        const snapshot = await uploadTask;
+            // Ensure previous cropper instance is destroyed
+            if (cropper) {
+                cropper.destroy();
+                cropper = null;
+            }
 
-        // Get download URL of uploaded file
-        const downloadURL = await getDownloadURL(snapshot.ref);
+            // Wait for modal to be shown
+            $('#imageCropperModal').on('shown.bs.modal', function () {
+                // Initialize Cropper
+                cropper = new Cropper(imageElement, {
+                    aspectRatio: 1,
+                    viewMode: 1,
+                    scalable: true,
+                    cropBoxResizable: true,
+                    dragMode: 'move'
+                });
+            });
 
-        // Update user's profile picture URL in Firestore
-        await updateProfilePicture(userId, downloadURL);
-
-        // Update profile picture in UI
-        const profilePicture = document.getElementById('profilePicture');
-        profilePicture.src = downloadURL;
-
-        // Show success message
-        Swal.fire({
-            icon: 'success',
-            title: 'Profile Picture Updated',
-            text: 'Your profile picture has been updated successfully.'
-        });
-    } catch (error) {
-        console.error('Error uploading profile picture:', error);
-        Swal.fire({
-            icon: 'error',
-            title: 'Error',
-            text: 'An error occurred while uploading your profile picture. Please try again.'
-        });
+            // Show the modal after setting image source
+            $('#imageCropperModal').modal('show');
+        };
+        reader.readAsDataURL(file);
     }
-}
-
-async function updateProfilePicture(userId, downloadURL) {
-    const userDocRef = doc(db, 'users', userId);
-
-    try {
-        await updateDoc(userDocRef, { profilePicture: downloadURL });
-    } catch (error) {
-        console.error('Error updating profile picture URL:', error);
-        throw error;
-    }
-}
-
-const backBtn = document.getElementById('backBtn');
-backBtn.addEventListener('click', function () {
-    window.history.back();
 });
 
-const resetButton = document.getElementById("resetPhoto");
-
-// Add click event listener to the reset button
-resetButton.addEventListener("click", function () {
-    // Get the profile picture element
-    const profilePicture = document.getElementById("profilePicture");
-
-    // Set the source of the profile picture to the default image URL
-    profilePicture.src = "https://bootdey.com/img/Content/avatar/avatar1.png";
+$('#imageCropperModal').on('hidden.bs.modal', function () {
+    if (cropper) {
+        cropper.destroy();
+        cropper = null;
+        document.getElementById('imageToCrop').src = ''; // Clear the image source
+    }
 });

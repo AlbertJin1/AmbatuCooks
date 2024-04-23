@@ -1,141 +1,98 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
+/* Reset and Basics */
 * {
-    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* USER PROFILE */
 body {
-    background-color: #6D9773;
+    background-color: #E5E8E1;
+    /* Updated to match your body style */
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
 }
 
-#titlePage {
-    margin-top: 20px;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-#cardHold {
-    border-radius: 10px;
+/* Card Styles */
+.card {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 20px;
 }
 
-.ui-w-80 {
-    width: 80px !important;
-    height: auto;
-}
-
-.btn-default {
-    border-color: rgba(24, 28, 33, 0.1);
-    background: rgba(0, 0, 0, 0);
-    color: #4E5155;
-}
-
-label.btn {
-    margin-bottom: 0;
-}
-
-.btn-outline-primary {
-    border-color: #26B4FF;
-    background: transparent;
-    color: #26B4FF;
-}
-
-.btn {
+/* List Group Item */
+.list-group-item {
+    border: none;
+    padding: 15px 20px;
     cursor: pointer;
 }
 
-.text-light {
-    color: #babbbc !important;
+.list-group-item:hover,
+.list-group-item.active {
+    background-color: #5cb85c;
+    color: white;
 }
 
-.btn-facebook {
-    border-color: rgba(0, 0, 0, 0);
-    background: #3B5998;
-    color: #fff;
+/* Form Control Styles */
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
 }
 
-.btn-instagram {
-    border-color: rgba(0, 0, 0, 0);
-    background: #000;
-    color: #fff;
+/* Button Styles */
+.btn {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
-.card {
-    background-clip: padding-box;
-    box-shadow: 0 1px 4px rgba(24, 28, 33, 0.012);
+.btn-primary {
+    background-color: #007bff;
+    color: white;
 }
 
-.row-bordered {
-    overflow: hidden;
+.btn-primary:hover {
+    background-color: #0056b3;
 }
 
-.account-settings-fileinput {
-    position: absolute;
-    visibility: hidden;
-    width: 1px;
-    height: 1px;
-    opacity: 0;
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
 }
 
-.account-settings-links .list-group-item.active {
-    font-weight: bold !important;
+.btn-danger:hover {
+    background-color: #c82333;
 }
 
-html:not(.dark-style) .account-settings-links .list-group-item.active {
-    background: transparent !important;
-}
-
-.account-settings-multiselect~.select2-container {
-    width: 100% !important;
-}
-
-.light-style .account-settings-links .list-group-item {
-    padding: 0.85rem 1.5rem;
-    border-color: rgba(24, 28, 33, 0.03) !important;
-}
-
-.light-style .account-settings-links .list-group-item.active {
-    color: #4e5155 !important;
-}
-
-.material-style .account-settings-links .list-group-item {
-    padding: 0.85rem 1.5rem;
-    border-color: rgba(24, 28, 33, 0.03) !important;
-}
-
-.material-style .account-settings-links .list-group-item.active {
-    color: #4e5155 !important;
-}
-
-.dark-style .account-settings-links .list-group-item {
-    padding: 0.85rem 1.5rem;
-    border-color: rgba(255, 255, 255, 0.03) !important;
-}
-
-.dark-style .account-settings-links .list-group-item.active {
-    color: #fff !important;
-}
-
-.light-style .account-settings-links .list-group-item.active {
-    color: #4E5155 !important;
-}
-
-.light-style .account-settings-links .list-group-item {
-    padding: 0.85rem 1.5rem;
-    border-color: rgba(24, 28, 33, 0.03) !important;
-}
-
-/* LOADER */
+/* Loader Styles */
 .loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #E5E8E1;
-    transition: opacity 0.75s, visibility 0.75s;
-    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 1000;
+    opacity: 1;
+    visibility: visible;
+    transition: visibility 0.3s, opacity 0.3s ease-in-out;
 }
 
 .loader--hidden {
@@ -144,22 +101,34 @@ html:not(.dark-style) .account-settings-links .list-group-item.active {
 }
 
 .loader::after {
-    content: "";
-    width: 75px;
-    height: 75px;
-    border: 15px solid white;
-    border-top-color: #0C3B2E;
+    content: '';
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top-color: #3498db;
     border-radius: 50%;
-    animation: loading 0.75s ease infinite;
+    animation: spin 1s linear infinite;
 }
 
-@keyframes loading {
-    from {
-        transform: rotate(0turn);
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
     }
 
-    to {
-        transform: rotate(1turn);
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .list-group-item,
+    .tab-content {
+        padding: 10px;
     }
 }
 
@@ -187,4 +156,68 @@ html:not(.dark-style) .account-settings-links .list-group-item.active {
 
 .password-input .fas.fa-eye {
     display: block;
+}
+
+.modal-dialog {
+    max-width: 95%;
+    /* Adjust this value based on your layout */
+    margin: 30px auto;
+}
+
+.modal-content {
+    overflow: hidden;
+    /* Ensures nothing spills out of the modal */
+}
+
+#imageToCrop {
+    max-width: 100%;
+    /* Ensures the image fits within the modal */
+    height: auto;
+    /* Maintains aspect ratio */
+}
+
+@keyframes rgbBorderTrail {
+
+    0%,
+    100% {
+        border-image: linear-gradient(to right,
+                rgb(255, 0, 0) 0%,
+                rgb(0, 255, 0) 33%,
+                rgb(0, 0, 255) 66%,
+                rgb(255, 0, 0) 100%);
+        border-image-slice: 1;
+    }
+
+    25% {
+        border-image: linear-gradient(to right,
+                rgb(0, 255, 0) 0%,
+                rgb(0, 0, 255) 33%,
+                rgb(255, 0, 0) 66%,
+                rgb(0, 255, 0) 100%);
+        border-image-slice: 1;
+    }
+
+    50% {
+        border-image: linear-gradient(to right,
+                rgb(0, 0, 255) 0%,
+                rgb(255, 0, 0) 33%,
+                rgb(0, 255, 0) 66%,
+                rgb(0, 0, 255) 100%);
+        border-image-slice: 1;
+    }
+
+    75% {
+        border-image: linear-gradient(to right,
+                rgb(255, 0, 0) 0%,
+                rgb(0, 255, 0) 33%,
+                rgb(0, 0, 255) 66%,
+                rgb(255, 0, 0) 100%);
+        border-image-slice: 1;
+    }
+}
+
+#cardHold {
+    border: 5px solid transparent;
+    /* Ensure the border is present */
+    animation: rgbBorderTrail 8s linear infinite;
 }
