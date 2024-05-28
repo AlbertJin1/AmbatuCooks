@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(229, 232, 225);
+    /* Set background color */
+}
+
+.container {
+    background-color: #ffffff;
+    border: 5px solid transparent;
+    /* Set initial border color to transparent */
+    border-radius: 15px;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3);
+    animation: borderEffect 10s infinite linear;
+    /* Apply the animation */
+
+    overflow: hidden;
+}
+
+@keyframes borderEffect {
+    0% {
+        border-color: rgba(255, 0, 0, 0.5);
+        /* Start with semi-transparent red */
+    }
+
+    10% {
+        border-color: rgba(255, 255, 0, 0.5);
+        /* Transition to semi-transparent yellow */
+    }
+
+    20% {
+        border-color: rgba(0, 255, 0, 0.5);
+        /* Transition to semi-transparent green */
+    }
+
+    30% {
+        border-color: rgba(0, 255, 255, 0.5);
+        /* Transition to semi-transparent cyan */
+    }
+
+    40% {
+        border-color: rgba(0, 0, 255, 0.5);
+        /* Transition to semi-transparent blue */
+    }
+
+    50% {
+        border-color: rgba(255, 0, 255, 0.5);
+        /* Transition to semi-transparent magenta */
+    }
+
+    60% {
+        border-color: rgba(255, 0, 0, 0.5);
+        /* Transition back to semi-transparent red */
+    }
+
+    70% {
+        border-color: rgba(255, 255, 0, 0.5);
+        /* Transition back to semi-transparent yellow */
+    }
+
+    80% {
+        border-color: rgba(0, 255, 0, 0.5);
+        /* Transition back to semi-transparent green */
+    }
+
+    90% {
+        border-color: rgba(0, 255, 255, 0.5);
+        /* Transition back to semi-transparent cyan */
+    }
+
+    100% {
+        border-color: rgba(0, 0, 255, 0.5);
+        /* End with semi-transparent blue */
+    }
+}
+
+/* h1,
+h2 {
+    margin-top: 20px;
+} */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 5px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 10px 0 10px 0;
+}
+
+button[type="button"],
+button[type="submit"] {
+    padding: 8px 20px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+button[type="button"]:hover,
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.removeIngredient {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    color: red;
+}
+
+.removeIngredient:hover {
+    color: darkred;
+}
+
+#directionsList {
+    padding-left: 20px;
+    width: 95%;
+}
+
+#directInput {
+    border-radius: 5px;
+    margin: 10px 0 10px 0;
+}
+
+#addRecipeForm {
+    margin: 20px 0 20px 0;
+}
+
+.ingredientInput td {
+    vertical-align: middle;
+}
+
+.direction-item {
+    display: flex;
+    align-items: center;
+}
+
+.removeDirection {
+    margin-left: 10px;
+    /* Adjust margin as needed */
+    background-color: transparent;
+    border: none;
+    color: red;
+}
+
+.removeDirection:hover {
+    color: darkred;
+}
+
+#directRemove {
+    border-radius: 5px;
+}
+
+#titleNig {
+    margin: 20px 0 20px 0;
+}
+
+label {
+    font-weight: bold;
+}
+
+li::marker {
+    font-weight: bold;
+}
+
+#bodyNig{
+    margin: 50px 0 50px 0;
+}
