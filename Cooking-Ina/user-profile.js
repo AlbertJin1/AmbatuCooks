@@ -59,6 +59,23 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('saveBtn').addEventListener('click', handleSaveProfile);
     document.getElementById('changePassBtn').addEventListener('click', handleChangePassword);
     document.getElementById('profileImageInput').addEventListener('change', handleFileUpload);
+
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    console.log("DOM fully loaded and parsed");
+
+    document.getElementById('backBtn').addEventListener('click', function () {
+        console.log("Back button clicked");
+        window.location.href = 'index.php';
+    });
+
+    // Check if the button exists
+    if (document.getElementById('backBtn')) {
+        console.log("Back button is correctly identified");
+    } else {
+        console.log("Back button not found");
+    }
 });
 
 async function getUserProfile(userId) {
