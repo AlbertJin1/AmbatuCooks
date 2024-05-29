@@ -14,12 +14,12 @@
 <link rel="preload" as="style" href="https://unpkg.com/aos@next/dist/aos.css" />
 <link rel="preload" as="style"
     href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.4.0/css/lightgallery.min.css" />
-<link rel="preload" as="script" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js">
-<link rel="preload" as="script" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-<link rel="preload" as="script" src="https://unpkg.com/aos@next/dist/aos.js">
-<link rel="preload" as="script"
+<link as="script" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js">
+<link as="script" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+<link as="script" src="https://unpkg.com/aos@next/dist/aos.js">
+<link as="script"
     src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js">
-<link rel="preload" as="script" src="./assets/script-recipe-list.js">
+<link as="script" src="./assets/script-recipe-list.js">
 
 <!-- STYLESHEETS LOCAL MEOW -->
 <link rel="stylesheet" href="./assets/style-recipe-list.css">
@@ -37,5 +37,6 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 
 <script type="module" src="firebase-authRetrieveCOURSE.js" defer></script>
+<script type="module" src="firebase-recipe.js" defer></script>
 
 <title>Courses | Cooking Ina</title>

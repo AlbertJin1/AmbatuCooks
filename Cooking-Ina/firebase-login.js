@@ -17,6 +17,22 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 
 const submit = document.getElementById('loginButton');
+const emailInput = document.getElementById('email');
+const passwordInput = document.getElementById('password');
+
+// Listen for keypress event on email input
+emailInput.addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') {
+        submit.click(); // Trigger click event on submit button
+    }
+});
+
+// Listen for keypress event on password input
+passwordInput.addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') {
+        submit.click(); // Trigger click event on submit button
+    }
+});
 submit.addEventListener("click", function (event) {
     event.preventDefault();
 

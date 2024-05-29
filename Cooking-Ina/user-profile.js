@@ -38,6 +38,24 @@ let cropper; // Define cropper globally
 
 
 document.addEventListener('DOMContentLoaded', function () {
+    const loader = document.querySelector(".loader");
+    let profilePictureLoaded = false;
+
+    // Function to check if all data and profile picture are loaded
+    function checkAllLoaded() {
+        if (loader && profilePictureLoaded) {
+            loader.classList.add("loader--hidden");
+            loader.addEventListener("transitionend", () => {
+                setTimeout(() => {
+                    if (loader.parentNode) {
+                        loader.parentNode.removeChild(loader);
+                    }
+                }, 500);
+            });
+        }
+    }
+
+    // Load user profile and set profile picture
     onAuthStateChanged(auth, async (user) => {
         if (user) {
             const userProfile = await getUserProfile(user.uid);
@@ -45,6 +63,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 populateForm(userProfile);
             }
             document.getElementById('email').value = user.email || '';
+            profilePictureLoaded = true; // Set profile picture as loaded
+            checkAllLoaded(); // Check if all data and profile picture are loaded
         } else {
             Swal.fire({
                 icon: 'error',
@@ -54,6 +74,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 window.location.href = 'login.php';
             });
         }
+    });
+
+    // Event listener for the profile picture
+    document.getElementById('profilePicture').addEventListener('load', function () {
+        profilePictureLoaded = true; // Set profile picture as loaded
+        checkAllLoaded(); // Check if all data and profile picture are loaded
     });
 
     document.getElementById('saveBtn').addEventListener('click', handleSaveProfile);

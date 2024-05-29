@@ -1305,6 +1305,62 @@ ol {
     padding-left: 20px;
 }
 
+.bottom h6 {
+    margin: 20px 0 20px;
+    display: block;
+    font-size: 12px;
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 20px;
+    /* Adjust as needed */
+}
+
+.buttons button {
+    padding: 12px 24px;
+    margin: 0 10px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    /* Add border */
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Add shadow */
+    transition: background-color 0.3s, transform 0.3s, border-color 0.3s;
+    /* Smooth transition */
+}
+
+.update-btn {
+    background-color: #ffc107;
+    /* Yellow */
+    color: #fff;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    /* Red */
+    color: #fff;
+}
+
+/* Hover effects */
+.buttons button:hover {
+    transform: translateY(-2px);
+    /* Move button up slightly */
+    border-color: rgba(0, 0, 0, 0.1);
+    /* Change border color */
+}
+
+.update-btn:hover {
+    background-color: #ffb807;
+    /* Lighter yellow on hover */
+}
+
+.delete-btn:hover {
+    background-color: #d13240;
+    /* Darker red on hover */
+}
+
 /* .top ul{
     columns: 3;
     display: block;

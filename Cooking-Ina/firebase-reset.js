@@ -17,6 +17,14 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 
 const submit = document.getElementById('forgotPasswordButton');
+const emailInput = document.getElementById('email');
+
+// Listen for keypress event on email input
+emailInput.addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') {
+        submit.click(); // Trigger click event on submit button
+    }
+});
 submit.addEventListener("click", function (event) {
     event.preventDefault();
 

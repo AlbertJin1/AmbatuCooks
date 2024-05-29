@@ -387,7 +387,8 @@
         </div>
         <div class="text-right mt-3">
             <button type="button" class="btn btn-primary" id="saveBtn">Save</button>&nbsp;
-            <button type="button" class="btn btn-danger" id="backBtn" onclick="window.history.back();">Back to Home</button>
+            <button type="button" class="btn btn-danger" id="backBtn" onclick="window.history.back();">Back to
+                Home</button>
         </div>
     </div>
     <div class="modal fade" id="imageCropperModal" tabindex="-1" role="dialog" aria-labelledby="imageCropperModalLabel"
@@ -418,22 +419,6 @@
     </script>
 
     <script>
-        window.addEventListener("load", () => {
-            const loader = document.querySelector(".loader");
-
-            if (loader) { // Check if loader element exists
-                loader.classList.add("loader--hidden");
-
-                loader.addEventListener("transitionend", () => {
-                    // Delay the removal of the loader by a short interval
-                    setTimeout(() => {
-                        if (loader.parentNode) { // Check if loader has a parent node
-                            loader.parentNode.removeChild(loader);
-                        }
-                    }, 500); // Adjust the delay time as needed
-                });
-            }
-        });
         document.getElementById("backBtn").addEventListener("click", function () {
             window.history.back();
         });

@@ -17,6 +17,42 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 
 const submit = document.getElementById('registerButton');
+const firstNameInput = document.getElementById('firstName');
+const lastNameInput = document.getElementById('lastName');
+const emailInput = document.getElementById('email');
+const passwordInput = document.getElementById('password');
+const confirmPasswordInput = document.getElementById('confirmPassword');
+
+// Listen for keypress event on inputs
+firstNameInput.addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') {
+        submit.click(); // Trigger click event on submit button
+    }
+});
+
+lastNameInput.addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') {
+        submit.click(); // Trigger click event on submit button
+    }
+});
+
+emailInput.addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') {
+        submit.click(); // Trigger click event on submit button
+    }
+});
+
+passwordInput.addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') {
+        submit.click(); // Trigger click event on submit button
+    }
+});
+
+confirmPasswordInput.addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') {
+        submit.click(); // Trigger click event on submit button
+    }
+});
 submit.addEventListener("click", function (event) {
     event.preventDefault();
 
