@@ -33,6 +33,10 @@ const db = getFirestore(app);
 const auth = getAuth(app);
 const storage = getStorage(app);
 
+let cropper; // Define cropper globally
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
     onAuthStateChanged(auth, async (user) => {
         if (user) {
@@ -110,6 +114,47 @@ function populateForm(userProfile) {
     document.getElementById('profilePicture').src = userProfile.profilePicture || 'https://bootdey.com/img/Content/avatar/avatar1.png';
 }
 
+// Define global variable for default profile picture URL
+const defaultProfilePictureURL = 'https://bootdey.com/img/Content/avatar/avatar1.png';
+
+// Event listener for the reset button
+document.getElementById('resetPhoto').addEventListener('click', async function () {
+    // Set the profile picture back to the default one
+    document.getElementById('profilePicture').src = defaultProfilePictureURL;
+
+    // Save the default profile picture URL to the database
+    await updateProfilePicture(defaultProfilePictureURL);
+});
+// Function to update profile picture in the database
+async function updateProfilePicture(profilePictureURL) {
+    const user = auth.currentUser;
+    if (!user) {
+        Swal.fire({
+            icon: 'error',
+            title: 'User Not Logged In',
+            text: 'Please log in to save your profile changes.'
+        });
+        return;
+    }
+
+    try {
+        // Update user profile in Firestore
+        await updateDoc(doc(db, 'users', user.uid), { profilePicture: profilePictureURL });
+
+        Swal.fire({
+            icon: 'success',
+            title: 'Profile picture reset successfully!'
+        });
+    } catch (error) {
+        console.error('Error saving profile:', error);
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Error saving profile. Please try again.'
+        });
+    }
+}
+
 async function handleSaveProfile() {
     const user = auth.currentUser;
     if (!user) {
@@ -133,11 +178,14 @@ async function handleSaveProfile() {
         webFB: document.getElementById('webFB').value.trim(),
         webGoogle: document.getElementById('webGoogle').value.trim(),
         webLinkedIn: document.getElementById('webLinkedIn').value.trim(),
-        webInstagram: document.getElementById('webInstagram').value.trim()
+        webInstagram: document.getElementById('webInstagram').value.trim(),
+        profilePicture: document.getElementById('profilePicture').src // Get current profile picture URL
     };
 
     try {
+        // Update user profile in Firestore
         await updateDoc(doc(db, 'users', user.uid), profileData);
+
         Swal.fire({
             icon: 'success',
             title: 'Profile saved successfully!'
@@ -152,6 +200,101 @@ async function handleSaveProfile() {
             text: 'Error saving profile. Please try again.'
         });
     }
+}
+
+// Function to compress the image blob
+async function compressImage(blob, maxSize) {
+    return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = (event) => {
+            const img = new Image();
+            img.src = event.target.result;
+            img.onload = () => {
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d');
+
+                const maxWidth = 1024; // Max width for the compressed image
+                const maxHeight = 1024; // Max height for the compressed image
+
+                let width = img.width;
+                let height = img.height;
+
+                if (width > height) {
+                    if (width > maxWidth) {
+                        height *= maxWidth / width;
+                        width = maxWidth;
+                    }
+                } else {
+                    if (height > maxHeight) {
+                        width *= maxHeight / height;
+                        height = maxHeight;
+                    }
+                }
+
+                canvas.width = width;
+                canvas.height = height;
+
+                ctx.drawImage(img, 0, 0, width, height);
+
+                canvas.toBlob((compressedBlob) => {
+                    if (compressedBlob.size > maxSize) {
+                        reject(new Error('Compressed image exceeds maximum size'));
+                    } else {
+                        resolve(compressedBlob);
+                    }
+                }, 'image/jpeg', 0.7); // Adjust compression quality as needed
+            };
+        };
+        reader.readAsDataURL(blob);
+    });
+}
+
+
+// Event listener for the crop image button
+document.getElementById('cropImage').addEventListener('click', async function () {
+    if (cropper) {
+        try {
+            // Retrieve cropped data as Blob
+            const croppedBlob = await new Promise((resolve) => {
+                cropper.getCroppedCanvas().toBlob((blob) => {
+                    resolve(blob);
+                });
+            });
+
+            // Upload cropped photo to Firebase Storage
+            const storageRef = ref(storage, 'profilePictures/' + auth.currentUser.uid);
+            const uploadTaskSnapshot = await uploadBytes(storageRef, croppedBlob);
+
+            // Get download URL of the uploaded cropped photo
+            const croppedImageUrl = await getDownloadURL(uploadTaskSnapshot.ref);
+
+            // Set the cropped image as the source of the profile picture
+            document.getElementById('profilePicture').src = croppedImageUrl;
+
+            // Close the modal
+            $('#imageCropperModal').modal('hide');
+        } catch (error) {
+            console.error('Error cropping and uploading image:', error);
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Error cropping and uploading image. Please try again.'
+            });
+        }
+    }
+});
+
+// Function to convert dataURL to Blob
+function dataURLtoBlob(dataURL) {
+    const parts = dataURL.split(';base64,');
+    const contentType = parts[0].split(':')[1];
+    const raw = window.atob(parts[1]);
+    const rawLength = raw.length;
+    const uInt8Array = new Uint8Array(rawLength);
+    for (let i = 0; i < rawLength; ++i) {
+        uInt8Array[i] = raw.charCodeAt(i);
+    }
+    return new Blob([uInt8Array], { type: contentType });
 }
 
 async function handleChangePassword() {
@@ -224,8 +367,8 @@ function validatePassword(password) {
     return regex.test(password);
 }
 
-let cropper;
-document.getElementById('profileImageInput').addEventListener('change', function (event) {
+// Define handleFileUpload function
+function handleFileUpload(event) {
     const file = event.target.files[0];
     if (file) {
         const reader = new FileReader();
@@ -256,7 +399,7 @@ document.getElementById('profileImageInput').addEventListener('change', function
         };
         reader.readAsDataURL(file);
     }
-});
+}
 
 $('#imageCropperModal').on('hidden.bs.modal', function () {
     if (cropper) {

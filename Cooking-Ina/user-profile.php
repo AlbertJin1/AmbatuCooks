@@ -9,7 +9,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/cropperjs@1.5.12/dist/cropper.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
     <script type="module" src="user-profile.js" defer></script>
     <style>
         textarea {
@@ -68,10 +69,9 @@
                                         Upload new photo
                                         <input type="file" class="account-settings-fileinput" id="profileImageInput">
                                     </label> &nbsp;
-                                    <button type="button" class="btn btn-default md-btn-flat"
-                                        id="resetPhoto">Reset</button>
-                                    <div class="small mt-1">Allowed JPG, GIF or PNG. Max size of 800K. Size is 200px X
-                                        200px.</div>
+                                    <button type="button" class="btn btn-warning md-btn-flat"
+                                        id="resetPhoto">Reset</button> <!-- Add id="resetPhoto" -->
+                                    <div class="small mt-1">Allowed JPG, GIF or PNG.</div>
                                 </div>
                             </div>
                             <hr class="border-light m-0">
@@ -413,7 +413,6 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/cropperjs@1.5.12/dist/cropper.min.js"></script>
     <script type="text/javascript">
 
     </script>
@@ -434,6 +433,9 @@
                     }, 500); // Adjust the delay time as needed
                 });
             }
+        });
+        document.getElementById("backBtn").addEventListener("click", function () {
+            window.history.back();
         });
     </script>
 </body>
