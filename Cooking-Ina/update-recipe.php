@@ -4,13 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Recipe</title>
+    <title>Update Recipe</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/cropperjs/dist/cropper.css">
     <link rel="stylesheet" href="assets/add-update-recipe.css">
-    <script type="module" src="assets/add-recipe.js" defer></script>
-
+    <script type="module" src="assets/update-recipe.js" defer></script>
 </head>
 
 <body id="bodyNig" class="justify-content-center align-items-center">
@@ -20,12 +19,12 @@
         <p>Welcome, <span id="displayName"></span>!</p>
     </div>
     <div class="container">
-        <h1 class="text-center" id="titleNig">Add Recipe</h1>
+        <h1 class="text-center" id="titleNig">Update Recipe</h1>
 
-        <!-- Add Picture Feature -->
+        <!-- Update Picture Feature -->
         <div class="form-group">
-            <label for="recipeImage">Add Picture:</label>
-            <input type="file" class="form-control-file" id="recipeImage">
+            <label for="updateRecipeImage">Update Picture (Optional):</label>
+            <input type="file" class="form-control-file" id="updateRecipeImage">
             <!-- Modal -->
             <div class="modal fade" id="cropModal" tabindex="-1" role="dialog" aria-labelledby="cropModalLabel"
                 aria-hidden="true">
@@ -53,17 +52,17 @@
         <div id="croppedImageContainer"></div>
 
 
-        <div id="addRecipeForm">
+        <div id="updateRecipeForm">
             <div class="form-group">
-                <label for="recipeName">Recipe Name:</label>
-                <input type="text" class="form-control" id="recipeName" name="recipeName" placeholder="Recipe Name"
-                    required>
+                <label for="updateRecipeName">Recipe Name:</label>
+                <input type="text" class="form-control" id="updateRecipeName" name="updateRecipeName"
+                    placeholder="Recipe Name" required>
             </div>
 
             <!-- Category Dropdown -->
             <div class="form-group">
-                <label for="recipeCategory">Category:</label>
-                <select class="form-control" id="recipeCategory">
+                <label for="updateRecipeCategory">Category:</label>
+                <select class="form-control" id="updateRecipeCategory">
                     <option value="" disabled selected>Select Category</option>
                     <option value="Main Dish">Main Dish</option>
                     <option value="Appetizer">Appetizer</option>
@@ -73,14 +72,14 @@
             </div>
 
             <div class="form-group">
-                <label for="recipeDescription">Short Description:</label>
-                <textarea class="form-control" id="recipeDescription" name="recipeDescription" rows="3"
+                <label for="updateRecipeDescription">Short Description:</label>
+                <textarea class="form-control" id="updateRecipeDescription" name="updateRecipeDescription" rows="3"
                     placeholder="Enter a short description"></textarea>
             </div>
 
             <div class="form-group">
                 <h2>Ingredients:</h2>
-                <table id="ingredientTable" class="table">
+                <table id="updateIngredientTable" class="table">
                     <thead>
                         <tr>
                             <th>Ingredient Name</th>
@@ -89,31 +88,31 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="ingredientInput">
-                            <td><input type="text" class="form-control" name="ingredientName[]"
+                        <tr class="updateIngredientInput">
+                            <td><input type="text" class="form-control" name="updateIngredientName[]"
                                     placeholder="Ingredient Name" required></td>
-                            <td><input type="text" class="form-control" name="ingredientQuantity[]"
+                            <td><input type="text" class="form-control" name="updateIngredientQuantity[]"
                                     placeholder="Quantity" required></td>
                             <td></td> <!-- Placeholder column for remove button -->
                         </tr>
                     </tbody>
                 </table>
-                <button type="button" id="addIngredient" class="btn btn-primary">Add Ingredient</button>
+                <button type="button" id="updateAddIngredient" class="btn btn-primary">Add Ingredient</button>
             </div>
 
             <div class="form-group">
                 <h2>Directions:</h2>
-                <ol id="directionsList">
+                <ol id="updateDirectionsList">
                     <li>
                         <div class="direction-item input-group">
-                            <input id="directInput" type="text" class="form-control directionInput" name="directions[]"
-                                placeholder="Step 1" required>
+                            <input id="updateDirectInput" type="text" class="form-control directionInput"
+                                name="updateDirections[]" placeholder="Step 1" required>
                         </div>
                     </li>
                 </ol>
-                <button type="button" class="btn btn-danger" id="addDirection">Add Direction</button>
+                <button type="button" class="btn btn-danger" id="updateAddDirection">Add Direction</button>
             </div>
-            <button type="button" id="submitRecipe" class="btn btn-primary">Submit Recipe</button>
+            <button type="button" id="updateRecipeSubmit" class="btn btn-primary">Update Recipe</button>
         </div>
     </div>
 
@@ -140,9 +139,7 @@
             }
         });
     </script>
-    <script type="text/javascript">
+    <script type="text/javascript"></script>
+</body>
 
-
-</body >
-
-</html >
+</html>

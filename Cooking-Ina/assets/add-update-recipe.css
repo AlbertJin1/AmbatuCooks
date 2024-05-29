@@ -134,21 +134,21 @@ button[type="submit"]:hover {
     color: darkred;
 }
 
-#directionsList {
+#directionsList, #updateDirectionsList {
     padding-left: 20px;
     width: 95%;
 }
 
-#directInput {
+#directInput, #updateDirectInput {
     border-radius: 5px;
     margin: 10px 0 10px 0;
 }
 
-#addRecipeForm {
+#addRecipeForm, #updateRecipeForm {
     margin: 20px 0 20px 0;
 }
 
-.ingredientInput td {
+.ingredientInput td, .updateIngredientInput td {
     vertical-align: middle;
 }
 
@@ -169,7 +169,7 @@ button[type="submit"]:hover {
     color: darkred;
 }
 
-#directRemove {
+#directRemove, #updateDirectRemove {
     border-radius: 5px;
 }
 

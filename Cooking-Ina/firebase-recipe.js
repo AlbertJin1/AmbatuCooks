@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                         const section = document.getElementById(sectionId);
                         const menuDiv = section.querySelector('.menu');
                         const recipeHTML = createRecipeHTML({ id: recipeId, ...recipeData });
-                        menuDiv.insertAdjacentHTML('beforeend', recipeHTML);
+                        menuDiv.insertAdjacentHTML('beforeend', recipeHTML); // Append at the end
                     } else if (change.type === 'removed') {
                         // Remove recipe if it was deleted
                         const recipeToRemove = document.querySelector(`.food-items[data-id="${recipeId}"]`);
@@ -199,9 +199,41 @@ async function deleteRecipeFromFirestore(recipeId) {
     }
 }
 
+document.addEventListener('click', async function (event) {
+    if (event.target.classList.contains('update-btn')) {
+        const recipeId = event.target.dataset.id;
+        try {
+            // Retrieve recipe data from Firestore based on the recipeId
+            const recipeRef = doc(db, 'recipes', recipeId);
+            const recipeSnapshot = await getDoc(recipeRef);
+            if (recipeSnapshot.exists()) {
+                const recipeData = recipeSnapshot.data();
+
+                const queryString = new URLSearchParams({ recipeId: recipeId, ...recipeData }).toString();
+                window.location.href = `update-recipe.php?${queryString}`;
+            } else {
+                throw new Error('Recipe does not exist');
+            }
+        } catch (error) {
+            console.error('Error retrieving recipe data:', error);
+            // Show error message
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'An error occurred while retrieving recipe data. Please try again later.',
+            });
+        }
+    }
+});
+
+
 
 // Function to create HTML for a recipe
 function createRecipeHTML(recipe) {
+    const updateButton = `
+    <button class="update-btn" data-id="${recipe.id}">Update</button>
+`;
+
     return `
         <div class="food-items">
             <img src="${recipe.imageURL}">
@@ -239,8 +271,8 @@ function createRecipeHTML(recipe) {
                             </ol>
                             <h6>Added by: ${recipe.addedBy}</h6> <!-- Display addedBy here -->
                             <div class="buttons">
-                                <button class="update-btn">Update</button>
-                                <button class="delete-btn" data-id="${recipe.id}" data-image="${recipe.imageURL}">Delete</button>
+                                ${updateButton}
+                                <button class="delete-btn" data-id="${recipe.id}">Delete</button>
                             </div>
                         </div>
                     </div>
