@@ -20,7 +20,7 @@
         </div>
         <div class="menu-tab-item" data-target="#starters">
             <i class="bx bx-restaurant"></i>
-            <span>Appetizers and Bread</span>
+            <span>Appetizers</span>
         </div>
         <div class="menu-tab-item" data-target="#desserts">
             <i class="bx bxs-popsicle"></i>
@@ -30,7 +30,7 @@
             <i class="bx bxs-drink"></i>
             <span>Beverage</span>
         </div>
-        <div class="menu-tab-item" data-target="#breakfast">
+        <!-- <div class="menu-tab-item" data-target="#breakfast">
             <i class="bx bx-restaurant"></i>
             <span>Breakfast</span>
         </div>
@@ -38,10 +38,10 @@
             <i class="bx bx-restaurant"></i>
             <span>Lunch</span>
         </div>
-        <div class="menu-tab-item" data-target="#Dinner">
+        <div class="menu-tab-item" data-target="#dinner">
             <i class="bx bx-restaurant"></i>
             <span>Dinner</span>
-        </div>
+        </div> -->
     </div>
 
     <!-- MAIN DISHES -->
@@ -128,28 +128,6 @@
                         </div>
                         <div class="desc">
                             <p>Tuna belly is perfect for grilling. This grilled tuna belly recipe is easy to follow and the result is great. You should be enjoying your tasty and delicious tuna belly after a few hours of preparation. </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <!-- ITEM END -->
-
-        <!-- ITEM START -->
-        <div class="menu-item">
-            <div class="menu-item-inner">
-                <a href="recipes-list.php#popup4-main">
-                    <div class="food-img">
-                        <img class="lazy" data-src="./img/MAIN MENU/1-MAIN DISH/adobo.png" alt="#">
-                    </div>
-                    <div class="text">
-                        <div class="dish-details">
-                            <h2>Chicken Adobo</h2>
-                            <div class="line"></div>
-                            <!-- <span class="price">None</span> -->
-                        </div>
-                        <div class="desc">
-                            <p>Chicken Adobo is an authentic Filipino dish and is one of the mostly recognized Filipino foods. Not to be mistaken with Mexican adobo, this dish is uniquely prepared by stewing chicken in vinegar and soy sauce. </p>
                         </div>
                     </div>
                 </a>
@@ -269,116 +247,6 @@
                         </div>
                         <div class="desc">
                             <p>This Chicken Siomai recipe is a variation of pork siomai or shaomai. This recipe makes use of lean ground chicken plus additional vegetables and seasonings. Are you a fan of siomai? If you are, I am certain that you will love this recipe!</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <!-- ITEM END -->
-
-        <!-- ITEM START -->
-        <div class="menu-item">
-            <div class="menu-item-inner">
-                <a href="recipes-list.php#popup4-appe">
-                    <div class="food-img">
-                        <img class="lazy" data-src="./img/MAIN MENU/5-BREAD/pandesal.png" alt="#">
-                    </div>
-                    <div class="text">
-                        <div class="dish-details">
-                            <h2>Pandesal</h2>
-                            <div class="line"></div>
-                            <!-- <span class="price">None</span> -->
-                        </div>
-                        <div class="desc">
-                            <p>We often hear about how convenient it is to start with a blank canvas– to work with the simplest elements in order to create something entirely new and vibrant. I could say that this does not only apply to art, as this works also in the field of cooking.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <!-- ITEM END -->
-
-       <!-- ITEM START -->
-       <div class="menu-item">
-            <div class="menu-item-inner">
-                <a href="recipes-list.php#popup4-appe">
-                    <div class="food-img">
-                        <img class="lazy" data-src="./img/MAIN MENU/5-BREAD/ensaymada.png" alt="#">
-                    </div>
-                    <div class="text">
-                        <div class="dish-details">
-                            <h2>Ensaymada</h2>
-                            <div class="line"></div>
-                            <!-- <span class="price">None</span> -->
-                        </div>
-                        <div class="desc">
-                            <p>Ensaymada is a Filipino sweet pastry. This is said to be a variation of the Ensaimades, a similar bread that uses pork lard as an ingredient that originated in Majorca (the largest island of Spain).</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <!-- ITEM END -->
-
-        <!-- ITEM START -->
-       <div class="menu-item">
-            <div class="menu-item-inner">
-                <a href="recipes-list.php#popup4-appe">
-                    <div class="food-img">
-                        <img class="lazy" data-src="./img/MAIN MENU/5-BREAD/monay.png" alt="#">
-                    </div>
-                    <div class="text">
-                        <div class="dish-details">
-                            <h2>Monay</h2>
-                            <div class="line"></div>
-                            <!-- <span class="price">None</span> -->
-                        </div>
-                        <div class="desc">
-                            <p>Monay, also known as pan de monja, is a dense bread roll from the Philippines made with all-purpose flour, milk, and salt. It has a characteristic shape, with an indentation down the middle dividing the bread into two round halves.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <!-- ITEM END -->
-
-        <!-- ITEM START -->
-       <div class="menu-item">
-            <div class="menu-item-inner">
-                <a href="recipes-list.php#popup4-appe">
-                    <div class="food-img">
-                        <img class="lazy" data-src="./img/MAIN MENU/5-BREAD/ube-cheese-pandesal.png" alt="#">
-                    </div>
-                    <div class="text">
-                        <div class="dish-details">
-                            <h2>Ube Cheese Pandesal</h2>
-                            <div class="line"></div>
-                            <!-- <span class="price">None</span> -->
-                        </div>
-                        <div class="desc">
-                            <p>Ube Cheese Pandesal are a new twist on our classic Filipino dinner roll. Ultra-soft and delicious with an intense purple-yam flavor and melty cheese filling, they're great for breakfast or anytime snack.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <!-- ITEM END -->
-
-        <!-- ITEM START -->
-       <div class="menu-item">
-            <div class="menu-item-inner">
-                <a href="recipes-list.php#popup4-appe">
-                    <div class="food-img">
-                        <img class="lazy" data-src="./img/MAIN MENU/5-BREAD/star-bread.png" alt="#">
-                    </div>
-                    <div class="text">
-                        <div class="dish-details">
-                            <h2>Star Bread</h2>
-                            <div class="line"></div>
-                            <!-- <span class="price">None</span> -->
-                        </div>
-                        <div class="desc">
-                            <p>Putok or star bread is a dense bread roll from the Philippines made with all-purpose flour, milk, and salt. It is typically dusted with coarse white sugar.</p>
                         </div>
                     </div>
                 </a>
