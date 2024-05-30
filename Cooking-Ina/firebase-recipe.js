@@ -50,19 +50,11 @@ document.addEventListener('DOMContentLoaded', async function () {
             'Beverage': 'recipes-beve'
         };
 
-        // Initialize counters for each category
-        const categoryCounters = {};
-
         // Fetch existing recipes from HTML
         const existingRecipes = document.querySelectorAll('.food-items');
         const existingRecipeIds = new Set();
         existingRecipes.forEach(recipe => {
             existingRecipeIds.add(recipe.dataset.id);
-            const category = recipe.dataset.category;
-            if (!categoryCounters.hasOwnProperty(category)) {
-                categoryCounters[category] = 0;
-            }
-            categoryCounters[category]++;
         });
 
         // Listen for real-time changes in Firestore
@@ -76,47 +68,46 @@ document.addEventListener('DOMContentLoaded', async function () {
                     const recipeId = change.doc.id;
 
                     if (!existingRecipeIds.has(recipeId)) {
-                        // Increment the counter for this category
-                        if (!categoryCounters.hasOwnProperty(category)) {
-                            categoryCounters[category] = 0;
-                        }
-                        categoryCounters[category]++;
+                        // Add new recipe ID to the set
+                        existingRecipeIds.add(recipeId);
 
-                        // Append new recipe at the correct position
+                        // Append new recipe at the end
                         const section = document.getElementById(sectionId);
                         const menuDiv = section.querySelector('.menu');
                         const recipeHTML = createRecipeHTML({ id: recipeId, ...recipeData });
-
-                        // Find the correct position to insert the new recipe
-                        let position = categoryCounters[category];
-                        let currentRecipe = menuDiv.firstChild;
-
-                        while (currentRecipe && position > 1) {
-                            if (currentRecipe.classList && currentRecipe.classList.contains('food-items')) {
-                                position--;
-                            }
-                            currentRecipe = currentRecipe.nextSibling;
-                        }
-
-                        // Insert the new recipe
-                        if (currentRecipe && currentRecipe.classList && currentRecipe.classList.contains('food-items')) {
-                            currentRecipe.insertAdjacentHTML('beforebegin', recipeHTML);
-                        } else {
-                            // If no recipes found, append at the end
-                            menuDiv.insertAdjacentHTML('beforeend', recipeHTML);
-                        }
-                    } else if (change.type === 'removed') {
-                        // Remove recipe if it was deleted
-                        const recipeToRemove = document.querySelector(`.food-items[data-id="${recipeId}"]`);
-                        recipeToRemove.remove();
+                        menuDiv.insertAdjacentHTML('beforeend', recipeHTML);
                     }
                 });
+
+                // Sort recipes after changes
+                sortRecipes(sectionId);
             });
         });
     } catch (error) {
         console.error('Error fetching and appending recipes:', error);
     }
 });
+
+// Function to sort recipes by creation timestamp
+function sortRecipes(sectionId) {
+    const section = document.getElementById(sectionId);
+    const menuDiv = section.querySelector('.menu');
+    const recipes = Array.from(menuDiv.querySelectorAll('.food-items'));
+
+    recipes.sort((a, b) => {
+        const timestampA = parseInt(a.dataset.timestamp);
+        const timestampB = parseInt(b.dataset.timestamp);
+        return timestampA - timestampB;
+    });
+
+    // Clear existing recipes
+    menuDiv.innerHTML = '';
+
+    // Append sorted recipes
+    recipes.forEach(recipe => {
+        menuDiv.appendChild(recipe);
+    });
+}
 
 
 // Function to fetch recipes by category from Firestore
@@ -165,6 +156,23 @@ function showErrorAndReload(errorMessage) {
     }, 3000);
 }
 
+// Function to delete recipe document from Firestore and corresponding photo from Storage
+async function deleteRecipeFromFirestore(recipeId, imageURL) {
+    if (recipeId) {
+        // Delete document from Firestore
+        const recipeRef = doc(db, 'recipes', recipeId);
+        await deleteDoc(recipeRef);
+
+        // Delete corresponding photo from Storage
+        if (imageURL) {
+            const storageRef = ref(storage, imageURL);
+            await deleteObject(storageRef);
+        }
+    } else {
+        throw new Error('Recipe ID is undefined');
+    }
+}
+
 // Event listener for delete button
 document.addEventListener('click', async function (event) {
     if (event.target.classList.contains('delete-btn')) {
@@ -185,8 +193,8 @@ document.addEventListener('click', async function (event) {
 
         if (isConfirmed.isConfirmed) {
             try {
-                // Delete document from Firestore
-                await deleteRecipeFromFirestore(recipeId);
+                // Delete document from Firestore and corresponding photo from Storage
+                await deleteRecipeFromFirestore(recipeId, imageURL);
 
                 // Update UI
                 const deletedRecipe = event.target.closest('.food-items');
@@ -221,16 +229,6 @@ document.addEventListener('click', async function (event) {
         }
     }
 });
-
-// Function to delete recipe document from Firestore
-async function deleteRecipeFromFirestore(recipeId) {
-    if (recipeId) {
-        const recipeRef = doc(db, 'recipes', recipeId);
-        await deleteDoc(recipeRef);
-    } else {
-        throw new Error('Recipe ID is undefined');
-    }
-}
 
 document.addEventListener('click', async function (event) {
     if (event.target.classList.contains('update-btn')) {
@@ -269,8 +267,6 @@ document.addEventListener('click', async function (event) {
         }
     }
 });
-
-
 
 // Function to create HTML for a recipe
 function createRecipeHTML(recipe) {
@@ -327,7 +323,7 @@ function createRecipeHTML(recipe) {
                             ${modifiedInfo} <!-- Display modified info here -->
                             <div class="buttons">
                                 ${updateButton}
-                                <button class="delete-btn" data-id="${recipe.id}">Delete</button>
+                                <button class="delete-btn" data-id="${recipe.id}" data-image="${recipe.imageURL}">Delete</button>
                             </div>
                         </div>
                     </div>
