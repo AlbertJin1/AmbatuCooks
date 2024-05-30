@@ -39,4 +39,4 @@
 <script type="module" src="firebase-authRetrieveCOURSE.js" defer></script>
 <script type="module" src="firebase-recipe.js" defer></script>
 
-<title>Courses | Cooking Ina</title>
+<title>Courses | CookingIna</title>

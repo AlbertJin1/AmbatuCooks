@@ -45,4 +45,4 @@
 
 <script type="module" src="firebase-authRetrieveMAIN.js" defer></script>
 
-<title>Main Menu - CookingIna</title>
+<title>Main Menu | CookingIna</title>

@@ -39,4 +39,4 @@
 
 <script type="module" src="firebase-authRetrieveINDEX.js" defer></script>
 
-<title>Cooking Ina</title>
+<title>Home | CookingIna</title>
