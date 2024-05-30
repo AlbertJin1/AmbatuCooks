@@ -11,9 +11,6 @@
             <div class="square"></div>
         </div>
     </div>
-    <div class="toggle-button-container">
-        <button class="toggle-button-main">Show More</button>
-    </div>
 
     <div class="menu">
         <div class="food-items">
@@ -547,61 +544,3 @@
     </div>
 
 </section>
-
- 
-<!--<section id="recipes-main"> CAN YOU FIND A WAY TO INTEGRATE LIKE IT WILL BASE THE CATEGORY THAT WAS SELECTED LIKE HERE
-    IS THE main dish category
-
-    <div class="section-heading">
-        <h3>Main Dish</h3>
-        <h1>Hearty Main Course Recipes That Will Satisfy Your Hunger</h1>
-        <div class="square-wrapper flex-row">
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-        </div>
-    </div>
-    <div class="toggle-button-container">
-        <button class="toggle-button-main">Show More</button>
-    </div>
-    <div class="menu">
-        <div class="food-items">
-            <img src="FIREBASE SOURCE IMAGE HERE DEPENDING ON THE RECIPE THAT WAS ADDED">
-            <div class="details">
-                <div class="details-sub">
-                    <h2>FIREBASE RECIPE NAME HERE</h2>
-                </div>
-                <p>FIREBASE SHORT DESCRIPTION HERE</p>
-                <a href="#popup1-main" class="btn">View Recipe</a>
-                <div id="popup1-main" class="popup">
-                    <a href="#recipes-main" class="close">&times;</a>
-                    <h2>FIREBASE RECIPE</h2>
-                    <div class="containers">
-                        <div class="top">
-                            <h2>Ingredients</h2>
-                            <table>
-                                <tr>
-                                    <th> Name </th>
-                                    <th> Quantity </th>
-                                </tr>
-
-                                <tr>
-                                    <td> FIREBASE INGREDIENT NAME </td>
-                                    <td> FIREBASE INGREDIENT QUANTITY </td>
-                                </tr>
-
-                            </table>
-                        </div>
-                        <div class="bottom">
-                            <h2>Directions</h2>
-                            <ol>
-                                <li>FIREBASE DIRECTIONS LIST</li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-                <a href="#recipes-main" class="close-popup"></a>
-            </div>
-        </div>
-    </div>
-</section> -->

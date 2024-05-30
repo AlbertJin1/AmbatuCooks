@@ -21,9 +21,7 @@
             <div class="square"></div>
         </div>
     </div>
-    <div class="toggle-button-container">
-        <button class="toggle-button-beve">Show More</button>
-    </div>
+
 
     <div class="menu">
         <div class="food-items">

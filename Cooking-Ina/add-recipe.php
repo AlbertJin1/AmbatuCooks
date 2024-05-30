@@ -114,6 +114,7 @@
                 <button type="button" class="btn btn-danger" id="addDirection">Add Direction</button>
             </div>
             <button type="button" id="submitRecipe" class="btn btn-primary">Submit Recipe</button>
+            <a href="javascript:history.back()" class="btn btn-secondary ml-2">Back</a>
         </div>
     </div>
 

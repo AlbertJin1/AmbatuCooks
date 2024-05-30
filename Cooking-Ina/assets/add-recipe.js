@@ -342,8 +342,8 @@ document.addEventListener('DOMContentLoaded', function () {
                             timer: 2000,
                             showConfirmButton: false
                         }).then(() => {
-                            // Reload the page
-                            location.reload();
+
+                            window.location.href = 'recipes-list.php';
                         });
                     }
                 } catch (error) {

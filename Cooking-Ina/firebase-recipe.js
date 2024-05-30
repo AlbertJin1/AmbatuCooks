@@ -50,11 +50,19 @@ document.addEventListener('DOMContentLoaded', async function () {
             'Beverage': 'recipes-beve'
         };
 
+        // Initialize counters for each category
+        const categoryCounters = {};
+
         // Fetch existing recipes from HTML
         const existingRecipes = document.querySelectorAll('.food-items');
         const existingRecipeIds = new Set();
         existingRecipes.forEach(recipe => {
             existingRecipeIds.add(recipe.dataset.id);
+            const category = recipe.dataset.category;
+            if (!categoryCounters.hasOwnProperty(category)) {
+                categoryCounters[category] = 0;
+            }
+            categoryCounters[category]++;
         });
 
         // Listen for real-time changes in Firestore
@@ -68,11 +76,35 @@ document.addEventListener('DOMContentLoaded', async function () {
                     const recipeId = change.doc.id;
 
                     if (!existingRecipeIds.has(recipeId)) {
-                        // Append new recipe if it doesn't exist in the HTML
+                        // Increment the counter for this category
+                        if (!categoryCounters.hasOwnProperty(category)) {
+                            categoryCounters[category] = 0;
+                        }
+                        categoryCounters[category]++;
+
+                        // Append new recipe at the correct position
                         const section = document.getElementById(sectionId);
                         const menuDiv = section.querySelector('.menu');
                         const recipeHTML = createRecipeHTML({ id: recipeId, ...recipeData });
-                        menuDiv.insertAdjacentHTML('beforeend', recipeHTML); // Append at the end
+
+                        // Find the correct position to insert the new recipe
+                        let position = categoryCounters[category];
+                        let currentRecipe = menuDiv.firstChild;
+
+                        while (currentRecipe && position > 1) {
+                            if (currentRecipe.classList && currentRecipe.classList.contains('food-items')) {
+                                position--;
+                            }
+                            currentRecipe = currentRecipe.nextSibling;
+                        }
+
+                        // Insert the new recipe
+                        if (currentRecipe && currentRecipe.classList && currentRecipe.classList.contains('food-items')) {
+                            currentRecipe.insertAdjacentHTML('beforebegin', recipeHTML);
+                        } else {
+                            // If no recipes found, append at the end
+                            menuDiv.insertAdjacentHTML('beforeend', recipeHTML);
+                        }
                     } else if (change.type === 'removed') {
                         // Remove recipe if it was deleted
                         const recipeToRemove = document.querySelector(`.food-items[data-id="${recipeId}"]`);
@@ -85,6 +117,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         console.error('Error fetching and appending recipes:', error);
     }
 });
+
 
 // Function to fetch recipes by category from Firestore
 async function getRecipesByCategory(db, category) {
@@ -209,7 +242,18 @@ document.addEventListener('click', async function (event) {
             if (recipeSnapshot.exists()) {
                 const recipeData = recipeSnapshot.data();
 
-                const queryString = new URLSearchParams({ recipeId: recipeId, ...recipeData }).toString();
+                // Include modifiedBy and modifiedAt fields
+                const modifiedBy = recipeData.modifiedBy;
+                const modifiedAt = recipeData.modifiedAt;
+
+                // Construct recipe object including modification info
+                const recipeWithModification = {
+                    ...recipeData,
+                    modifiedBy: modifiedBy,
+                    modifiedAt: modifiedAt
+                };
+
+                const queryString = new URLSearchParams({ recipeId: recipeId, ...recipeWithModification }).toString();
                 window.location.href = `update-recipe.php?${queryString}`;
             } else {
                 throw new Error('Recipe does not exist');
@@ -231,8 +275,18 @@ document.addEventListener('click', async function (event) {
 // Function to create HTML for a recipe
 function createRecipeHTML(recipe) {
     const updateButton = `
-    <button class="update-btn" data-id="${recipe.id}">Update</button>
-`;
+        <button class="update-btn" data-id="${recipe.id}">Update</button>
+    `;
+
+    let modifiedInfo = ''; // Initialize modified info string
+
+    // Check if recipe was modified and modifiedBy and modifiedAt fields exist
+    if (recipe.modifiedBy && recipe.modifiedAt) {
+        modifiedInfo = `
+            <h6>Modified by: ${recipe.modifiedBy}</h6>
+            <h6>Modified at: ${new Date(recipe.modifiedAt).toLocaleString()}</h6>
+        `;
+    }
 
     return `
         <div class="food-items">
@@ -270,6 +324,7 @@ function createRecipeHTML(recipe) {
                                 `).join('')}
                             </ol>
                             <h6>Added by: ${recipe.addedBy}</h6> <!-- Display addedBy here -->
+                            ${modifiedInfo} <!-- Display modified info here -->
                             <div class="buttons">
                                 ${updateButton}
                                 <button class="delete-btn" data-id="${recipe.id}">Delete</button>

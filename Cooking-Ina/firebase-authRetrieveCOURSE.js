@@ -69,9 +69,14 @@ document.addEventListener("DOMContentLoaded", function () {
         if (user) {
             // User is signed in
             // Show the user icon
+            addRecipe.style.display = "inline-block";
+            addRecipe.addEventListener('click', () => {
+
+                window.location.href = "add-recipe.php";
+            });
             userIcon.style.display = "inline-block";
             userIcon.addEventListener('click', () => {
-                // Navigate to user-profile.php
+
                 window.location.href = "user-profile.php";
             });
         } else {

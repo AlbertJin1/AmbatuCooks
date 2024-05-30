@@ -176,7 +176,18 @@ document.addEventListener('DOMContentLoaded', async function () {
         if (event.target.classList.contains('removeIngredient')) {
             const row = event.target.closest('tr');
             if (row) {
-                row.remove();
+                Swal.fire({
+                    title: 'Confirmation',
+                    text: 'Are you sure you want to remove this ingredient?',
+                    icon: 'question',
+                    showCancelButton: true,
+                    confirmButtonText: 'Yes, remove it',
+                    cancelButtonText: 'No, keep it',
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        row.remove();
+                    }
+                });
             }
         }
     });
@@ -186,7 +197,18 @@ document.addEventListener('DOMContentLoaded', async function () {
         if (event.target.classList.contains('removeDirection')) {
             const step = event.target.closest('li');
             if (step) {
-                step.remove();
+                Swal.fire({
+                    title: 'Confirmation',
+                    text: 'Are you sure you want to remove this direction?',
+                    icon: 'question',
+                    showCancelButton: true,
+                    confirmButtonText: 'Yes, remove it',
+                    cancelButtonText: 'No, keep it',
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        step.remove();
+                    }
+                });
             }
         }
     });
@@ -303,7 +325,18 @@ document.addEventListener('DOMContentLoaded', async function () {
 
         if (!hasError) {
             try {
-                await updateDoc(doc(db, "recipes", recipeId), recipeData);
+                // Get the current user's display name
+                const modifiedBy = document.getElementById('displayName').textContent;
+
+                // Construct the data object to update
+                const updatedData = {
+                    ...recipeData,
+                    modifiedBy: modifiedBy,
+                    modifiedAt: new Date().toISOString() // Current datetime
+                };
+
+                // Update the document with the updated data
+                await updateDoc(doc(db, "recipes", recipeId), updatedData);
                 console.log("Document updated successfully");
                 Swal.fire({
                     icon: 'success',
@@ -312,7 +345,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                     timer: 2000,
                     showConfirmButton: false
                 }).then(() => {
-                    window.location.href = 'recipes-list.php';
+                    window.location.href = 'recipes-list.php'; // Redirect after updating
                 });
             } catch (error) {
                 console.error('Error updating document: ', error);
@@ -356,7 +389,18 @@ document.addEventListener('DOMContentLoaded', async function () {
             <td><button type="button" class="btn btn-link removeIngredient"><i class="fas fa-times"></i></button></td>
         `;
                     newRow.querySelector('.removeIngredient').addEventListener('click', function () {
-                        newRow.parentNode.removeChild(newRow);
+                        Swal.fire({
+                            title: 'Confirmation',
+                            text: 'Are you sure you want to remove this ingredient?',
+                            icon: 'question',
+                            showCancelButton: true,
+                            confirmButtonText: 'Yes, remove it',
+                            cancelButtonText: 'No, keep it',
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                newRow.parentNode.removeChild(newRow);
+                            }
+                        });
                     });
                 });
             }
@@ -378,7 +422,18 @@ document.addEventListener('DOMContentLoaded', async function () {
                 `;
                 directionsList.appendChild(newStep);
                 newStep.querySelector('.removeDirection').addEventListener('click', function () {
-                    newStep.parentNode.removeChild(newStep);
+                    Swal.fire({
+                        title: 'Confirmation',
+                        text: 'Are you sure you want to remove this direction?',
+                        icon: 'question',
+                        showCancelButton: true,
+                        confirmButtonText: 'Yes, remove it',
+                        cancelButtonText: 'No, keep it',
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            newStep.parentNode.removeChild(newStep);
+                        }
+                    });
                 });
             });
         } else {
@@ -387,4 +442,6 @@ document.addEventListener('DOMContentLoaded', async function () {
     } catch (error) {
         console.error('Error fetching document: ', error);
     }
+
+
 });
