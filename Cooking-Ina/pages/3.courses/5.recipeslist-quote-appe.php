@@ -462,7 +462,7 @@
             <img src="./img/RECIPES/2-APPETIZER/siomai.png">
             <div class="details">
                 <div class="details-sub">
-                    <h2>Chiken Siomai</h2>
+                    <h2>Chicken Siomai</h2>
                 </div>
                 <p>This Chicken Siomai recipe is a variation of pork siomai or shaomai. This recipe makes use of lean
                     ground chicken plus additional vegetables and seasonings. Are you a fan of siomai? If you are, I am
