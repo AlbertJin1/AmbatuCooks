@@ -35,8 +35,6 @@ const storage = getStorage(app);
 
 let cropper; // Define cropper globally
 
-
-
 document.addEventListener('DOMContentLoaded', function () {
     const loader = document.querySelector(".loader");
     let profilePictureLoaded = false;
@@ -61,6 +59,8 @@ document.addEventListener('DOMContentLoaded', function () {
             const userProfile = await getUserProfile(user.uid);
             if (userProfile) {
                 populateForm(userProfile);
+                // Save user profile to localStorage
+                localStorage.setItem('userProfile', JSON.stringify(userProfile));
             }
             document.getElementById('email').value = user.email || '';
             profilePictureLoaded = true; // Set profile picture as loaded
@@ -86,22 +86,6 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('changePassBtn').addEventListener('click', handleChangePassword);
     document.getElementById('profileImageInput').addEventListener('change', handleFileUpload);
 
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-    console.log("DOM fully loaded and parsed");
-
-    document.getElementById('backBtn').addEventListener('click', function () {
-        console.log("Back button clicked");
-        window.location.href = 'index.php';
-    });
-
-    // Check if the button exists
-    if (document.getElementById('backBtn')) {
-        console.log("Back button is correctly identified");
-    } else {
-        console.log("Back button not found");
-    }
 });
 
 async function getUserProfile(userId) {
@@ -151,6 +135,7 @@ document.getElementById('resetPhoto').addEventListener('click', async function (
     // Save the default profile picture URL to the database
     await updateProfilePicture(defaultProfilePictureURL);
 });
+
 // Function to update profile picture in the database
 async function updateProfilePicture(profilePictureURL) {
     const user = auth.currentUser;
@@ -211,6 +196,9 @@ async function handleSaveProfile() {
     try {
         // Update user profile in Firestore
         await updateDoc(doc(db, 'users', user.uid), profileData);
+
+        // Update user profile in localStorage
+        localStorage.setItem('userProfile', JSON.stringify(profileData));
 
         Swal.fire({
             icon: 'success',

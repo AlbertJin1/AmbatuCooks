@@ -1,4 +1,3 @@
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
 import { getFirestore, onSnapshot, doc } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js";
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
@@ -17,28 +16,29 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const auth = getAuth(app);
 
-// Wait for the DOM content to be fully loaded
 document.addEventListener("DOMContentLoaded", function () {
-    // Wait for Firebase authentication state changes
     onAuthStateChanged(auth, (user) => {
         if (user) {
-            // User is signed in
-            // Fetch user data from Firestore using user.uid
-            const userRef = doc(db, "users", user.uid);
-            onSnapshot(userRef, (doc) => {
-                if (doc.exists()) {
-                    // Update UI with user data
-                    const userData = doc.data();
-                    const contactInfo = document.getElementById("contactInfo");
-                    if (contactInfo) {
-                        contactInfo.innerHTML = `User: <span id="loggedInUserName">${userData.firstName} ${userData.lastName}</span>`;
+            // Check if user data is already in localStorage
+            const storedUserData = localStorage.getItem("userData");
+            if (storedUserData) {
+                const userData = JSON.parse(storedUserData);
+                updateUIWithUserData(userData);
+            } else {
+                // Fetch user data from Firestore
+                const userRef = doc(db, "users", user.uid);
+                onSnapshot(userRef, (doc) => {
+                    if (doc.exists()) {
+                        const userData = doc.data();
+                        // Store user data in localStorage
+                        localStorage.setItem("userData", JSON.stringify(userData));
+                        updateUIWithUserData(userData);
+                    } else {
+                        console.log("No such document!");
                     }
-                } else {
-                    console.log("No such document!");
-                }
-            });
+                });
+            }
         } else {
-            // User is signed out
             console.log("User is signed out");
             // Display contact information
             const contactInfo = document.getElementById("contactInfo");
@@ -47,17 +47,15 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             // Redirect users if they try to access recipes-list.php
             if (window.location.pathname.includes("recipes-list.php")) {
-                // Display SweetAlert2
                 Swal.fire({
                     icon: 'info',
                     title: 'Oops...',
                     text: 'You need to log in first!',
-                    timer: 2000, // Timer in milliseconds (3 seconds)
-                    timerProgressBar: true, // Show progress bar
-                    allowOutsideClick: false, // Prevent outside click from closing
-                    showConfirmButton: false // Hide confirm button
+                    timer: 2000,
+                    timerProgressBar: true,
+                    allowOutsideClick: false,
+                    showConfirmButton: false
                 }).then(() => {
-                    // Redirect to login page
                     window.location.href = "login.php";
                 });
             }
@@ -67,31 +65,25 @@ document.addEventListener("DOMContentLoaded", function () {
     onAuthStateChanged(auth, (user) => {
         const userIcon = document.getElementById("userIcon");
         if (user) {
-            // User is signed in
             // Show the user icon
             addRecipe.style.display = "inline-block";
             addRecipe.addEventListener('click', () => {
-
                 window.location.href = "add-recipe.php";
             });
             userIcon.style.display = "inline-block";
             userIcon.addEventListener('click', () => {
-
                 window.location.href = "user-profile.php";
             });
         } else {
-            // User is signed out
             // Hide the user icon
             userIcon.style.display = "none";
         }
     });
 
-    // Update navigation links based on authentication state
     const navItems = document.getElementById("nav-items");
     if (navItems) {
         onAuthStateChanged(auth, (user) => {
             if (user) {
-                // User is signed in
                 navItems.innerHTML = `
                     <li><a href="index.php#home" class="nav-links">HOME</a></li>
                     <li><a href="recipes.php" class="nav-links">MAIN MENU</a></li>
@@ -102,7 +94,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     <li><a id="logoutBtn" href="#" class="nav-links">LOGOUT</a></li>
                 `;
             } else {
-                // User is signed out
                 navItems.innerHTML = `
                     <li><a href="index.php#home" class="nav-links">HOME</a></li>
                     <li><a href="login.php" class="nav-links">LOGIN</a></li>
@@ -112,12 +103,12 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Logout Functionality
     document.addEventListener("click", (event) => {
         const logoutBtn = event.target.closest("#logoutBtn");
         if (logoutBtn) {
             auth.signOut().then(() => {
-                // Sign-out successful, redirect to index.php
+                // Clear localStorage on sign-out
+                localStorage.removeItem("userData");
                 window.location.href = "index.php";
             }).catch((error) => {
                 console.error("Error signing out:", error);
@@ -125,3 +116,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+function updateUIWithUserData(userData) {
+    const contactInfo = document.getElementById("contactInfo");
+    if (contactInfo) {
+        contactInfo.innerHTML = `User: <span id="loggedInUserName">${userData.firstName} ${userData.lastName}</span>`;
+    }
+}

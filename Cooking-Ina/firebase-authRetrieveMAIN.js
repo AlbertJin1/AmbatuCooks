@@ -1,4 +1,3 @@
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
 import { getFirestore, onSnapshot, doc } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js";
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
@@ -17,26 +16,30 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const auth = getAuth(app);
 
-// Wait for the DOM content to be fully loaded
 document.addEventListener("DOMContentLoaded", function () {
     // Wait for Firebase authentication state changes
     onAuthStateChanged(auth, (user) => {
         if (user) {
             // User is signed in
-            // Fetch user data from Firestore using user.uid
-            const userRef = doc(db, "users", user.uid);
-            onSnapshot(userRef, (doc) => {
-                if (doc.exists()) {
-                    // Update UI with user data
-                    const userData = doc.data();
-                    const contactInfo = document.getElementById("contactInfo");
-                    if (contactInfo) {
-                        contactInfo.innerHTML = `User: <span id="loggedInUserName">${userData.firstName} ${userData.lastName}</span>`;
+            // Check if user data is already in localStorage
+            const storedUserData = localStorage.getItem("userData");
+            if (storedUserData) {
+                const userData = JSON.parse(storedUserData);
+                updateUIWithUserData(userData);
+            } else {
+                // Fetch user data from Firestore using user.uid
+                const userRef = doc(db, "users", user.uid);
+                onSnapshot(userRef, (doc) => {
+                    if (doc.exists()) {
+                        const userData = doc.data();
+                        // Store user data in localStorage
+                        localStorage.setItem("userData", JSON.stringify(userData));
+                        updateUIWithUserData(userData);
+                    } else {
+                        console.log("No such document!");
                     }
-                } else {
-                    console.log("No such document!");
-                }
-            });
+                });
+            }
         } else {
             // User is signed out
             console.log("User is signed out");
@@ -96,7 +99,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const logoutBtn = event.target.closest("#logoutBtn");
         if (logoutBtn) {
             auth.signOut().then(() => {
-                // Sign-out successful, redirect to index.php
+                // Sign-out successful, clear localStorage and redirect to index.php
+                localStorage.removeItem("userData");
                 window.location.href = "index.php";
             }).catch((error) => {
                 console.error("Error signing out:", error);
@@ -104,3 +108,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+function updateUIWithUserData(userData) {
+    const contactInfo = document.getElementById("contactInfo");
+    if (contactInfo) {
+        contactInfo.innerHTML = `User: <span id="loggedInUserName">${userData.firstName} ${userData.lastName}</span>`;
+    }
+}
